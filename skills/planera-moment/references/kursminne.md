@@ -1,4 +1,4 @@
-# Kursminne — format och regler
+# Kursminne - format och regler
 
 ## Lagringsformat
 
@@ -27,11 +27,11 @@ antal_moment: [N]
 - [...]
 
 ## Tidsfordelning
-- [T.ex. "Kortar fas 3 (explicit instruktion) till forman for fas 4 (guidad ovning)"]
+- [T.ex. "Kortar larargenomgangen till forman for elevaktivt arbete i rollkarnan"]
 - [...]
 
 ## Aktiviteter och metoder
-- [T.ex. "Gillar debattovningar, anvander dem ofta som fas 4-aktivitet"]
+- [T.ex. "Gillar debattovningar, anvander dem ofta som brottningsform"]
 - [T.ex. "Valjer alltid bort rollspel for denna grupp"]
 - [...]
 
@@ -48,7 +48,7 @@ antal_moment: [N]
 - [...]
 
 ## Tvargaende tradar mellan moment
-- [T.ex. "Antikens arv-momentet — vack tillbaka i renässans-momentet, upplysnings-momentet, fascism-momentet"]
+- [T.ex. "Antikens arv-momentet - vack tillbaka i renässans-momentet, upplysnings-momentet, fascism-momentet"]
 - [Format: nar X-moment kommer, vack koppling till Y-moment med fraga/verktyg Z]
 - [...]
 
@@ -60,8 +60,8 @@ antal_moment: [N]
 
 ## Regler for minneshantering
 
-- **Skriv aldrig over** — lagg till nya lardomar, ta inte bort gamla
-- **Generalisera** — spara inte "andrade tid i lektion 3 fran 10 till 15 min" utan "foredrar langre guidad ovning, kortar explicit instruktion"
-- **Undvik redundans** — om en lardom redan finns, forstark den med en notering istallet for att duplicera
-- **Max 5 punkter per kategori** — om det blir fler, sla ihop eller ersatt de minst specifika
-- **Var arlig** — om det inte finns tydliga monster efter bara ett moment, skriv fa punkter. Minnet vaxer organiskt.
+- **Skriv aldrig over** - lagg till nya lardomar, ta inte bort gamla
+- **Generalisera** - spara inte "andrade tid i lektion 3 fran 10 till 15 min" utan "foredrar langre guidad ovning, kortar explicit instruktion"
+- **Undvik redundans** - om en lardom redan finns, forstark den med en notering istallet for att duplicera
+- **Max 5 punkter per kategori** - om det blir fler, sla ihop eller ersatt de minst specifika
+- **Var arlig** - om det inte finns tydliga monster efter bara ett moment, skriv fa punkter. Minnet vaxer organiskt.

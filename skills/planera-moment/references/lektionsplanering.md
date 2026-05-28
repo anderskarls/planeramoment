@@ -1,204 +1,194 @@
-# Lektionsplanering - Mall och principer
+# Lektionsplanering - rollbaserad mall och principer
 
-## Lektionens sex faser (evidensbaserad modell)
+Denna fil beskriver hur en **enskild lektion** struktureras inom Momentplaneringsramverket (nivå 4-5). Den ersätter den tidigare sex-fas-modellen, som ramverket avvisar som lektionsstruktur (rigid sekvens, för instrumentell, single-lektion-fokuserad, omöjlig att utföra konsekvent).
 
-Varje lektion foljer en evidensbaserad struktur med sex faser, baserad pa Rosenshines forskning om framgangsrika larare och Skolverkets rekommendationer om strukturerad undervisning. Tidsfordelningen anpassas efter lektionslangd.
-
-### Tidsbudget
-
-| Fas | 60 min | 80 min | 90 min |
-|-----|--------|--------|--------|
-| 1. Retrieval review | 5 min | 8 min | 10 min |
-| 2. Malaktivering | 2 min | 3 min | 5 min |
-| 3. Explicit instruktion med worked examples | 10 min | 12 min | 15 min |
-| 4. Guidad ovning med formativ bedomning | 15 min | 25 min | 25 min |
-| 5. Sjalvstandig ovning/tillampning | 10 min | 15 min | 15 min |
-| 6. Avslut med summering och metakognition | 3 min | 5 min | 5 min |
-
-**Regel:** Elevaktiv tid (fas 1 + fas 4 + fas 5 + fas 6 delvis) ska overstiga 50% av lektionens totala tid.
-
-**Kritiskt fynd:** Rosenshine observerade att framgangsrika larare spenderade **57% av lektionstiden pa guidad ovning** (fas 4). De flesta larare overdimensionerar genomgangen (fas 3) och underdimensionerar guidad ovning. Om tiden inte racker - korta genomgangen, aldrig den guidade ovningen.
-
-### Fas 1: Retrieval review (5-10 min)
-
-**Syfte:** Aktiv aterkallelse fran tidigare lektioner. Starker minnesspar mer an passiv repetition.
-
-**Data-funktion:** Exit ticket-data fran foregaende lektion styr vad som repeteras. Om manga elever missade en specifik punkt - inkludera den har.
-
-Tekniker:
-- **Laginsats-quiz**: 3-5 fragor fran foregaende lektion (enskilt, sedan gemensamt)
-- **Par-retrieval**: "Beratta for din partner tre saker fran forra lektionen"
-- **Tidslinjekonstruktion**: Elever bygger tidslinje fran minnet
-- **Kopplingsfraga**: "Vad ar kopplingen mellan X fran forra lektionen och Y?"
-
-**Viktigt:** Denna fas kopplar ALLTID tillbaka till foregaende lektion. Undantag: momentets forsta lektion, dar forkunskaper om amnesomradet aktiveras istallet.
-
-### Fas 2: Malaktivering (2-5 min)
-
-**Syfte:** Presentera lektionsmal i elevanligt sprak, aktivera forkunskaper eller skapa kognitiv krok.
-
-Tekniker:
-- Presentera dagens mal tydligt: "Idag ska ni kunna..."
-- **Provocerande fraga**: En fraga som vacker nyfikenhet och kopplar till lektionens innehall
-- **Bild/kalla/citat**: Visa ett material och fraga "Vad ser ni? Vad tror ni att detta handlar om?"
-- **Koppling till verkligheten**: En aktuell nyhet eller elevernas vardag
-
-### Fas 3: Explicit instruktion med worked examples (10-15 min)
-
-**Syfte:** Presentera nytt innehall i sma steg med lararmodellering och think-alouds.
-
-Principer:
-- **Max 15 minuter** sammanhangande instruktion
-- **Kontrollfragor till alla** (inte bara frivilliga) efter varje steg
-- **Signalera struktur**: "Vi ska titta pa tre saker idag: [1], [2], [3]"
-- **Koppla till larandemal**: Gor explicit varfor de lar sig detta
-- **Worked examples**: Modellera analysprocessen - visa hur en kompetent historiker/samhallsvetare *tanker*, inte bara vad de vet
-- **Kognitiv belastningsteori**: Bygg fran enkelt till komplext, minimera extravariabell belastning
-
-### Fas 4: Guidad ovning med formativ bedomning (15-25 min)
-
-**Syfte:** Eleverna arbetar med stod. Har sker det egentliga larandet.
-
-**Denna fas ar den viktigaste och langsta.** Rosenshine: framgangsrika larare spenderar 57% av lektionstiden har.
-
-Valj aktivitet baserat pa:
-- Vilket larandemal som adresseras
-- Vilken kunskapskravsnivaa som tranas
-- Var i momentet lektionen befinner sig (tidigt = mer stodstruktur, sent = mer sjalvstandighet)
-
-Exempelaktiviteter:
-- **Kallanalys med lararstod**: Elever analyserar primorkallor medan lararen staller checka-fragor
-- **Strukturerad diskussion i par/smagrupper**: Lararen cirkulerar och lyssnar pa resonemang
-- **Gemensamt argumentationsarbete**: Elever bygger argument med stod innan sjalvstandigt skrivande
-- **EPA-diskussioner**: Enskilt-Par-Alla med fordjupande fragor
-- **Jamforelseuppgifter** med stodstrukturer (forifyllda matriser)
-
-**Lararens roll under guidad ovning:**
-- Cirkulera i klassrummet
-- Stall fordjupande fragor till enskilda/grupper
-- Identifiera missforstand att adressera
-- Ge differentierat stod (scaffolding till de som behover, utmaningar till de som ar redo)
-- Anvand Wiliams formativa strategier: simultansvar-tekniker, klargorande fragor, kamratfeedback
-
-### Fas 5: Sjalvstandig ovning/tillampning (10-15 min)
-
-**Syfte:** Eleven demonstrerar larande utan stod.
-
-Exempelaktiviteter efter analytisk nivaa:
-- **Skriftlig argumentation**: Sjalvstandigt resonerande skrivande
-- **Dokumentanalys**: Kalllritisk granskning utan guidemallar
-- **Strukturerad diskussion**: Seminarium eller debatt
-- **Perspektivanalys**: Analysera fenomen ur flera aktors synvinklar
-
-Denna fas genererar formativa data for nasta lektions planering.
-
-### Fas 6: Avslut med summering och metakognition (3-5 min)
-
-**Syfte:** Eleverna formulerar vad de lart sig, lararen far formativ information for nasta lektion.
-
-**Exit ticket** (obligatorisk):
-- En specifik fraga kopplad till lektionens framgangskriterier
-- **Svagt exit ticket**: "Skriv en sak du larde dig idag" (social funktion, inte formativ)
-- **Starkt exit ticket**: "Forklara med egna ord varfor Versaillesfreden ledde till okad nationalism i Tyskland" (mater specifik lektions processmal)
-
-Exit ticket-format:
-- En-minuts-essay: Eleven skriver det viktigaste fran lektionen
-- 3-2-1: 3 saker de larde sig, 2 fragor de fortfarande har, 1 koppling till tidigare kunskap
-- Feldetektering: Visa ett felaktigt pastaende - ar det ratt eller fel och varfor?
-- Forutsagelsefraga: "Vad tror du hander i nasta fas av processen vi studerar?"
-
-**Datahantering (realistisk):** Sortera snabbt exit tickets i tre hogar (forstod, osaker, missade). Hog 2 och 3 informerar nasta lektions retrieval review. Tar 2-3 minuter.
-
-Avsluta med:
-- Aterkoppla till lektionsmalat: "Titta pa malet - hur langt har vi kommit?"
-- Preview av nasta lektion (stodjer encodering och forvantansuppbyggnad)
+Grundtanken: en lektion realiserar en eller flera **roller** (tilldelade i Steg 4). Lektionens inre förlopp följer av rollen/rollerna och - för en Brottning-lektion - diskursmålet och formen (Steg 3.2). Det finns ingen universell fassekvens.
 
 ---
 
-## Exit ticket-planeringsslinga
+## 1. Lektionens ram - tre evidensprinciper (inte faser)
 
-Exit tickets fyller en ofta missad funktion: de ar inte bara ett avslutningsmoment utan en *lank* till nasta lektions planering.
+Tre principer ramar varje lektion. De är ortogonala mot rollinnehållet och gäller oavsett roll:
+
+1. **Öppna med retrieval (spaced practice).** Aktiv återkallelse från tidigare lektioner, styrd av föregående lektions exit ticket-data. Stärker minnesspår mer än passiv repetition. Momentets första lektion: aktivera förkunskaper om ämnesområdet istället.
+2. **Elevaktiv tid > 50%** (sikta 60%+). Rosenshines fynd att framgångsrika lärare lade ~57% av tiden på guidad övning gäller fortfarande - men som **teknik inom de roller där eleven arbetar mot en exit**, inte som en tvingande fas. Om tiden inte räcker: korta lärargenomgången, aldrig elevarbetet.
+3. **Avsluta med exit ticket + framåtkoppling.** En fråga som mäter rollens exit + en kort preview av nästa lektion (stödjer encodering och förväntansuppbyggnad).
+
+**Kärnan mellan öppning och avslut formas av lektionens roll** (avsnitt 2). En lektion är alltså: öppning (retrieval) → rollkärna → avslut (exit ticket).
+
+---
+
+## 2. Rollspecifik kärnvägledning
+
+Vad lektionskärnan ser ut som beror på vilken roll lektionen realiserar. För varje roll: vad eleven exit:ar med, typisk kärnaktivitet, och vilken sorts exit ticket som mäter rätt sak.
+
+### Frågeförankring
+- **Exit:** eleven förstår brottningsfrågan och varför den är värd att brottas med.
+- **Kärna:** presentera frågan, gör dess spänning levande (en händelse, ett dilemma, en kontrast). Knyt an till elevernas värld.
+- **Exit ticket:** "Formulera med egna ord vad frågan handlar om och varför den inte har ett enkelt svar."
+
+### Provokation
+- **Exit:** en produktiv kognitiv dissonans - ett ifrågasatt förgivettagande.
+- **Kärna:** ett motintuitivt material, ett provocerande påstående, ett pretesting-moment (gissa innan undervisning).
+- **Exit ticket:** "Vad trodde du innan - och vad fick dig att tveka?"
+
+### Begreppsbygge
+- **Exit:** begreppslig precision - eleven kan använda momentets fackbegrepp korrekt.
+- **Kärna:** explicit instruktion med worked examples + guidad bearbetning. Frayer-modellen, begreppskartor, elevegna definitioner. (Hemvist för de tekniker som tidigare låg i sex-fasens "fas 3-4".)
+- **Exit ticket:** "Använd begreppet X korrekt i en egen mening om [temat]."
+
+### Perspektivbygge
+- **Exit:** en perspektivinventering - flera synsätt kartlagda, **utan** egen position.
+- **Kärna:** perspektivanalys, jämförande analys, källanalys ur olika aktörers synvinkel. Eleven söker ännu ingen ståndpunkt.
+- **Exit ticket:** "Återge det starkaste argumentet från två olika perspektiv."
+
+### Brottning
+- **Exit:** en försvarad/prövad position i den omtvistade frågan.
+- **Kärna:** kärnan *är* den valda formen (avsnitt 3). Diskursmålet styr samtalsstrukturen. Ingen lärargenomgång ska tränga ut brottningstiden.
+- **Exit ticket:** styrs av diskursmålet - t.ex. för Syntes: "Formulera motståndarens starkaste argument lika starkt som ditt eget."
+
+### Syntes
+- **Exit:** en integrerad helhetsförståelse.
+- **Kärna:** integrationsaktivitet - eleven väver ihop positioner/perspektiv/begrepp till en helhet, ofta i skriftlig form.
+- **Exit ticket:** "Hur hänger [perspektiv A] och [perspektiv B] ihop i en samlad bedömning?"
+
+### Metareflektion
+- **Exit:** insikt om sitt eget tänkande/lärande under momentet. (Hård regel: sist i momentet.)
+- **Kärna:** strukturerad reflektion över hur den egna positionen/förståelsen förändrats.
+- **Exit ticket:** "Vad har förändrats i hur du tänker om frågan sedan momentets början?"
+
+### Applikation
+- **Exit:** förmågan att tillämpa på ett nytt fall.
+- **Kärna:** ett nytt, obekant case där eleven självständigt applicerar momentets begrepp/analys.
+- **Exit ticket:** "Tillämpa [analys/begrepp] på [nytt fall]."
+
+### Återbesök
+- **Exit:** befäst, spaced retrieval av momentets kärna (ofta i ett senare moment).
+- **Kärna:** låginsats-retrieval av tidigare moments kärnbegrepp och slutsatser.
+- **Exit ticket:** kopplingsfråga mellan det gamla och det nya momentet.
+
+---
+
+## 3. Brottningslektionen i detalj
+
+Brottning-lektionen är den mest krävande och planeras noggrannast. **Diskursmålet är primärt, formen är deriverad** (Felton, Crowell & Liu 2015).
+
+**Diskursmål → formfamilj (vägledning, inte lookup-tabell):**
+
+| Diskursmål | Vad formen ska bära | Exempelformer |
+|---|---|---|
+| Övertyga | Försvara position mot motargument | Strukturerad debatt, ställningstagande-seminarium |
+| Syntes | Integrera bägge sidors starkaste argument | SAC (Structured Academic Controversy), fishbowl med rollbyte |
+| Utforska | Öppen kollektiv undersökning utan position | Sokratiskt seminarium, Harkness-diskussion |
+| Klargöra | Begreppslig precision | Begreppsseminarium, definitionsförhandling |
+| Pröva | Hypotes-test mot källor | Källkritiskt seminarium, evidens-jury |
+
+**Gruppstorleksgolv + struktur:** storleken sätter golvet för möjliga former (sokratiskt seminarium kollapsar vid >18; Harkness designad för 10-14; exploratory talk kräver 3-4/grupp). Storlek räcker inte - **struktur krävs**: utan strukturerade talturer dominerar 3-5 elever talutrymmet (Larsson 2007). Ange alltid den mekanism som säkrar talutrymme (t.ex. talkort, roterande roller, tysta skrivrundor före tal).
+
+**Position-tilldelning (Hess-gate):** om frågan klassats tippande (Steg 1.7) - lägg position-tilldelning ovanpå vald form som stark default, för att skydda elever med utsatt minoritetsposition.
+
+**Variering:** upprepa inte samma form mer än en gång i momentet utan motivering.
+
+---
+
+## 4. Exit ticket-planeringsslingan
+
+Exit tickets är inte bara ett avslutningsmoment utan en *länk* till nästa lektions planering - och, inför Brottning-lektionen, en **verifikation** att förutsättningarna (nivå 3) sitter.
 
 ```
 Lektion N:
-  Fas 1: Retrieval review [baserat pa data fran Lektion N-1]
-  ...
-  Fas 6: Exit ticket [samlar data om forstaelse]
+  Öppning: Retrieval [baserat på data från Lektion N-1]
+  Rollkärna: [rollens aktivitet]
+  Avslut: Exit ticket [mäter rollens exit]
          |
-Planering infor Lektion N+1:
-  Vad forstod de? -> Fortsatt framat
-  Vad missade de? -> Inkludera i nasta retrieval review
+Planering inför Lektion N+1:
+  Nådde de rollens exit? -> Fortsätt i sekvensen
+  Lucka kvar?            -> Adressera i nästa retrieval-öppning
+  (Inför Brottning: sitter förutsättningarna? -> annars stötta innan)
          |
 Lektion N+1:
-  Fas 1: Retrieval review [adresserar gap fran Lektion N]
+  Öppning: Retrieval [adresserar gap från Lektion N]
 ```
 
-## Mall for lektionsplan
+**Datahantering (realistisk):** sortera snabbt exit tickets i tre högar (nådde exit / osäker / nådde inte). Hög 2-3 informerar nästa retrieval-öppning. Tar 2-3 minuter.
 
-Anvand denna mall vid generering av lektionsplaner:
+**Starkt vs svagt exit ticket:** ett starkt exit ticket mäter *rollens specifika exit* ("Formulera motståndarens starkaste position"), inte en social funktion ("Skriv en sak du lärde dig idag").
+
+---
+
+## 5. Mall för lektionsplan (rollbaserad)
 
 ```markdown
 # Lektion [N]: [Titel]
 
-**Kurs:** [Kursnamn]
+**Kurs:** [Kurs]
 **Moment:** [Momentets titel]
-**Lektionslangd:** [X] minuter
+**Lektionslängd:** [X] minuter
 
-## Larandemal for lektionen
-- [Vilka av momentets larandemal som primart adresseras]
+## Roll(er)
+- **Roll:** [vilken/vilka av de 9 rollerna lektionen realiserar]
+- **Eleven exit:ar med:** [rollens bedömningsmål-relativa exit i detta moment]
 
-## Forberedelse
-- [Vad lararen behover forbereda innan lektionen]
-- [Material, utskrifter, teknisk utrustning]
+## Lärandemål för lektionen
+- [Vilka av momentets lärandemål som primärt adresseras]
 
-## Retrieval review-koppling
-- Baserat pa exit ticket fran lektion [N-1]: [specifik koppling]
-- Begrepp/fragor att ateraktualisera: [lista]
+## Förberedelse
+- [Vad läraren behöver förbereda]
+- [Förutsättningar: Princip 3-leverans - vad levereras i förväg, elevens ansvar]
 
-## Tidsplanering
+## Retrieval-öppning
+- Baserat på exit ticket från lektion [N-1]: [specifik koppling]
+- Begrepp/frågor att återaktualisera: [lista]
 
-| Tid | Fas | Aktivitet | Beskrivning |
-|-----|-----|-----------|-------------|
-| 0-X min | 1. Retrieval review | [Aktivitetsnamn] | [Detaljerad beskrivning] |
-| X-Y min | 2. Malaktivering | [Aktivitetsnamn] | [Detaljerad beskrivning] |
-| Y-Z min | 3. Explicit instruktion | [Aktivitetsnamn] | [Detaljerad beskrivning] |
-| Z-A min | 4. Guidad ovning | [Aktivitetsnamn] | [Detaljerad beskrivning] |
-| A-B min | 5. Sjalvstandig ovning | [Aktivitetsnamn] | [Detaljerad beskrivning] |
-| B-C min | 6. Avslut | [Aktivitetsnamn] | [Detaljerad beskrivning] |
+## Lektionsförlopp
 
-## Lararinstruktioner
-- **Retrieval review:** [Specifika fragor baserade pa foregaende lektions exit ticket]
-- **Instruktion:** [Nyckelformuleringar, worked examples, kontrollfragor]
-- **Guidad ovning:** [Hur aktiviteten introduceras, vad lararen gor under tiden, formativa checkpoints]
-- **Sjalvstandig ovning:** [Vad eleverna gor, bedomningskriterier]
-- **Avslut:** [Exit ticket-fraga, preview av nasta lektion]
+| Tid | Moment | Aktivitet | Beskrivning |
+|-----|--------|-----------|-------------|
+| 0-X min | Öppning (retrieval) | [Aktivitet] | [Beskrivning] |
+| X-Y min | Rollkärna: [roll] | [Aktivitet/form] | [Beskrivning] |
+| Y-Z min | Avslut (exit ticket) | [Aktivitet] | [Beskrivning] |
+
+(Tidsuppskattningar, inte fasta fasandelar. Elevaktiv tid > 50%.)
+
+## Brottningsform (endast Brottning-lektioner)
+- **Diskursmål:** [...]
+- **Form:** [...]
+- **Gruppstorlek + strukturmekanism:** [...]
+- **Position-tilldelning:** [Ja, tippande fråga | Ej tillämpligt]
+
+## Lärarinstruktioner
+- **Öppning:** [specifika retrieval-frågor]
+- **Rollkärna:** [nyckelformuleringar, worked examples, hur formen/gruppen faciliteras, cirkuleringsfrågor]
+- **Avslut:** [exit ticket-fråga, preview av nästa lektion]
 
 ## Elevaktiviteter
-- [Specifika instruktioner for vad eleverna gor]
-- [Uppgiftsbeskrivning med tydliga steg]
+- [Specifika instruktioner med tydliga steg]
 
 ## Differentiering
-- **Stod (mot E):** [Konkreta stodstrukturer: mallar, ledande fragor, reducerade val]
-- **Utmaning (mot A):** [Fordjupning: oppnare fragor, fler perspektiv, komplexa kopplingar]
+- **Stöd (mot E):** [konkreta stödstrukturer: mallar, ledande frågor, ordbank]
+- **Utmaning (mot A):** [öppnare frågor, fler perspektiv, komplexa kopplingar]
+- **Princip 3-undantag:** [elever med dokumenterat stöd i Brottning]
 
 ## Exit ticket
-- **Fraga:** [Specifik fraga kopplad till lektionens processmal]
-- **Anvandning:** [Hur resultaten informerar nasta lektions retrieval review]
+- **Fråga:** [mäter rollens exit]
+- **Användning:** [hur resultaten informerar nästa lektions retrieval-öppning]
 
 ## Material
-- [Lista over allt material som behovs]
+- [Lista över allt material som behövs]
 
-## Koppling till kunskapskrav
+## Koppling till bedömningsmål/kunskapskrav
 - [Hur lektionen bidrar till E/C/A-progressionen]
 ```
 
-## Den roda traden - att skapa sammanhang
+---
 
-Varje lektion i ett moment maste koppla till helheten:
+## 6. Den röda tråden - sammanhang i rolltermer
 
-1. **Bakatkoppling**: Varje lektion borjar med retrieval review kopplad till foregaende lektions exit ticket
-2. **Framatkoppling**: Varje lektion slutar med exit ticket + preview av nasta
-3. **Vertikal progression**: Analysdjupet okar genom momentet
-4. **Horisontell koppling**: Begrepp och perspektiv aterkommer och fordjupas
+Varje lektion måste koppla till momentets helhet:
 
-**Praktisk regel:** Om en lektion kan lyftas ur momentet och fungera helt fristaende, saknar den tillracklig koppling.
+1. **Bakåtkoppling:** varje lektion öppnar med retrieval kopplad till föregående lektions exit ticket.
+2. **Framåtkoppling:** varje lektion slutar med exit ticket + preview av nästa.
+3. **Rollprogression:** rollsekvensen bär momentet - typiskt Begreppsbygge/Perspektivbygge → Brottning → Syntes. Det analytiska kravet stiger mot Brottning.
+4. **Horisontell koppling:** begrepp och perspektiv återkommer och fördjupas mellan roller.
+
+**Praktisk regel:** om en lektion kan lyftas ur momentet och fungera helt fristående, saknar den tillräcklig koppling - och troligen en tydlig roll i sekvensen.

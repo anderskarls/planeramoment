@@ -2,7 +2,7 @@
 description: >
   Planera ett komplett undervisningsmoment för gymnasiet genom en dialogdriven
   7-stegsprocess. Genererar lektionsplaner (Word/.docx), presentationer
-  (reveal.js HTML) och momentöversikt (HTML) — allt förankrat i Gy11,
+  (reveal.js HTML) och momentöversikt (HTML) - allt förankrat i Gy11,
   Rosenshines forskning och evidensbaserad pedagogik. Använd ALLTID denna skill
   när användaren vill planera ett moment, planera undervisning, skapa
   lektionsplaner för flera lektioner, göra en momentplanering, strukturera ett
@@ -35,19 +35,19 @@ Strukturen ar identisk pa bada platser (t.ex. `Historia/Franska revolutionen/`).
 
 ## Dialogprinciper
 
-**Packa alltid upp principer när de nämns första gången i en dialog-turn.** Skillen refererar regelbundet till Princip 1 (Scaffoldat tolkningsslag), Princip 2 (Kontextprimat) och Princip 3 (Förberedelseintegritet) — använd aldrig en princip-referens utan att samtidigt ge en kort one-liner:
+**Packa alltid upp principer när de nämns första gången i en dialog-turn.** Skillen refererar regelbundet till Princip 1 (Scaffoldat tolkningsslag), Princip 2 (Kontextprimat) och Princip 3 (Förberedelseintegritet) - använd aldrig en princip-referens utan att samtidigt ge en kort one-liner:
 
-- *Princip 1 — Scaffoldat tolkningsslag: vid autonomt arbete med extern text, brief pre-teach + universell scaffold + selektiv fördjupning.*
-- *Princip 2 — Kontextprimat: lärarens kontextläsning får företräde vid varje vägval — men kategori 2-5 krävs (klassobservation, mönster, struktur, ämneskunnande).*
-- *Princip 3 — Förberedelseintegritet: förutsättningar levereras i förväg, elevens ansvar att tillägna sig dem.*
+- *Princip 1 - Scaffoldat tolkningsslag: vid autonomt arbete med extern text, brief pre-teach + universell scaffold + selektiv fördjupning.*
+- *Princip 2 - Kontextprimat: lärarens kontextläsning får företräde vid varje vägval - men kategori 2-5 krävs (klassobservation, mönster, struktur, ämneskunnande).*
+- *Princip 3 - Förberedelseintegritet: förutsättningar levereras i förväg, elevens ansvar att tillägna sig dem.*
 
 Inom samma dialog-turn räcker det att packa upp en gång. I nya turns: packa upp igen om läraren inte uttryckligen visat att hen har principen aktivt i huvudet.
 
 ---
 
-## Kursminne — lärande mellan moment
+## Kursminne - lärande mellan moment
 
-Skillen har ett kursspecifikt minne som gor att den blir battre over tid. Nar lararen justerar forslag under planeringen — andrar tidsfordelning, valjer bort aktiviteter, lagger till saker — ar det signaler om preferenser. Dessa fangas upp automatiskt och anvands i framtida moment for samma kurs.
+Skillen har ett kursspecifikt minne som gor att den blir battre over tid. Nar lararen justerar forslag under planeringen - andrar tidsfordelning, valjer bort aktiviteter, lagger till saker - ar det signaler om preferenser. Dessa fangas upp automatiskt och anvands i framtida moment for samma kurs.
 
 Minnesfiler lagras per kurs i `.claude/planera-moment/minne/[kursnamn-kebab-case].md`.
 
@@ -69,7 +69,7 @@ Avslutningens kursminnes-uppdatering blir då en *sammanfattning + utfyllnad av 
 
 ## NotebookLM-integration (primar kallkalla)
 
-NotebookLM ar den primara kallan for amnesinnehall. Varje kurs har en dedicerad notebook med lararens valda kallmaterial (larobocker, Skolverkets material, artiklar, primorkallor). Innehall fran NotebookLM ar kallgrundat och har inbyggda referenshanvisningar — detta minskar behovet av `[VERIFIERA]`-taggar avsevart.
+NotebookLM ar den primara kallan for amnesinnehall. Varje kurs har en dedicerad notebook med lararens valda kallmaterial (larobocker, Skolverkets material, artiklar, primorkallor). Innehall fran NotebookLM ar kallgrundat och har inbyggda referenshanvisningar - detta minskar behovet av `[VERIFIERA]`-taggar avsevart.
 
 ### Konfiguration
 
@@ -85,7 +85,7 @@ Nar kursen ar vald i steg 1, aktivera notebooken:
 notebooklm use [NOTEBOOK_ID]
 ```
 
-Fraga notebooken med `notebooklm ask` — anvand `--json` for att fa strukturerade svar med kallhanvisningar:
+Fraga notebooken med `notebooklm ask` - anvand `--json` for att fa strukturerade svar med kallhanvisningar:
 ```bash
 notebooklm ask --json "fraga har"
 ```
@@ -96,7 +96,7 @@ notebooklm ask -c [CONVERSATION_ID] --json "uppfoljningsfraga"
 ```
 
 Principer for NotebookLM-fragor:
-- Stall specifika, avgransade fragor — inte "beratta allt om X"
+- Stall specifika, avgransade fragor - inte "beratta allt om X"
 - Anvand `--json` for att fa kallhanvisningar som kan foras in i materialet
 - Om svaret ar otillrackligt, stall uppfoljningsfragor eller bredda sokningen
 - Presentera NotebookLM:s kallhanvisningar for lararen sa de kan verifiera
@@ -136,7 +136,7 @@ Baserat på kursval, identifiera system och ladda rätt referensfiler. Bekräfta
 | Sh Nivå 1b | GY25 | `references/gy25/struktur.md` + `references/gy25/amnesplaner.md` |
 | Hi Nivå 1b | GY25 | (samma) |
 
-Bekräfta: "Detta moment går under [GY11 / GY25] — jag använder [kunskapskrav-modellen / betygskriterier-modellen] och kommer formulera lärandemål med [systemets värdeord]."
+Bekräfta: "Detta moment går under [GY11 / GY25] - jag använder [kunskapskrav-modellen / betygskriterier-modellen] och kommer formulera lärandemål med [systemets värdeord]."
 
 ### 1.4 NotebookLM-koppling
 
@@ -146,15 +146,15 @@ notebooklm use [NOTEBOOK_ID]
 ```
 Bekräfta för läraren. Om ID saknas, informera om fallback till Claudes inbyggda kunskap med `[VERIFIERA]`-taggar.
 
-### 1.5 Kursminne — försörjer M-i:s defaults
+### 1.5 Kursminne - försörjer M-i:s defaults
 
 Läs `.claude/planera-moment/minne/[kursnamn-kebab-case].md` om den finns. **Detta minne försörjer M-i:s defaults nedströms.** När skillen i 1.7-1.8 (och senare 2.x) föreslår defaults ska de vägas mot minnet.
 
-Presentera kort: "Tidigare moment i [kursnamn] visar mönster — t.ex. [1-2 saker som verkar relevanta för det här momentet]. Jag använder dem som **default men inte tvång** — säg till nu om något inte passar detta moment innan vi börjar, så slipper vi korrigera halvvägs in."
+Presentera kort: "Tidigare moment i [kursnamn] visar mönster - t.ex. [1-2 saker som verkar relevanta för det här momentet]. Jag använder dem som **default men inte tvång** - säg till nu om något inte passar detta moment innan vi börjar, så slipper vi korrigera halvvägs in."
 
 Tonregler för kursminnes-presentation:
-- Säg "mönster" och "verkar" — undvik "vet" och "föredrar alltid"
-- Lyft högst 2 saker. Hela listan finns i filen — överbelasta inte dialogen
+- Säg "mönster" och "verkar" - undvik "vet" och "föredrar alltid"
+- Lyft högst 2 saker. Hela listan finns i filen - överbelasta inte dialogen
 - Inbjud aktivt till avfärdande: "säg till om något inte passar"
 
 Om filen inte finns, säg ingenting.
@@ -169,32 +169,32 @@ Stöd läraren att formulera en kärnfråga som kan driva 5-10 lektioner. Om lä
 
 Spara frågan ordagrant.
 
-### 1.6.5 Skärpningsfilter — innan klassificering
+### 1.6.5 Skärpningsfilter - innan klassificering
 
-Innan frågan klassificeras (1.7-1.8), testa den mot tre kriterier. Varje test ska kunna besvaras "ja" — annars föreslå skärpning innan vi går vidare.
+Innan frågan klassificeras (1.7-1.8), testa den mot tre kriterier. Varje test ska kunna besvaras "ja" - annars föreslå skärpning innan vi går vidare.
 
-1. **Spänningstest:** Har frågan en inbyggd spänning (X *vs* Y, kontrast, värdekonflikt) eller är den öppet undersökande utan motkraft? Frågor utan inbyggd spänning ger inte brottning — eleverna kan svara "lite av varje" och få rätt.
+1. **Spänningstest:** Har frågan en inbyggd spänning (X *vs* Y, kontrast, värdekonflikt) eller är den öppet undersökande utan motkraft? Frågor utan inbyggd spänning ger inte brottning - eleverna kan svara "lite av varje" och få rätt.
 
 2. **Bärighetstest:** Kan frågan driva *varje* lektion i momentet, eller bara introducera momentet? En momentintro-fråga blir tom från lektion 3 och framåt.
 
-3. **Default-genererings-test:** Kan skillen själv ge en konkret default-Hess-klassificering med säkerhet baserat på frågans formulering? Om inte — frågan är för vag för att klassificeras.
+3. **Default-genererings-test:** Kan skillen själv ge en konkret default-Hess-klassificering med säkerhet baserat på frågans formulering? Om inte - frågan är för vag för att klassificeras.
 
-**Om ett test fallerar:** Presentera 2-3 skärpningar enligt M-i (default + alternativ med pedagogisk motivering). Be läraren välja eller forma något eget. Acceptera *inte* den ursprungliga vaga frågan om något test fallerade — det är skillens jobb att skydda momentet från luddigheten, inte tvärtom.
+**Om ett test fallerar:** Presentera 2-3 skärpningar enligt M-i (default + alternativ med pedagogisk motivering). Be läraren välja eller forma något eget. Acceptera *inte* den ursprungliga vaga frågan om något test fallerade - det är skillens jobb att skydda momentet från luddigheten, inte tvärtom.
 
 **Om alla tre tester passerar:** Gå direkt till 1.7.
 
-### 1.7 Nivå 1a — Hess-gate
+### 1.7 Nivå 1a - Hess-gate
 
 Klassificera frågan (Hess 2009): **sluten | tippande | öppen**.
 
-**Default-rekommendation (M-i):** Skillen föreslår klassificering baserat på frågan + ev. kursminne. T.ex. "Frågan 'Bör Sverige ha straffrabatt för unga?' är öppen policyfråga — naturlig brottningskandidat."
+**Default-rekommendation (M-i):** Skillen föreslår klassificering baserat på frågan + ev. kursminne. T.ex. "Frågan 'Bör Sverige ha straffrabatt för unga?' är öppen policyfråga - naturlig brottningskandidat."
 
 #### Vid SLUTEN fråga
 
-Förklara: "Detta är en sluten fråga — det finns ett etablerat rätt svar. Att brotta över den är inautentiskt pedagogiskt. Den kan tas in i Begreppsbygge eller Perspektivbygge istället."
+Förklara: "Detta är en sluten fråga - det finns ett etablerat rätt svar. Att brotta över den är inautentiskt pedagogiskt. Den kan tas in i Begreppsbygge eller Perspektivbygge istället."
 
 Erbjud tre vägar:
-1. **Omformulera** frågan till en öppen/tippande variant — föreslå konkret omformulering
+1. **Omformulera** frågan till en öppen/tippande variant - föreslå konkret omformulering
 2. **Behåll** frågan men placera den i Begreppsbygge i Steg 4 (då är det inte brottningsfråga)
 3. **Avbryt** och välj ny fråga
 
@@ -202,7 +202,7 @@ Erbjud tre vägar:
 
 #### Vid TIPPANDE fråga
 
-Förklara: "Detta är en tippande fråga — bred samhällskonsensus men inte universellt. Vi lägger på position-tilldelning som default i Steg 5 (Formvalsprincip 3) för att skydda elever med minoritetsposition."
+Förklara: "Detta är en tippande fråga - bred samhällskonsensus men inte universellt. Vi lägger på position-tilldelning som default i Steg 5 (Formvalsprincip 3) för att skydda elever med minoritetsposition."
 
 #### Vid ÖPPEN fråga
 
@@ -210,25 +210,25 @@ Förklara: "Detta är en tippande fråga — bred samhällskonsensus men inte un
 
 **Override-prompt (M-ii):** Om läraren går emot defaulten, fråga: *"Vilken kontextläsning motiverar avvikelsen? Kategori 2-5 (specifik klassobservation | mönster över tid | strukturella faktorer | ämneskunnande)."*
 
-Magkänsla utan stöd avvisas — defaulten vinner.
+Magkänsla utan stöd avvisas - defaulten vinner.
 
-### 1.8 Nivå 1b — Frågetypologi (ämnesspecifik)
+### 1.8 Nivå 1b - Frågetypologi (ämnesspecifik)
 
 Gäller bara öppna och tippande frågor.
 
 **Historia:** Disciplinär | Etisk | Existentiell
 **Samhällskunskap:** Hess-fråga | Värdefråga | Analysfråga | Existentiell
 
-**Default-rekommendation (M-i):** Baserat på frågans formulering + kursminne. T.ex. "Frågan 'Bör Sverige ha straffrabatt för unga?' är en Värdefråga (normativ — vad bör gälla)."
+**Default-rekommendation (M-i):** Baserat på frågans formulering + kursminne. T.ex. "Frågan 'Bör Sverige ha straffrabatt för unga?' är en Värdefråga (normativ - vad bör gälla)."
 
 Visa övriga alternativ med kort förklaring. Be om val.
 
-**Sekundär frågetyp (valbar):** Om frågan har en tydlig andra-axel utöver den primära, dokumentera den som sekundär typ. Sekundär typ är inte ett separat val utan en *flagga* om vad som lever vidare nedströms. Skillen ska aktivt fråga: "Har frågan en sekundär dimension? Om ja — vilken av de övriga typerna?"
+**Sekundär frågetyp (valbar):** Om frågan har en tydlig andra-axel utöver den primära, dokumentera den som sekundär typ. Sekundär typ är inte ett separat val utan en *flagga* om vad som lever vidare nedströms. Skillen ska aktivt fråga: "Har frågan en sekundär dimension? Om ja - vilken av de övriga typerna?"
 
 Sekundär typ påverkar:
 - **Bedömningsmål (2.2):** kan väva in båda dimensionerna i prövningsverben
 - **Lärandemål (2.3):** kan inkludera mål som primärt adresserar sekundär-axeln
-- **Nivå 4 (parkerad — roller):** Syntes/metareflektion-roller adresserar ofta sekundär-axeln
+- **Nivå 4 (parkerad - roller):** Syntes/metareflektion-roller adresserar ofta sekundär-axeln
 
 **Override-prompt (M-ii):** Samma form som 1.7.
 
@@ -255,7 +255,7 @@ Två sub-fält:
 
 - **Inter-moment** (framtida koppling som väcks i senare moment): T.ex. "när kursen senare når renässansen, väck tråden tillbaka till detta moment". Sparas i **kursminnet** (under sektionen "Tvärgående trådar mellan moment") så att framtida moment kan plocka upp den.
 
-Om läraren inte har någon tvärgående tråd, hoppa över — det är frivilligt.
+Om läraren inte har någon tvärgående tråd, hoppa över - det är frivilligt.
 
 ### 1.11 Sammanfattning och momentplan.md (M-iv)
 
@@ -276,18 +276,18 @@ Sammanfatta valen och be läraren bekräfta. Skapa `Undervisningsmaterial/[Ämne
 ### Root: Brottningsfråga
 > [frågan ordagrant]
 
-### Nivå 1a — Hess-gate
+### Nivå 1a - Hess-gate
 - **Klassificering:** [sluten | tippande | öppen]
 - **Default:** [systemets rekommendation]
 - **Valt:** [lärarens val]
-- **Override:** [Nej | Ja — kategori X kontextläsning: "..."]
+- **Override:** [Nej | Ja - kategori X kontextläsning: "..."]
 
-### Nivå 1b — Frågetypologi
+### Nivå 1b - Frågetypologi
 - **Primär typ:** [...]
 - **Sekundär typ:** [... eller "ingen"]
 - **Default:** [...]
 - **Valt:** [...]
-- **Override:** [Nej | Ja — kategori X: "..."]
+- **Override:** [Nej | Ja - kategori X: "..."]
 
 ### Tvärgående trådar (valbart)
 - **Intra-moment:** [bivinkel eller "ingen"]
@@ -295,7 +295,7 @@ Sammanfatta valen och be läraren bekräfta. Skapa `Undervisningsmaterial/[Ämne
 
 ## Override-räknare
 - **Antal overrides hittills:** [N]
-- **Mönsterlarm:** [Inte triggat | Triggat på princip X — motivering: "..."]
+- **Mönsterlarm:** [Inte triggat | Triggat på princip X - motivering: "..."]
 ```
 
 ---
@@ -310,7 +310,7 @@ Baserat på system från Steg 1.3, läs:
 - **GY11:** `references/gy11/struktur.md`
 - **GY25:** `references/gy25/struktur.md`
 
-### 2.2 Nivå 2 — Bedömningsmål: Vad är lyckad brottning?
+### 2.2 Nivå 2 - Bedömningsmål: Vad är lyckad brottning?
 
 Fråga: "Vad ska 'lyckad brottning' innebära för eleverna i detta moment?"
 
@@ -326,9 +326,9 @@ Fråga: "Vad ska 'lyckad brottning' innebära för eleverna i detta moment?"
 
 Visa default + alternativ. Be om val.
 
-**Viktigt:** Vissa bedömningsmål låser diskursmålet (Steg 5 nivå 5 — byggs senare). T.ex. "kan formulera motståndarens starkaste position" → låser syntes-DNA.
+**Viktigt:** Vissa bedömningsmål låser diskursmålet (Steg 5 nivå 5 - byggs senare). T.ex. "kan formulera motståndarens starkaste position" → låser syntes-DNA.
 
-**Override-prompt (M-ii):** Vid avvikelse från default — fråga om kontextläsningskategori.
+**Override-prompt (M-ii):** Vid avvikelse från default - fråga om kontextläsningskategori.
 
 ### 2.3 Lärandemål med E/C/A-progression
 
@@ -344,27 +344,27 @@ Föreslå **3-5 konkreta lärandemål** som operationaliserar bedömningsmålet 
 
 Presentera med E/C/A-progressionen synlig. Fråga om läraren vill ändra/lägga till/ta bort.
 
-**Override-prompt (M-ii):** Vid avvikelse — fråga om kontextläsningskategori.
+**Override-prompt (M-ii):** Vid avvikelse - fråga om kontextläsningskategori.
 
-### 2.4 Nivå 3 — Förutsättningar för brottning
+### 2.4 Nivå 3 - Förutsättningar för brottning
 
 Identifiera **två kategorier**:
 
-1. **Innehåll** — fakta, händelser, kontext eleven måste känna till
-2. **Begrepp** — fackbegrepp eleven måste kunna använda
+1. **Innehåll** - fakta, händelser, kontext eleven måste känna till
+2. **Begrepp** - fackbegrepp eleven måste kunna använda
 
-*Argumentation och disciplinära färdigheter hör INTE hit — de är utvecklingsbåge över moment (bedöms via 2.2-2.3).*
+*Argumentation och disciplinära färdigheter hör INTE hit - de är utvecklingsbåge över moment (bedöms via 2.2-2.3).*
 
 **Default-rekommendation (M-i):** Skillen genererar lista baserat på bedömningsmål + CI + (om aktiv) NotebookLM-uppslag på "vad måste eleven känna till för att kunna brottas med [frågan]?".
 
-**För varje förutsättning ska skillen peka ut leveransplan** — fyra kategorier:
+**För varje förutsättning ska skillen peka ut leveransplan** - fyra kategorier:
 
 | Leveransstatus | Innebörd | Princip 3-status |
 |---|---|---|
 | **Ärvd** | Från tidigare moment/kurs | Uppfyller helt |
 | **Förförståelse** | Levereras i förförståelsepaket innan momentet | Uppfyller |
 | **L1 etablerar** | Introduceras i momentets första lektion | Mjuk (uppfyller om L1 ligger innan första brottnings-lektion) |
-| **Bygg-upp-under-momentet** | Levereras i samma lektion eller efter att den används | **Override mot Princip 3 — kräv motivering (M-ii)** |
+| **Bygg-upp-under-momentet** | Levereras i samma lektion eller efter att den används | **Override mot Princip 3 - kräv motivering (M-ii)** |
 
 **Cirkularitetskontroll:** Om en förutsättning får leveransstatus "Bygg-upp-under-momentet" *och* förutsättningen behövs för att den lektionens huvudaktivitet ska fungera → **flagga intern konflikt** och be läraren välja:
 - (a) Flytta förutsättningen till Förförståelse eller en tidigare lektion
@@ -375,7 +375,7 @@ Presentera leveranstabellen för läraren, be hen justera. Acceptera inte en fö
 
 #### Verifikationsregel (mjuk + spårbar)
 
-Innan brottning släpps lös, bedöm mot **tre dimensioner** — be läraren resonera kring varje:
+Innan brottning släpps lös, bedöm mot **tre dimensioner** - be läraren resonera kring varje:
 
 1. **Andel + spridning:** Hur stor del av klassen har förutsättningarna? Finns elever totalt utan?
 2. **Konsekvens av luckan:** Räcker det att tappa nyans, eller blir brottningen meningslös?
@@ -383,11 +383,11 @@ Innan brottning släpps lös, bedöm mot **tre dimensioner** — be läraren res
 
 Inga hårda tröskelvärden. Lärarens bedömning står i centrum.
 
-### 2.5 Princip 3 — Förberedelseintegritet
+### 2.5 Princip 3 - Förberedelseintegritet
 
 Bekräfta principen: *"Brottning väntar inte på att alla ska vara redo. Förutsättningar levereras i förväg och det är elevens ansvar att ha tillägnat sig dem. Differentierad tillämpning för elever med dokumenterat stöd."*
 
-Be läraren bekräfta att förutsättningarna i 2.4 kommer levereras innan brottning. Om läraren vill avvika (t.ex. "denna gång scaffoldas brottningen för alla") — det är override mot Princip 3 → M-ii utlöses.
+Be läraren bekräfta att förutsättningarna i 2.4 kommer levereras innan brottning. Om läraren vill avvika (t.ex. "denna gång scaffoldas brottningen för alla") - det är override mot Princip 3 → M-ii utlöses.
 
 ### 2.6 Mönsterlarms-check (M-iii)
 
@@ -397,7 +397,7 @@ Räkna overrides från Steg 1-2 (1.7, 1.8, 2.2, 2.3, 2.4, 2.5). Två triggers:
 2. **Typ-mönster:** 3+ overrides i samma kategori (2-5) inom samma moment, även om totalantalet är lägre
 
 **Vid antal-trigger, pausa med medium friktion:**
-> "Mönsterlarm: du har överridit defaults 3+ gånger i detta moment. Antingen är ramverkets defaults fel formulerade för din kontext, eller du har glidit in i en vana. Skriv en kort motivering innan vi fortsätter — vad ser du i kontexten som gör att defaults inte passar?"
+> "Mönsterlarm: du har överridit defaults 3+ gånger i detta moment. Antingen är ramverkets defaults fel formulerade för din kontext, eller du har glidit in i en vana. Skriv en kort motivering innan vi fortsätter - vad ser du i kontexten som gör att defaults inte passar?"
 
 **Vid typ-mönster-trigger, pausa med medium friktion (anpassad prompt):**
 > "Mönsterlarm: du har överridit defaults 3+ gånger i kategori [N: namn] inom detta moment. Antingen är ramverkets defaults systematiskt fel kalibrerade för din kontext (i den kategorin), eller du har glidit in i ett vanemönster. Skriv en kort motivering innan vi fortsätter."
@@ -411,22 +411,22 @@ Om ingen trigger: gå vidare utan paus.
 Sammanfatta nivå 2-3-besluten. Uppdatera `momentplan.md` med:
 
 ```markdown
-## Designval (Momentplaneringsramverket) — forts.
+## Designval (Momentplaneringsramverket) - forts.
 
-### Nivå 2 — Bedömningsmål
+### Nivå 2 - Bedömningsmål
 - **"Lyckad brottning" innebär:** [...]
 - **Default:** [...]
 - **Valt:** [...]
 - **Override:** [...]
 
-### Nivå 3 — Förutsättningar
+### Nivå 3 - Förutsättningar
 - **Innehåll:** [...]
 - **Begrepp:** [...]
 - **Verifikationsregel:**
   - Andel/spridning: [bedömning]
   - Konsekvens av lucka: [bedömning]
   - Frågetypens tolerans: [bedömning]
-- **Princip 3 bekräftad:** [Ja | Override — motivering: "..."]
+- **Princip 3 bekräftad:** [Ja | Override - motivering: "..."]
 
 ## Lärandemål (E/C/A-progression)
 [3-5 mål]
@@ -438,68 +438,189 @@ Uppdatera även Override-räknare.
 
 ---
 
-## Steg 3: Pedagogiskt upplagg och metoder
+## Steg 3: Rollsekvens (nivå 4) och brottningsform (nivå 5)
 
-Las in metodreferensen:
+Detta steg fortsätter designdialogen genom Momentplaneringsramverkets nivå 4 (sekvenslogik - 9 roller) och nivå 5 (brottningsform - diskursmål + formvalsprinciper). Här komponeras momentet av **roller**, inte av en generell pedagogisk ansats. M-i, M-ii, M-iii och M-iv aktiveras. Se @pedagogik-ramverk.md.
+
+Läs in metodreferensen (metodbibliotek organiserat efter funktion - försörjer rollernas konkreta aktiviteter):
 @references/pedagogiska-metoder.md
 
-**Kunskapsbasintegration (H4):** Sok vaultet via Local Brain Search efter relevanta reflektioner fran liknande moment och permanenta anteckningar om pedagogik:
+**Kunskapsbasintegration (H4):** Sök vaultet via Local Brain Search efter relevanta reflektioner från liknande moment och permanenta anteckningar om pedagogik:
 ```bash
-./resources/local-brain-search/run_search.sh "[amnet/temat] pedagogik reflektion" --limit 5 --json
+./resources/local-brain-search/run_search.sh "[ämnet/temat] pedagogik reflektion" --limit 5 --json
 ```
-Om relevanta resultat hittas, presentera dem kort for lararen: "Jag hittade dessa reflektioner fran tidigare undervisning som kan vara relevanta..."
+Om relevanta resultat hittas, presentera dem kort för läraren: "Jag hittade dessa reflektioner från tidigare undervisning som kan vara relevanta..."
 
-**NotebookLM-forskning:** Om en notebook ar aktiv, hamta amnesinnehall som grund for de pedagogiska ansatserna:
+**NotebookLM-forskning:** Om en notebook är aktiv, hämta ämnesinnehåll som grund för rollernas innehåll:
 ```bash
-notebooklm ask --json "Vilka centrala begrepp, teman och perspektiv finns kring [temat]? Vilka kallor i notebooken ar mest relevanta?"
+notebooklm ask --json "Vilka centrala begrepp, teman och perspektiv finns kring [temat]? Vilka källor i notebooken är mest relevanta?"
 ```
 ```bash
-notebooklm ask --json "Vilka primorkallor, citat eller konkreta exempel finns om [temat] som kan anvandas i undervisning?"
+notebooklm ask --json "Vilka primärkällor, citat eller konkreta exempel finns om [temat] som kan användas i undervisning?"
 ```
-Presentera en kort sammanfattning av vad notebooken innehaller om amnet for lararen. Anvand denna kunskap for att grunda de pedagogiska ansatserna i faktiskt kallmaterial.
+Presentera en kort sammanfattning av vad notebooken innehåller om ämnet för läraren.
 
-1. Foresla **2-3 alternativa pedagogiska ansatser** som passar det valda innehallet och larandemalen. Varje ansats ska vara en sammanhangande beskrivning, inte bara en metodlista:
-   - Namn pa ansatsen (t.ex. "Kallkritisk undersokande ansats")
-   - Kort beskrivning av upplagget
-   - Pedagogisk motivering - varfor den passar just detta moment
-   - Forskningsstod
-   - Fordelar och nackdelar
-   - Vilka metoder som ingar (EPA, seminarium, debatt, skriftlig analys osv.)
+### 3.1 Nivå 4 - Rollkomposition
 
-2. Lat lararen valja eller kombinera ansatser.
+Ett moment komponeras av roller, inte fasta faser. **En roll definieras av vad eleven exit:ar med**, inte aktivitetens yttre form. De nio rollerna:
 
-3. Diskutera **differentiering**: Hur stodjer vi elever som siktar pa E? Hur utmanar vi elever som siktar pa A? Be lararen om input.
-   - **UDL-informerad (M1):** Foresla minst en alternativ representationsform per lektion (t.ex. visuellt, auditivt, textbaserat). Vid terminologitunga amnen, identifiera sarskilda anpassningar for L2-elever.
+| # | Roll | Eleven exit:ar med |
+|---|------|--------------------|
+| 1 | Frågeförankring | Förståelse av brottningsfrågan och varför den är värd att brottas med |
+| 2 | Provokation | En produktiv kognitiv dissonans / ett ifrågasatt förgivettagande |
+| 3 | Begreppsbygge | Begreppslig precision - kan använda momentets fackbegrepp korrekt |
+| 4 | Perspektivbygge | En perspektivinventering - flera synsätt kartlagda, **utan** egen position |
+| 5 | Brottning | En försvarad/prövad position i den omtvistade frågan |
+| 6 | Syntes | En integrerad helhetsförståelse |
+| 7 | Metareflektion | Insikt om sitt eget tänkande/lärande under momentet |
+| 8 | Applikation | Förmågan att tillämpa på ett nytt fall |
+| 9 | Återbesök | Befäst, spaced retrieval av momentets kärna (ofta i senare moment) |
 
-4. Diskutera **formativa avstamningar**: Vilka formativa checkpoints ska finnas under momentet? (utgangsbilijetter, snabbskrivningar, larpar)
+**Core (måste finnas):** Frågeförankring + Brottning + Syntes.
 
-**Sammanfatta** pedagogiskt upplagg, metoder och differentieringsstrategi. Uppdatera momentplanen.
+**Hårda ordningsregler (får inte brytas):**
+- Frågeförankring först
+- Brottning före Syntes
+- Metareflektion sist (om den används)
+
+**Soft default-ordning för övriga** (får brytas med motivering): Frågeförankring → Provokation → Begreppsbygge → Perspektivbygge → Brottning → Syntes → Applikation → Metareflektion → (Återbesök, ofta i senare moment).
+
+**Default-rekommendation (M-i):** Skillen föreslår en rollsekvens härledd från frågetyp (1.8), bedömningsmål (2.2), förutsättningar (2.4) + ev. kursminne. Vägledning för vilka valbara roller som default slås på:
+
+| Signal från Steg 1-2 | Slår default på roll |
+|---|---|
+| Förutsättningar med **begrepp** att etablera (2.4) | Begreppsbygge |
+| Värdefråga / Hess-fråga / tippande fråga (1.8/1.7) | Perspektivbygge (kartlägg positioner före brottning) |
+| Etisk eller Existentiell fråga (1.8) | Metareflektion (sist) |
+| Bedömningsmål med tillämpning/transfer (2.2) | Applikation |
+| Frågan har en stark ingångshändelse/dilemma | Provokation (tidigt) |
+| Sekundär frågetyp dokumenterad (1.8) | Väv in i Perspektivbygge eller Metareflektion |
+
+Presentera förslaget som en numrerad rollsekvens. För **varje roll**: ange dess bedömningsmål-relativa exit (vad eleven exit:ar med) i *detta* moment, konkretiserad mot frågan och CI.
+
+**Override-prompt (M-ii):** Om läraren bryter en hård ordningsregel eller väljer bort en core-roll → avvisa och förklara (det är inte en kontextläsningsfråga, det är ramverkets golv). Om läraren avviker från default-urvalet av *valbara* roller eller från soft default-ordningen → fråga: *"Vilken kontextläsning motiverar avvikelsen? Kategori 2-5 (Princip 2)."* Magkänsla utan kategori-2-5-stöd avvisas.
+
+### 3.2 Nivå 5 - Diskursmål och brottningsform
+
+Gäller Brottning-rollen. **Diskursmålet är primärt val; formen är terminal output, deriverad** (Felton, Crowell & Liu 2015: diskursmålet - inte formatets etikett - avgör om my-side-bias uppstår).
+
+**Steg A - Härled diskursmål (M-i).** Fem diskursmål:
+
+| Diskursmål | Innebörd |
+|---|---|
+| Övertyga | Vinn argumentet, försvara position |
+| Syntes | Integrera bägge sidors starkaste argument |
+| Utforska | Öppen kollektiv undersökning, ingen position söks |
+| Klargöra | Begreppslig precision - "vad menar vi när vi säger X?" |
+| Pröva | Hypotes-test mot källor - håller påståendet? |
+
+Default-mappning från frågetyp (1.8), justeras mot bedömningsmål:
+
+| Frågetyp | Default-diskursmål |
+|---|---|
+| Hess-fråga / Värdefråga | Övertyga (eller Syntes om bedömningsmålet kräver motpartsförståelse) |
+| Analysfråga | Pröva eller Utforska |
+| Disciplinär (historia) | Pröva (mot källor) |
+| Etisk (historia) | Syntes eller Övertyga |
+| Existentiell | Utforska eller Klargöra |
+
+**Låsningskontroll:** Om bedömningsmålet (2.2) redan låser diskursmålet - t.ex. "kan formulera motståndarens starkaste position" → **Syntes är låst** - säg det explicit och hoppa över valet. Annars: presentera default + alternativ, be om val.
+
+**Steg B - Härled form via de fyra formvalsprinciperna (i ordning):**
+
+1. **Härledning från tre inputs:** form följer av (i) diskursmål → DNA, (ii) frågetyp → familj, (iii) bedömningsmål → precisering. Föreslå en konkret form (t.ex. sokratiskt seminarium, strukturerad debatt, fishbowl, SAC - Structured Academic Controversy, Harkness-diskussion, exploratory talk i smågrupp).
+2. **Gruppstorleksgolv:** fråga efter gruppstorlek. Storleken sätter *golvet* för möjliga former (sokratiskt seminarium kollapsar vid >18; Harkness designad för 10-14; exploratory talk kräver 3-4/grupp). **Storlek räcker inte - struktur krävs** (Larsson 2007: 3-5 elever dominerar talutrymmet utan strukturerade talturer). Ange den strukturmekanism som säkrar talutrymme.
+3. **Hess-gate-tillämpning:** om frågan klassades **tippande** (1.7) - lägg position-tilldelning ovanpå vald form som stark default (skyddar elever med utsatt minoritetsposition).
+4. **Variering över moment:** kontrollera mot tidigare valda former i momentet - upprepa inte samma form mer än en gång utan motivering.
+
+Presentera diskursmål + härledd form + gruppstruktur. **Override-prompt (M-ii):** vid avvikelse från default-diskursmål eller default-form - fråga om kontextläsningskategori 2-5.
+
+### 3.3 Differentiering och UDL (M1)
+
+Diskutera **differentiering** mot rollsekvensen: Hur stödjer vi elever som siktar på E genom de tunga rollerna (särskilt Brottning)? Hur utmanar vi elever som siktar på A? Be läraren om input.
+- **UDL-informerad (M1):** föreslå minst en alternativ representationsform per roll/lektion (visuellt, auditivt, textbaserat). Vid terminologitunga moment, identifiera särskilda anpassningar för L2-elever.
+- **Princip 3-koppling:** elever med dokumenterat stöd har explicit undantag i Brottning-rollen (differentierad tillämpning).
+
+### 3.4 Formativa avstämningar
+
+Diskutera **formativa checkpoints** kopplade till **rollövergångar** - särskilt verifikationen innan Brottning släpps lös (nivå 3, 2.4): utgångsbiljetter, snabbskrivningar, lärpar. En formativ avstämning bör ligga vid övergången till Brottning för att bekräfta att förutsättningarna sitter.
+
+### 3.5 Mönsterlarms-check (M-iii)
+
+Räkna overrides kumulativt från Steg 1-3 (1.7, 1.8, 2.2, 2.3, 2.4, 2.5, 3.1 rollurval, 3.2 diskursmål/form). Samma två triggers som i 2.6 (antal: 3+ totalt; typ-mönster: 3+ i samma kategori). Vid trigger, pausa med medium friktion och kräv skriftlig motivering. Spara i momentplan.md → Override-räknare.
+
+### 3.6 Sammanfattning och uppdatering av momentplan.md (M-iv)
+
+Sammanfatta rollsekvensen och brottningsformen, be läraren bekräfta. Uppdatera `momentplan.md`:
+
+```markdown
+## Designval (Momentplaneringsramverket) - forts.
+
+### Nivå 4 - Rollsekvens
+[Numrerad sekvens av valda roller i ordning]
+1. [Roll] - eleven exit:ar med: [...]
+2. ...
+- **Core verifierad:** Frågeförankring + Brottning + Syntes finns [Ja/Nej]
+- **Ordningsregler:** [uppfyllda / avvikelse med motivering]
+- **Default:** [systemets föreslagna sekvens]
+- **Valt:** [lärarens sekvens]
+- **Override:** [Nej | Ja - kategori X: "..."]
+
+### Nivå 5 - Brottningsform
+- **Diskursmål:** [...] ([låst av bedömningsmål / valt])
+- **Form:** [...]
+- **Gruppstorlek + strukturmekanism:** [...]
+- **Position-tilldelning (Hess):** [Ja, tippande fråga | Ej tillämpligt]
+- **Variering:** [första formen i momentet | upprepning motiverad: "..."]
+- **Default:** [...] / **Valt:** [...] / **Override:** [Nej | Ja - kategori X: "..."]
+
+### Differentiering och formativa avstämningar
+- **Differentiering (E/A) per tung roll:** [...]
+- **UDL alternativa representationsformer:** [...]
+- **Formativ avstämning före Brottning:** [...]
+```
+
+Uppdatera även Override-räknare.
 
 ---
 
-## Steg 4: Lektionsstruktur med progression
+## Steg 4: Lektionssekvens - rollerna mappas på lektioner
 
-Las in lektionsplaneringsreferensen:
+Här mappas rollsekvensen från Steg 3.1 på det faktiska antalet lektioner. En roll kan spänna över flera lektioner; en lektion kan bära en eller flera roller (eller en del av en roll). Det är **rollerna**, inte en generisk progression, som driver ordningen.
+
+Läs in lektionsplaneringsreferensen:
 @references/lektionsplanering.md
 
-1. Foresla en **lektion-for-lektion-struktur** for hela momentet. Varje lektion far:
+1. **Föreslå en lektion-för-lektion-mappning** av rollsekvensen. För varje lektion:
    - Nummer och arbetstitel
-   - Huvudinnehall
-   - Primar aktivitet/metod
-   - Vilka larandemal den adresserar
-   - **Exit ticket-fraga** (H2) - en specifik fraga som mater forstaelse av lektionens processal
+   - **Vilken/vilka roller** lektionen realiserar (från 3.1)
+   - **Rollens exit** - vad eleven exit:ar med i just denna lektion
+   - **Primär form/metod** - för en Brottning-lektion: diskursmålet + formen från 3.2. För övriga roller: lämplig metod från `pedagogiska-metoder.md`
+   - Vilka lärandemål den adresserar
+   - **Exit ticket-fråga** (H2) - en specifik fråga som mäter rollens exit, inte bara "vad lärde du dig"
 
-2. Gor **progressionen explicit**: Forklara varfor lektionerna kommer i just denna ordning. Visa hur det analytiska kravet okar genom momentet.
+2. **Gör progressionen explicit i rolltermer.** Förklara varför lektionerna kommer i denna ordning utifrån rollsekvensens logik (typiskt Begreppsbygge/Perspektivbygge → Brottning → Syntes) och de hårda ordningsreglerna (Frågeförankring först, Brottning före Syntes, Metareflektion sist). Visa hur det analytiska kravet stiger mot Brottning och hur Syntes integrerar.
 
-3. Identifiera:
-   - Var retrieval practice-moment aterkopplar till tidigare lektioner (spaced practice)
-   - **Hur varje lektions exit ticket-data informerar nasta lektions retrieval review** (H2)
-   - Var den mest kognitivt kravande lektionen ligger - ar det ratt placering?
-   - Var det finns naturliga stoppunkter om lararen behover anpassa
+3. **Identifiera:**
+   - Var retrieval/spaced practice återkopplar till tidigare lektioner (särskilt Återbesök-rollen)
+   - **Hur varje lektions exit ticket-data informerar nästa lektions retrieval-öppning** (H2) - och särskilt: verifierar exit ticket-data inför Brottning-lektionen att förutsättningarna (2.4) sitter?
+   - Var den mest kognitivt krävande lektionen ligger (ofta Brottning) - är placeringen rätt, och ligger förutsättningarna före?
+   - Var det finns naturliga stoppunkter om läraren behöver anpassa
 
-4. Presentera strukturen som en numrerad lista och fraga lararen om de vill andra ordning, lagga till, ta bort eller modifiera lektioner.
+4. **Presentera mappningen som en numrerad lista** (lektion → roll(er) → exit → form) och fråga läraren om de vill ändra ordning, slå ihop/dela roller över lektioner, lägga till eller ta bort.
 
-**Sammanfatta** den godkanda strukturen och uppdatera momentplanen.
+**Sammanfatta** den godkända lektionssekvensen och uppdatera momentplanen med en lektionsöversikt där **roll** är en egen kolumn:
+
+```markdown
+## Lektionssekvens (rollmappning)
+
+| Lektion | Roll(er) | Eleven exit:ar med | Form/metod | Lärandemål |
+|---|---|---|---|---|
+| 1 | Frågeförankring (+ ...) | [...] | [...] | [...] |
+| ... | | | | |
+
+**Röd tråd (rolltermer):** [hur rollsekvensen bär momentet från fråga till syntes]
+```
 
 ---
 
@@ -510,65 +631,71 @@ Las in docx-skillen:
 
 Sakerstall att `docx`-paketet ar installerat: `npm install -g docx`
 
-Generera **en lektion i taget**. Anvand sex-fas lektionsmodellen (H1).
+Läs in lektionsplaneringsreferensen (rollbaserad mall + ramprinciper):
+@references/lektionsplanering.md
 
-**NotebookLM-innehallshamtning:** Innan varje lektion genereras, hamta relevant innehall fran notebooken. Anpassa fragorna efter lektionens tema:
+Generera **en lektion i taget**, rollbaserat. Varje lektion realiserar de roller den tilldelades i Steg 4 - lektionens inre förlopp formas av rollen/rollerna och (för Brottning) diskursmålet + formen från 3.2. **Ingen fast fassekvens.**
+
+**NotebookLM-innehållshämtning:** Innan varje lektion genereras, hämta relevant innehåll från notebooken. Anpassa frågorna efter lektionens tema:
 ```bash
-notebooklm ask --json "Ge mig fakta, nyckelbegrepp och konkreta exempel om [lektionens specifika tema]. Inkludera kallhanvisningar."
+notebooklm ask --json "Ge mig fakta, nyckelbegrepp och konkreta exempel om [lektionens specifika tema]. Inkludera källhänvisningar."
 ```
 ```bash
-notebooklm ask --json "Vilka vanliga missforstand eller svarigheter finns kring [temat]? Vad brukar elever ha svart att forsta?"
+notebooklm ask --json "Vilka vanliga missförstånd eller svårigheter finns kring [temat]? Vad brukar elever ha svårt att förstå?"
 ```
 ```bash
-notebooklm ask --json "Finns det primorkallor, citat eller historiska dokument om [temat] som kan anvandas som undervisningsmaterial?"
+notebooklm ask --json "Finns det primärkällor, citat eller historiska dokument om [temat] som kan användas som undervisningsmaterial?"
 ```
-Anvand svaren som grund for:
-- **Fas 3** (explicit instruktion): worked examples och faktainnehall
-- **Fas 4** (guidad ovning): kallmaterial och analysuppgifter
-- **Lararinstruktioner**: nyckelformuleringar och fordjupningsfragor
-- **Differentiering**: fordjupningsmaterial (mot A) fran notebookens kallor
-Inkludera NotebookLM:s kallhanvisningar i lektionsplanens materialsektion.
+Använd svaren som grund för (mappat mot lektionens roll, inte fasta faser):
+- **Kunskapsöverförande roller** (Begreppsbygge/Perspektivbygge): worked examples, faktainnehåll, begreppsdefinitioner
+- **Brottning/Syntes**: källmaterial, analysuppgifter, positionsunderlag
+- **Lärarinstruktioner**: nyckelformuleringar och fördjupningsfrågor
+- **Differentiering**: fördjupningsmaterial (mot A) från notebookens källor
+Inkludera NotebookLM:s källhänvisningar i lektionsplanens materialsektion.
 
-### Sex-fas lektionsstruktur (evidensbaserad)
+### Lektionens ram (tre evidensprinciper, inte faser)
 
-Varje lektionsplan ska folja denna struktur baserad pa Rosenshines forskning och Skolverkets rekommendationer:
+Varje lektion ramas av tre principer som är ortogonala mot rollinnehållet - de gäller oavsett roll:
 
-| Fas | Tid (60 min) | Tid (80 min) | Tid (90 min) | Beskrivning |
-|-----|-------------|-------------|-------------|-------------|
-| 1. Retrieval review | 5 min | 8 min | 10 min | Aktiv aterkallelse fran tidigare lektioner - baserat pa foregaende lektions exit ticket-data |
-| 2. Malaktivering | 2 min | 3 min | 5 min | Presentera lektionsmal i elevanligt sprak, aktivera forkunskaper eller skapa kognitiv krok |
-| 3. Explicit instruktion med worked examples | 10 min | 12 min | 15 min | Nytt innehall i sma steg med lararmodellering, kontrollfragor efter varje steg |
-| 4. Guidad ovning med formativ bedomning | 15 min | 25 min | 25 min | **Langsta fasen** (Rosenshine: 57% av tid hos framgangsrika larare). Eleven arbetar, lararen cirkulerar och staller checka-fragor |
-| 5. Sjalvstandig ovning/tillamning | 10 min | 15 min | 15 min | Eleven demonstrerar larande utan stod |
-| 6. Avslut med summering och metakognition | 3 min | 5 min | 5 min | Exit ticket + preview av nasta lektion |
+1. **Öppna med retrieval** (spaced practice): aktiv återkallelse från tidigare lektioner, styrd av föregående lektions exit ticket-data. (Momentets första lektion: aktivera förkunskaper istället.)
+2. **Elevaktiv tid > 50%** av lektionen. Rosenshines fynd att framgångsrika lärare lägger ~57% av tiden på guidad övning gäller fortfarande - men som **teknik inom de roller där eleven arbetar mot en exit**, inte som en universell, tvingande fas.
+3. **Avsluta med exit ticket + framåtkoppling**: en fråga som mäter rollens exit + en preview av nästa lektion.
 
-**Kritiskt:** Guidad ovning (fas 4) ska dominera lektionen. Om tiden inte racker, korta genomgangen - aldrig den guidade ovningen.
+**Kärnan mellan öppning och avslut formas av lektionens roll** (se `lektionsplanering.md` för rollspecifik kärnvägledning). Kort:
 
-### Lektionsplanens innehall
+- **Begreppsbygge / Perspektivbygge:** explicit instruktion med worked examples + guidad bearbetning (Frayer, begreppskartor, perspektivanalys). Det här är hemvisten för de tekniker som tidigare låg i "fas 3-4".
+- **Brottning:** kärnan *är* den valda formen (sokratiskt seminarium / debatt / fishbowl / SAC) med diskursmålet som styr samtalsstrukturen och gruppmekanismen från 3.2. Ingen lärargenomgång ska tränga ut brottningstiden.
+- **Syntes:** integrationsaktivitet där eleven väver ihop positioner/perspektiv till en helhet.
+- **Metareflektion / Applikation / Återbesök:** struktureras mot sina respektive exits.
 
-Varje lektionsplan ska innehalla:
+### Lektionsplanens innehåll
+
+Varje lektionsplan ska innehålla:
 
 - **Lektion N: [Titel]**
-- **Larandemal for lektionen** - vilka av momentets mal som adresseras
-- **Forberedelse** - vad lararen behover gora innan lektionen
-- **Retrieval review-koppling** (H2) - "Baserat pa exit ticket fran lektion N-1: [specifik koppling]"
-- **Tidsplanering** - minut-for-minut med fas (6-fas), aktivitet och beskrivning
-- **Lararinstruktioner** - vad lararen sager/gor vid nyckelmoment, diskussionsfragor, hur grupparbete faciliteras
+- **Roll(er)** - vilken/vilka roller lektionen realiserar + rollens exit (vad eleven exit:ar med)
+- **Lärandemål för lektionen** - vilka av momentets mål som adresseras
+- **Förberedelse** - vad läraren behöver göra innan; för förutsättningar: notera Princip 3-leverans (levereras i förväg, elevens ansvar)
+- **Retrieval-öppning** (H2) - "Baserat på exit ticket från lektion N-1: [specifik koppling]"
+- **Lektionsförlopp** - minut-för-minut: öppning (retrieval) → rollkärna → avslut (exit ticket). Tidsuppskattningar, inte fasta fasandelar
+- **Brottningsform** (endast Brottning-lektioner) - diskursmål, form, gruppstorlek + strukturmekanism, ev. position-tilldelning
+- **Lärarinstruktioner** - vad läraren säger/gör vid nyckelmoment, diskussionsfrågor, hur formen/gruppen faciliteras
 - **Elevaktiviteter** - specifika instruktioner med tydliga steg
-- **Differentiering** - konkreta stodstrukturer (mot E) och utmaningar (mot A)
-- **Material som behovs** - allt som kravs
-- **Exit ticket** (H2) - en specifik fraga som mater forstaelse + instruktion for hur resultaten informerar nasta lektion
-- **Koppling till kunskapskrav** - hur lektionen bidrar till E/C/A-progressionen
+- **Differentiering** - konkreta stödstrukturer (mot E) och utmaningar (mot A)
+- **Material som behövs** - allt som krävs
+- **Exit ticket** (H2) - en specifik fråga som mäter rollens exit + instruktion för hur resultaten informerar nästa lektion
+- **Koppling till bedömningsmål/kunskapskrav** - hur lektionen bidrar till E/C/A-progressionen
 
 ### Kvalitetskontroll (obligatorisk) - kör innan du presenterar varje lektionsplan
 
 **Standardkontroller:**
-- Har lektionen retrieval practice-koppling till foregaende lektion?
-- Overstiger elevaktiv tid 50% av total tid?
-- Ar differentieringen konkret (inte "stod svagare elever")?
-- Finns [VERIFIERA]-taggar vid osakra faktapastaenden?
-- Kopplar lektionen framat till nasta?
-- Foljer lektionen sex-fas-strukturen?
+- Realiserar lektionen sin tilldelade roll, och mäter exit ticket den rollens exit?
+- Öppnar lektionen med retrieval kopplad till föregående lektion (utom momentets första)?
+- Överstiger elevaktiv tid 50% av total tid?
+- För Brottning-lektioner: matchar förloppet diskursmålet + formen från 3.2 (inte en generisk genomgång)?
+- Är differentieringen konkret (inte "stöd svagare elever")?
+- Finns [VERIFIERA]-taggar vid osäkra faktapåståenden?
+- Kopplar lektionen framåt till nästa?
 
 
 Presentera lektionsplanen och fraga: "Vill du justera nagot i denna lektionsplan, eller ska jag ga vidare till nasta?"
@@ -596,15 +723,15 @@ Markdown-versionen ska innehalla samma innehall som Word-dokumentet men formater
 
 ## Steg 5a: Elevuppgifter (separata Word-dokument)
 
-Eleverna behover konkret material att arbeta med under lektionen — inte bara instruktioner i lararens lektionsplan. Efter att varje lektionsplan godkants, generera separata elevuppgifter for fas 4 (guidad ovning) och fas 5 (sjalvstandig ovning).
+Eleverna behover konkret material att arbeta med under lektionen - inte bara instruktioner i lararens lektionsplan. Efter att varje lektionsplan godkants, generera separata elevuppgifter for lektionens **rollkärna** (det guidade och sjalvstandiga elevarbetet som realiserar rollens exit).
 
 ### Vad ska genereras
 
 Ga igenom den godkanda lektionsplanen och identifiera vilka elevmaterial som behovs. Typiska exempel:
 
-- **Arbetsblad/uppgiftsblad** — strukturerade fragor, analysuppgifter, jamforelseovningar med tydliga instruktioner och utrymme for elevsvar
-- **Kallmaterial** — sammanstallda kalltexter, utdrag, citat, bilder eller data som eleverna ska arbeta med. Inkludera kallhanvisningar. Om NotebookLM ar aktivt, anvand kallor darifraan
-- **Analysuppgifter** — konkreta uppgifter med stegvisa instruktioner, fragestallningar som stiger i komplexitet (E-C-A-progression)
+- **Arbetsblad/uppgiftsblad** - strukturerade fragor, analysuppgifter, jamforelseovningar med tydliga instruktioner och utrymme for elevsvar
+- **Kallmaterial** - sammanstallda kalltexter, utdrag, citat, bilder eller data som eleverna ska arbeta med. Inkludera kallhanvisningar. Om NotebookLM ar aktivt, anvand kallor darifraan
+- **Analysuppgifter** - konkreta uppgifter med stegvisa instruktioner, fragestallningar som stiger i komplexitet (E-C-A-progression)
 
 Ibland racker ett dokument per lektion, ibland behovs flera (t.ex. ett kallkompendium + ett arbetsblad). Anpassa efter lektionens innehall.
 
@@ -612,14 +739,14 @@ Ibland racker ett dokument per lektion, ibland behovs flera (t.ex. ett kallkompe
 
 Varje elevuppgift ska:
 - Ha en tydlig rubrik som kopplar till lektionen ("Lektion N: [Uppgiftstitel]")
-- Borja med en kort kontextsattning — vad ska eleven gora och varfor
+- Borja med en kort kontextsattning - vad ska eleven gora och varfor
 - Ha numrerade instruktioner/fragor
-- **Inkludera differentieringsstod direkt i dokumentet** — t.ex. stodrutor ("Tips: ...") for elever som behover hjalp, och fordjupningsfragor markerade med stjarna for elever som vill utmanas
+- **Inkludera differentieringsstod direkt i dokumentet** - t.ex. stodrutor ("Tips: ...") for elever som behover hjalp, och fordjupningsfragor markerade med stjarna for elever som vill utmanas
 - Inkludera eventuellt kallmaterial direkt i dokumentet, eller hanvisa till ett separat kalldokument om det ar omfattande
 
 ### Kvalitetskontroll
 
-- Matchar uppgiften det som star i lektionsplanens fas 4/5?
+- Matchar uppgiften lektionens rollkärna (det guidade/sjalvstandiga elevarbetet)?
 - Ar instruktionerna tillrackligt tydliga for att eleven ska kunna borja arbeta utan ytterligare forklaring?
 - Finns bade stod (mot E) och utmaning (mot A) inbyggt?
 - Ar sprakniavan anpassad for gymnasieelever (inte lararsprak)?
@@ -653,7 +780,7 @@ Exportera fragor till lararens frageapp for klassrumsquiz. Las in den fullstandi
 
 ## Steg 6: Presentationer (reveal.js HTML via slides-skillen)
 
-Generera presentationer for lektioner med instruktions-/presentationsmoment. Presentationerna skapas som self-contained reveal.js HTML-filer med hjalp av slides-skillen — detta ger visuellt tilltalande, interaktiva presentationer som fungerar direkt i webblasaren.
+Generera presentationer for lektioner med instruktions-/presentationsmoment. Presentationerna skapas som self-contained reveal.js HTML-filer med hjalp av slides-skillen - detta ger visuellt tilltalande, interaktiva presentationer som fungerar direkt i webblasaren.
 
 Las in slides-skillen:
 @.claude/skills/slides/SKILL.md
@@ -667,7 +794,7 @@ notebooklm ask --json "Ge mig fakta, nyckelbegrepp och konkreta exempel om [lekt
 ```bash
 notebooklm ask --json "Finns det primorkallor, citat eller historiska dokument om [temat] som kan anvandas i en presentation?"
 ```
-Anvand svaren som grund for presentationens innehall — fakta, citat, kallhanvisningar och diskussionsfragor. Inkludera NotebookLM:s kallhanvisningar pa relevanta slides.
+Anvand svaren som grund for presentationens innehall - fakta, citat, kallhanvisningar och diskussionsfragor. Inkludera NotebookLM:s kallhanvisningar pa relevanta slides.
 
 Om ingen notebook ar aktiv, generera presentationen baserat pa lektionsplanen och Claudes inbyggda kunskap. Markera osakra pastaenden med [VERIFIERA].
 
@@ -684,15 +811,15 @@ For varje presentation:
    - Jamforelser, tidslinjer eller statistik som passar specialiserade slide-typer
 
 2. **Generera presentationen** i designsystemet Arkiv (se slides-skillen). Folj Arkivs principer:
-   - Anvand Arkivs designtokens utan undantag — papper `#F4EDE1`, Cormorant Garamond i rubriker, bordeaux som signaturfarg
+   - Anvand Arkivs designtokens utan undantag - papper `#F4EDE1`, Cormorant Garamond i rubriker, bordeaux som signaturfarg
    - Rubriker bar mening: fragor som titlar, ett kursivt nyckelord per rubrik (`<em>ord</em>`)
    - Max 3 nyckelpunkter per slide
    - Diskussionspaus var 3-4:e slide (`discuss` eller `question`)
    - Talarnoter pa varje slide med lararhandledning och tidsuppskattningar
-   - Valj slide-typ efter innehall — Arkiv har 11 typer: `cover`, `section`, `question`, `content`, `twocol`, `timeline`, `quote`, `callout` (fakta/tips/varning/kalla), `table`, `discuss`, `close`
-   - Inga emojis — bara typografiska tecken (`▸ ● ▪ § №`)
+   - Valj slide-typ efter innehall - Arkiv har 11 typer: `cover`, `section`, `question`, `content`, `twocol`, `timeline`, `quote`, `callout` (fakta/tips/varning/kalla), `table`, `discuss`, `close`
+   - Inga emojis - bara typografiska tecken (`▸ ● ▪ § №`)
 
-3. **Kvalitetskontroll** — kor slides-skillens checklista innan du presenterar for lararen.
+3. **Kvalitetskontroll** - kor slides-skillens checklista innan du presenterar for lararen.
 
 4. **Presentera for lararen** och fraga om feedback innan du gar vidare till nasta presentation.
 
@@ -765,7 +892,7 @@ Nar alla steg ar klara:
    - Explicit feedback ("jag vill alltid ha...", "det har fungerar inte for den har gruppen")
    - Monster i differentieringen
 
-   Generalisera lärdomarna — spara inte detaljer specifika for just detta moment, utan det som troligen galler for framtida moment i samma kurs. Skriv/uppdatera minnesfilen i `.claude/planera-moment/minne/[kursnamn-kebab-case].md` enligt formatet i sektionen "Kursminne". Skapa katalogen om den inte finns.
+   Generalisera lärdomarna - spara inte detaljer specifika for just detta moment, utan det som troligen galler for framtida moment i samma kurs. Skriv/uppdatera minnesfilen i `.claude/planera-moment/minne/[kursnamn-kebab-case].md` enligt formatet i sektionen "Kursminne". Skapa katalogen om den inte finns.
 
    Presentera kort vad som sparades: "Jag har uppdaterat kursminnet for [kursnamn] med foljande lardomar: [kort lista]. Nasta gang du planerar ett moment i denna kurs tar jag hansyn till detta fran start."
 
@@ -789,9 +916,9 @@ Om `$ARGUMENTS` innehaller "enskild-lektion" eller om lararen specifikt ber om a
 |------|-----------|-------------|
 | 1 | Anvandare + amnesplaner.md + notebook-config.json + **kursminne** | momentplan.md |
 | 2 | Steg 1 + gy11-struktur.md | momentplan.md (uppdaterad) |
-| 3 | Steg 1-2 + pedagogiska-metoder.md + vault-sok + **NotebookLM** | momentplan.md (uppdaterad) |
-| 4 | Steg 1-3 + lektionsplanering.md | momentplan.md (uppdaterad) |
-| 5 | Steg 1-4 + docx SKILL.md + **NotebookLM** | lektion-N.md (vault) + lektion-N.docx (/home/anders/undervisningsmaterial/) |
+| 3 | Steg 1-2 + pedagogik-ramverk.md (nivå 4-5) + pedagogiska-metoder.md + vault-sok + **NotebookLM** | momentplan.md (rollsekvens + brottningsform) |
+| 4 | Steg 1-3 (rollsekvens) + lektionsplanering.md | momentplan.md (lektionssekvens/rollmappning) |
+| 5 | Steg 1-4 + lektionsplanering.md + docx SKILL.md + **NotebookLM** | lektion-N.md (vault) + lektion-N.docx (/home/anders/undervisningsmaterial/) |
 | 5a | Steg 5 (godkand lektionsplan) + docx SKILL.md | elevuppgift-lektion-N.md + .docx, kallmaterial-lektion-N.md + .docx |
 | 5b | Steg 1-5 + **MCP survey-platform** | fragor i databasen + momentplan.md (uppdaterad) |
 | 6 | Steg 1-4 + slides SKILL.md + **NotebookLM** (innehall) | presentation-lektion-N.html |
@@ -800,6 +927,8 @@ Om `$ARGUMENTS` innehaller "enskild-lektion" eller om lararen specifikt ber om a
 ## Completion Checklist
 
 - [ ] momentplan.md skapad med alla steg dokumenterade
+- [ ] Rollsekvens (nivå 4) + brottningsform (nivå 5) dokumenterade i momentplan.md
+- [ ] Varje lektion realiserar sin tilldelade roll; exit ticket mäter rollens exit
 - [ ] Alla lektionsplaner genererade som .md (vault) och .docx (/home/anders/undervisningsmaterial/)
 - [ ] Elevuppgifter genererade som .md (vault) och .docx (/home/anders/undervisningsmaterial/) for varje lektion
 - [ ] Fragor genererade och exporterade till frageappen (eller sparade som CSV om MCP ej tillgangligt)
@@ -807,5 +936,5 @@ Om `$ARGUMENTS` innehaller "enskild-lektion" eller om lararen specifikt ber om a
 - [ ] Momentoversikt genererad som .html (med delningskoder om fragor exporterades)
 - [ ] .md-filer sparade i vaultet (`Undervisningsmaterial/[Amne]/[Tema]/`), .docx-filer i `/home/anders/undervisningsmaterial/[Amne]/[Tema]/`
 - [ ] AI-svaghetscheck genomford pa alla lektionsplaner
-- [ ] Exit ticket-slinga verifierad (varje exit ticket informerar nasta retrieval review)
+- [ ] Exit ticket-slinga verifierad (varje exit ticket mäter rollens exit och informerar nästa retrieval-öppning)
 - [ ] Kursminne uppdaterat med lardomar fran detta moment
