@@ -17,7 +17,7 @@ For varje lektion, skapa 5-8 fragor:
 - ~70% MULTIPLE_CHOICE med 4 svarsalternativ (ett korrekt)
 - ~30% FREE_TEXT for oppna reflektioner
 - Fragorna ska spegla lektionens larandemal och innehall
-- Flervalsfragor ska testa forstaelse, inte bara faktaminne — inkludera fragor pa analysera/vardera-niva
+- Flervalsfragor ska testa forstaelse, inte bara faktaminne - inkludera fragor pa analysera/vardera-niva
 - Distraktorer (felaktiga alternativ) ska vara rimliga, inte uppenbara
 - Inkludera lektionens exit ticket som en av fragorna
 

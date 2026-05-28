@@ -1,4 +1,4 @@
-# Ämnesplaner GY25 — Centralt innehåll och betygskriterier
+# Ämnesplaner GY25 - Centralt innehåll och betygskriterier
 
 > Källa: gy25.se (speglar Skolverkets ämnesplaner). Texterna är ordagrant återgivna från Skolverket.
 
@@ -24,7 +24,7 @@ Eleverna ska utveckla kunskaper för att orientera sig i en komplex värld, bidr
 | Nivå 2 | 100 p | Fördjupning |
 | Nivå 3 | 100 p | Fördjupning |
 
-### Samhällskunskap — Nivå 1b (100 p)
+### Samhällskunskap - Nivå 1b (100 p)
 
 **Centralt innehåll (ordagrant):**
 
@@ -51,7 +51,7 @@ Eleverna ska utveckla kunskaper för att orientera sig i en komplex värld, bidr
 - För innehållet relevanta samhällsvetenskapliga begrepp, teorier och modeller i samband med samhällsfrågor.
 - För innehållet relevanta metoder för att söka, bearbeta, tolka, värdera och kritiskt granska information från olika källor och medier i digital och annan form i arbetet med komplexa samhällsfrågor. Källkritik och källtillit i samhällsvetenskapligt arbete.
 
-### Betygskriterier — Samhällskunskap (ordagrant, ämnesgemensamma)
+### Betygskriterier - Samhällskunskap (ordagrant, ämnesgemensamma)
 
 **E:** Eleven visar **godtagbara** kunskaper om samhällens organisation och institutioner, beslutsprocesser på olika nivåer samt om demokratiska värden och mänskliga rättigheter.
 
@@ -88,7 +88,7 @@ Eleverna ska utveckla historisk bildning och historiemedvetande genom kunskaper 
 - Historisk referensram för att analysera förändringsprocesser ur olika perspektiv
 - Insikten att människor ska förstås utifrån sin tids villkor
 - Arbete med historiska begrepp, källor och metod
-- Analys av historiebruk — hur människor och grupper i tid och rum har använt historia
+- Analys av historiebruk - hur människor och grupper i tid och rum har använt historia
 
 ### Nivåer i Historia (GY25)
 
@@ -101,7 +101,7 @@ Eleverna ska utveckla historisk bildning och historiemedvetande genom kunskaper 
 | Nivå 2b | 100 p | Fördjupning |
 | Nivå 3 | 100 p | Fördjupning |
 
-### Historia — Nivå 1b (100 p)
+### Historia - Nivå 1b (100 p)
 
 **Centralt innehåll (ordagrant):**
 
@@ -119,7 +119,7 @@ Eleverna ska utveckla historisk bildning och historiemedvetande genom kunskaper 
 - Tolkning, granskning och värdering av historiska källor, till exempel arkivmaterial och databaser, som utgångspunkt för behandling av frågor kopplade till delar av det historiska innehållet.
 - Historiebruk med koppling till delar av det historiska innehållet. Hur historia kan användas i till exempel vardagsliv, samhällsliv och politik och påverka människors identitet, värderingar och föreställningar.
 
-### Betygskriterier — Historia (ordagrant, ämnesgemensamma)
+### Betygskriterier - Historia (ordagrant, ämnesgemensamma)
 
 **E:** Eleven visar **godtagbara** kunskaper om förändringsprocesser, händelser och aktörer under olika tidsperioder utifrån olika tolkningar och perspektiv. Eleven ger exempel på och förklarar **översiktligt** samband mellan skeenden i det förflutna och förhållanden i nutiden.
 

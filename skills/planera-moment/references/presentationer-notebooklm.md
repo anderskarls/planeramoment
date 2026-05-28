@@ -39,23 +39,23 @@ For varje presentation:
    - Sammanfattning → `close`
 
 2. **Generera presentationen** i designsystemet Arkiv (se slides-skillen). Folj Arkivs principer:
-   - Anvand Arkivs designtokens utan undantag — papper `#F4EDE1`, Cormorant Garamond i rubriker, bordeaux som signaturfarg
+   - Anvand Arkivs designtokens utan undantag - papper `#F4EDE1`, Cormorant Garamond i rubriker, bordeaux som signaturfarg
    - Rubriker bar mening: fragor som titlar, ett kursivt nyckelord per rubrik (`<em>ord</em>`)
    - Max 3 nyckelpunkter per slide
    - Diskussionspaus var 3-4:e slide (`discuss` eller `question`)
    - Talarnoter pa varje slide med lararhandledning och tidsuppskattningar
-   - Inga emojis — bara typografiska tecken (`▸ ● ▪ § №`)
+   - Inga emojis - bara typografiska tecken (`▸ ● ▪ § №`)
 
-3. **Kvalitetskontroll** — kor slides-skillens Arkiv-checklista innan du presenterar for lararen:
+3. **Kvalitetskontroll** - kor slides-skillens Arkiv-checklista innan du presenterar for lararen:
    - Papperston `#F4EDE1` pa alla slides?
    - Masthead (meta_left/meta_right) + baseline (Mitt designsystem · Arkiv + sidnummer) pa varje slide?
    - Max 2 accentfarger per slide, bordeaux som primar?
-   - Ett kursivt nyckelord per rubrik — max?
+   - Ett kursivt nyckelord per rubrik - max?
    - Fragor som titlar dar mojligt?
    - Max 3 nyckelpunkter per slide?
    - Brodtext max 42 em bred?
    - Diskussionspaus var 3-4:e slide?
-   - Inga emojis — bara `▸ ● ▪ § №`?
+   - Inga emojis - bara `▸ ● ▪ § №`?
    - Talarnoter pa varje slide?
    - Cormorant Garamond + Inter Tight + JetBrains Mono laddade fran Google Fonts?
 

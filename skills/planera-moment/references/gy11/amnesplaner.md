@@ -1,4 +1,4 @@
-# Ämnesplaner GY11 — Centralt innehåll och kunskapskrav
+# Ämnesplaner GY11 - Centralt innehåll och kunskapskrav
 
 > Innehåller bara de GY11-kurser läraren undervisar i läsåret 2026/27: Samhällskunskap 1a2 och Internationella relationer. Övriga kurser hanteras i GY25-referenserna.
 >
@@ -10,7 +10,7 @@
 
 Undervisningen i samhällskunskap ska syfta till att eleverna breddar, fördjupar och utvecklar kunskaper om människors livsvillkor utifrån olika samhällsfrågor. Eleverna ska ges möjlighet att utveckla:
 
-1. Kunskaper om demokrati och de mänskliga rättigheterna — såväl individuella som kollektiva — samhällsfrågor, samhällsförhållanden samt olika samhällens organisation och funktion.
+1. Kunskaper om demokrati och de mänskliga rättigheterna - såväl individuella som kollektiva - samhällsfrågor, samhällsförhållanden samt olika samhällens organisation och funktion.
 2. Kunskaper om historiska förutsättningars betydelse samt om hur olika ideologiska, politiska, ekonomiska, sociala och miljömässiga förhållanden påverkar och påverkas av individer, grupper och samhällsstrukturer.
 3. Förmåga att analysera samhällsfrågor och identifiera orsaker och konsekvenser med hjälp av samhällsvetenskapliga begrepp, teorier, modeller och metoder.
 4. Förmåga att söka, kritiskt granska och tolka information från olika källor samt värdera källornas relevans och trovärdighet.
@@ -34,7 +34,7 @@ Undervisningen i kursen ska behandla följande centrala innehåll:
 - Samhällsvetenskapliga begrepp, teorier, modeller och metoder i samband med undersökningar av samhällsfrågor och samhällsförhållanden. Exempel på metoder för att samla in information är intervju, enkät och observation. Exempel på metoder för att bearbeta information är statistiska metoder, samhällsvetenskaplig textanalys, argumentationsanalys och källkritik.
 - Presentation i olika former, till exempel debatter, debattinlägg och rapporter.
 
-### Kunskapskrav — Sh 1a2 (ordagrant)
+### Kunskapskrav - Sh 1a2 (ordagrant)
 
 **E:** Eleven kan **översiktligt** redogöra för och analysera olika samhällens organisation och samhällsförhållanden samt de bakomliggande idéerna. I sin analys förklarar eleven **enkla** samband och drar **enkla** slutsatser om likheter och skillnader mellan olika samhällens organisation. Dessutom kan eleven **översiktligt** redogöra för de historiska förutsättningarnas betydelse och dra **enkla** slutsatser om hur nutida samhällsförhållanden påverkar och påverkas av individer, grupper och samhällsstrukturer.
 
@@ -75,7 +75,7 @@ Undervisningen i kursen ska behandla följande centrala innehåll:
 - Källkritisk granskning, tolkning och värdering av informationen från olika källor och medier i digital och annan form. Källhänvisning enligt vanliga system.
 - Muntlig och skriftlig presentation i olika former som är vanliga inom området, till exempel debatter, debattinlägg, vetenskapliga rapporter och essäer.
 
-### Kunskapskrav — Internationella relationer (ordagrant)
+### Kunskapskrav - Internationella relationer (ordagrant)
 
 **E:** Eleven kan **översiktligt** redogöra för hur olika nationella och internationella förutsättningar och förhållanden påverkar och påverkas av internationella aktörer. Dessutom diskuterar eleven **översiktligt** några teoretiska perspektiv på internationella relationer.
 

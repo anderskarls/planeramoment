@@ -1,4 +1,4 @@
-# Pedagogiska metoder — Evidensbaserat urval
+# Pedagogiska metoder - Evidensbaserat urval
 
 Metoder organiserade efter pedagogisk funktion, med ämnesspecifika exempel för samhällskunskap, historia och juridik.
 
@@ -15,12 +15,12 @@ Syftet är att ge eleverna ett stabilt begreppsligt fundament innan analytiskt a
 ### Frayer-modellen
 Fyra rutor per begrepp: definition, egenskaper, exempel, icke-exempel.
 - Effektivt för att undvika missförstånd kring centrala begrepp
-- **Samhällskunskap**: Begreppet "ideologi" — definition, egenskaper, liberalism som exempel, populism som icke-exempel (diskuterbart → bra diskussion)
-- **Juridik**: Begreppet "avtal" — definition, rekvisit, köp av bil som exempel, löfte till vän som icke-exempel
+- **Samhällskunskap**: Begreppet "ideologi" - definition, egenskaper, liberalism som exempel, populism som icke-exempel (diskuterbart → bra diskussion)
+- **Juridik**: Begreppet "avtal" - definition, rekvisit, köp av bil som exempel, löfte till vän som icke-exempel
 
 ### Ordlistor med elevegna definitioner
 - Eleverna formulerar egna definitioner istället för att kopiera lärobokens
-- Bygg ordlistan progressivt genom momentet — återbesök och fördjupa
+- Bygg ordlistan progressivt genom momentet - återbesök och fördjupa
 - Fungerar som retrieval practice vid lektionsstart
 
 ## Analytiska metoder
@@ -32,7 +32,7 @@ De fyra grundfrågorna:
 1. **Vem** skapade källan? (avsändare, position, intressen)
 2. **När** skapades den? (tidskontext, närhet till händelsen)
 3. **Varför** skapades den? (syfte, avsedd mottagare)
-4. **Vad** säger den — och vad säger den inte? (innehåll, luckor, perspektiv)
+4. **Vad** säger den - och vad säger den inte? (innehåll, luckor, perspektiv)
 
 - **Historia**: Primärkällor som brev, dagböcker, propagandamaterial, tidningsartiklar
 - **Samhällskunskap**: Nyhetsartiklar, debattinlägg, statistik, partipolitiska dokument
@@ -54,7 +54,7 @@ Systematisk jämförelse av likheter och skillnader:
 - **Juridik**: Jämför tvistemål och brottmål (processrätt)
 
 ### Orsak-konsekvenskedjor
-Multicausalt tänkande — händelser har flera samverkande orsaker:
+Multicausalt tänkande - händelser har flera samverkande orsaker:
 - Låt eleverna skilja mellan bakomliggande orsaker, utlösande faktorer och konsekvenser
 - Visualisera med flödesscheman eller fiskbensdiagram
 - **Historia**: Orsaker till första världskriget (allianser, nationalism, imperialism, Sarajevo)
@@ -62,7 +62,7 @@ Multicausalt tänkande — händelser har flera samverkande orsaker:
 
 ## Kommunikativa metoder
 
-Utvecklar förmågan att resonera, argumentera och uttrycka kunskaper — centralt i kunskapskraven.
+Utvecklar förmågan att resonera, argumentera och uttrycka kunskaper - centralt i kunskapskraven.
 
 ### EPA (Enskilt-Par-Alla)
 1. **Enskilt** (2-3 min): Eleven tänker/skriver själv
@@ -74,7 +74,7 @@ Fördelar: Alla elever aktiveras, inte bara de som räcker upp handen. Bygger tr
 ### Seminarium med rollfördelning
 - Tilldela roller: ordförande, inledare, opponent, sekreterare
 - Kräver förberedelse → fördjupad bearbetning
-- **Historia**: Seminarium om historiebruk — varje elev analyserar ett exempel
+- **Historia**: Seminarium om historiebruk - varje elev analyserar ett exempel
 - **Samhällskunskap**: Seminarium om en aktuell samhällsfråga
 - **Juridik**: Rättegångsspel med åklagare, försvarare, domare, vittnen
 
@@ -82,12 +82,12 @@ Fördelar: Alla elever aktiveras, inte bara de som räcker upp handen. Bygger tr
 - Eleverna argumenterar för en tilldelad position (inte nödvändigtvis sin egen)
 - Utvecklar förmågan att se flera perspektiv
 - **Samhällskunskap**: Debatt om välfärdsmodeller med tilldelade ideologiska perspektiv
-- **Juridik**: Moot court — argumentation för och emot i ett juridiskt tvistemål
+- **Juridik**: Moot court - argumentation för och emot i ett juridiskt tvistemål
 
 ### Skriftliga övningar med E/C/A-modellering
 1. Visa ett A-nivå-exempelsvar
 2. Analysera tillsammans: Vad gör detta till A-nivå? Vilka ord/strukturer?
-3. Visa E-nivå-version av samma svar — vad skiljer?
+3. Visa E-nivå-version av samma svar - vad skiljer?
 4. Eleverna skriver eget svar med stödstruktur
 5. Kamratbedömning med kunskapskraven som utgångspunkt
 

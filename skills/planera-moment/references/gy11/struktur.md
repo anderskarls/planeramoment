@@ -1,12 +1,12 @@
-# Gy11 — Kunskapskravens struktur
+# Gy11 - Kunskapskravens struktur
 
 ## Ämnesplanens uppbyggnad
 
 Varje ämnesplan i Gy11 består av:
 
-1. **Ämnets syfte** — Övergripande mål för undervisningen. Beskriver vilka förmågor eleverna ska utveckla. Formuleras som långsiktiga processer ("Undervisningen ska ge eleverna möjlighet att utveckla...")
-2. **Centralt innehåll** — Det ämnesspecifika innehåll som undervisningen ska behandla. Organiserat per kurs. Anger VAD som ska läras.
-3. **Kunskapskrav** — Beskriver kvaliteten på elevernas kunskaper för betygen E, C och A. Anger HUR BRA eleverna ska kunna något.
+1. **Ämnets syfte** - Övergripande mål för undervisningen. Beskriver vilka förmågor eleverna ska utveckla. Formuleras som långsiktiga processer ("Undervisningen ska ge eleverna möjlighet att utveckla...")
+2. **Centralt innehåll** - Det ämnesspecifika innehåll som undervisningen ska behandla. Organiserat per kurs. Anger VAD som ska läras.
+3. **Kunskapskrav** - Beskriver kvaliteten på elevernas kunskaper för betygen E, C och A. Anger HUR BRA eleverna ska kunna något.
 
 ### Relationen mellan delarna
 
@@ -22,7 +22,7 @@ Planering utgår alltid från denna kedja. Välj centralt innehåll → identifi
 
 ## Kunskapskravens progressionsmodell
 
-Kunskapskraven för E, C och A är formulerade som parallella texter där specifika **progressionsord** (värdeord) varierar för att markera kvalitetsskillnader. Samma grundstruktur upprepas — det är orden som signalerar nivån.
+Kunskapskraven för E, C och A är formulerade som parallella texter där specifika **progressionsord** (värdeord) varierar för att markera kvalitetsskillnader. Samma grundstruktur upprepas - det är orden som signalerar nivån.
 
 ### Fullständig lista över progressionsord
 
@@ -31,8 +31,8 @@ Kunskapskraven för E, C och A är formulerade som parallella texter där specif
 | E | C | A |
 |---|---|---|
 | översiktligt | utförligt | utförligt och nyanserat |
-| i huvuddrag | — | — |
-| grundläggande | — | fördjupade |
+| i huvuddrag | - | - |
+| grundläggande | - | fördjupade |
 
 #### Kvalitet i resonemang och argumentation
 
@@ -54,13 +54,13 @@ Kunskapskraven för E, C och A är formulerade som parallella texter där specif
 | E | C | A |
 |---|---|---|
 | (implicit enkelt perspektiv) | med visst kritiskt perspektiv | ur flera perspektiv |
-| — | — | med ett kritiskt förhållningssätt |
+| - | - | med ett kritiskt förhållningssätt |
 
 #### Självständighet och säkerhet
 
 | E | C | A |
 |---|---|---|
-| i någon mån | — | med säkerhet |
+| i någon mån | - | med säkerhet |
 | med viss säkerhet | med viss säkerhet | med säkerhet |
 | i viss utsträckning | i stor utsträckning | i stor utsträckning |
 
@@ -70,7 +70,7 @@ Kunskapskraven för E, C och A är formulerade som parallella texter där specif
 |---|---|---|
 | med viss språklig säkerhet | med relativt god språklig säkerhet | med god språklig säkerhet |
 | i huvudsak fungerande | fungerande | väl fungerande |
-| enkelt | — | nyanserat |
+| enkelt | - | nyanserat |
 
 ### Så här läser du kunskapskraven
 
@@ -83,12 +83,12 @@ Observera: Innehållet ("olika samhällens organisation och samhällsförhållan
 
 ## Vanliga fällor vid planering
 
-1. **Förväxla innehållssvårighet med analytisk kvalitet** — E-elever ska inte få enklare innehåll. De ska få stöd att analysera samma innehåll på en grundläggande nivå.
-2. **Ignorera progressionen mellan nivåerna** — Planera explicit hur undervisningen stödjer utveckling från E mot A.
-3. **Använda egna verb istället för Gy11:s** — Lärandemål ska använda de faktiska verben i kunskapskraven (redogöra, analysera, resonera, diskutera, jämföra).
-4. **Behandla kunskapskrav isolerat** — De hänger ihop med ämnets syfte och centralt innehåll. Alla tre måste beaktas vid planering.
+1. **Förväxla innehållssvårighet med analytisk kvalitet** - E-elever ska inte få enklare innehåll. De ska få stöd att analysera samma innehåll på en grundläggande nivå.
+2. **Ignorera progressionen mellan nivåerna** - Planera explicit hur undervisningen stödjer utveckling från E mot A.
+3. **Använda egna verb istället för Gy11:s** - Lärandemål ska använda de faktiska verben i kunskapskraven (redogöra, analysera, resonera, diskutera, jämföra).
+4. **Behandla kunskapskrav isolerat** - De hänger ihop med ämnets syfte och centralt innehåll. Alla tre måste beaktas vid planering.
 
-## Lärandemål — så formulerar du dem
+## Lärandemål - så formulerar du dem
 
 Bra lärandemål:
 - Utgår från kunskapskravens verb

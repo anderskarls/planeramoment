@@ -1,16 +1,16 @@
-# Presentationsteknik — Pedagogiska presentationer för klassrummet
+# Presentationsteknik - Pedagogiska presentationer för klassrummet
 
 ## Grundprinciper
 
-Klassrumspresentationer skiljer sig från konferenspresentationer. De ska inte bara informera — de ska aktivera tänkande och stödja lärande.
+Klassrumspresentationer skiljer sig från konferenspresentationer. De ska inte bara informera - de ska aktivera tänkande och stödja lärande.
 
 ### Regler
 
-1. **Max 3 nyckelpunkter per slide** — Mer än tre och eleverna slutar bearbeta
-2. **Frågor som slide-titlar** — "Varför startade första världskriget?" istället för "Orsaker till första världskriget". Frågor aktiverar tänkande
-3. **Diskussionspaus var 3-4:e slide** — Bädd in en "Diskutera med din granne"-slide regelbundet
-4. **Visuellt före text** — Föreslå bildtyp (karta, diagram, fotografi, tidslinje) före textpunkter
-5. **Progressiv avslöjning** — Visa inte allt på en gång. Bygg upp resonemang stegvis
+1. **Max 3 nyckelpunkter per slide** - Mer än tre och eleverna slutar bearbeta
+2. **Frågor som slide-titlar** - "Varför startade första världskriget?" istället för "Orsaker till första världskriget". Frågor aktiverar tänkande
+3. **Diskussionspaus var 3-4:e slide** - Bädd in en "Diskutera med din granne"-slide regelbundet
+4. **Visuellt före text** - Föreslå bildtyp (karta, diagram, fotografi, tidslinje) före textpunkter
+5. **Progressiv avslöjning** - Visa inte allt på en gång. Bygg upp resonemang stegvis
 
 ## Presentationsflöde (15-20 minuter)
 
@@ -96,7 +96,7 @@ Generera presentationsinnehåll i Markdown. Läraren överför sedan till valfri
 
 ## Slide 1: [Titel/Fråga]
 
-[Innehåll — punkter, citat, eller instruktion]
+[Innehåll - punkter, citat, eller instruktion]
 
 > **Talarnoter:** [Vad läraren säger och gör]
 > **Visuellt:** [Förslag på bild, karta, diagram eller annat visuellt stöd]
