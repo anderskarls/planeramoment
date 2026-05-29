@@ -4,7 +4,7 @@ Detta steg exporterar fragor direkt till lararens frageapp via MCP-servern `surv
 
 ## Forberedelse
 
-1. Kontrollera att MCP-verktyget `mcp__survey-platform__import_questions` ar tillgangligt. Om inte, informera lararen: "Frageappen ar inte kopplad just nu. Jag sparar fragorna som CSV istallet sa du kan importera dem manuellt." Generera da en CSV-fil till `Undervisningsmaterial/[Amne]/[Tema]/fragor.csv` och hoppa over resten av detta steg.
+1. Kontrollera att MCP-verktyget `mcp__survey-platform__create_quiz_from_csv` ar tillgangligt. Om inte, informera lararen: "Frageappen ar inte kopplad just nu. Jag sparar fragorna som CSV istallet sa du kan importera dem manuellt." Generera da en CSV-fil till `Undervisningsmaterial/[Amne]/[Tema]/fragor.csv` och hoppa over resten av detta steg.
 
 2. Hamta tillgangliga kurser via MCP-resursen `survey://courses`. Presentera listan och lat lararen valja vilken kurs fragorna ska kopplas till. Om kursen inte finns - informera lararen att den behover skapas i appen forst.
 
@@ -64,23 +64,31 @@ Fraga lararen: "Vill du andra, lagga till eller ta bort nagon fraga innan jag ex
 
 ## Export till frageappen
 
-Nar lararen godkant fragorna:
+Nar lararen godkant fragorna anvands MCP-verktyget `create_quiz_from_csv` - det importerar fragorna till frageappen OCH skapar quizzen i ett enda anrop, sa du behover aldrig halla reda pa fraga-ID:n.
 
-1. **Importera fragor** - Anvand `import_questions` MCP-verktyget. Formatera som CSV dar topic-kolumnen kopplar fragor till ratt lektion:
-   - Lektionsfragor far topic: `[Tema] - Lektion N: [Titel]`
-   - Momentfragor far topic: `[Tema] - Overgripande`
-   - For MULTIPLE_CHOICE med korrekt svar, anvand `correctAnswer`-kolumnen
+CSV-format (samma for alla anrop):
+```
+topic,type,text,option1,option2,option3,option4,correctAnswer
+```
+- For MULTIPLE_CHOICE med korrekt svar: fyll i `correctAnswer` (exakt samma text som ratt alternativ).
+- For FREE_TEXT: lamna option- och correctAnswer-kolumnerna tomma.
+- Fragornas ordning i quizzen foljer raderna i CSV:n.
 
-   CSV-format:
-   ```
-   topic,type,text,option1,option2,option3,option4,correctAnswer
-   ```
+1. **Skapa en quiz per lektion** - Ett `create_quiz_from_csv`-anrop per lektion:
+   - `course_id`: kursen lararen valde
+   - `title`: `[Tema] - Lektion N: [Titel]`
+   - `csv_content`: lektionens fragor, med topic-kolumnen satt till `[Tema] - Lektion N: [Titel]`
+   - `mode`: `QUIZ`
+   - (`lock_mode`: `true` endast om lararen vill kora lektionen som prov)
 
-2. **Skapa quiz per lektion** - Anvand `create_survey` MCP-verktyget for att skapa en quiz (mode: QUIZ) per lektion, med lektionens fragor i ratt ordning.
+2. **Skapa momentquiz** - Ett sista `create_quiz_from_csv`-anrop med de overgripande momentfragorna:
+   - `title`: `[Tema] - Momentquiz`
+   - `csv_content`: momentfragorna, med topic-kolumnen satt till `[Tema] - Overgripande`
+   - `mode`: `QUIZ`
 
-3. **Skapa momentquiz** - Skapa en overgripande quiz med momentfragorna.
+   Verktyget returnerar `shareCode` och `url` (`/s/[kod]`) for varje skapad quiz - spara dem till nasta steg.
 
-4. **Presentera resultat** for lararen:
+3. **Presentera resultat** for lararen:
    ```
    Exporterat till frageappen:
    - [N] fragor importerade
@@ -91,7 +99,7 @@ Nar lararen godkant fragorna:
      - Momentquiz: [Tema] - delningskod: [kod]
    ```
 
-5. **Spara delningskoder** till momentplanen (`momentplan.md`) under en ny sektion:
+4. **Spara delningskoder** till momentplanen (`momentplan.md`) under en ny sektion:
    ```markdown
    ## Frageapp (Survey Platform)
    | Quiz | Delningskod | Antal fragor |

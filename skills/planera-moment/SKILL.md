@@ -14,7 +14,7 @@ description: >
   lektioner de vill ha. Denna skill ska INTE användas för enskilda dokument
   (använd docx/pptx), enskilda lektionsplaner utan momentkontext, eller
   HTML-momentöversikter från befintlig data (använd html-momentoversikt).
-allowed-tools: Read, Write, Edit, Bash(node:*), Bash(npm:*), Bash(python:*), Bash(pip:*), Bash(pdftoppm:*), Bash(notebooklm:*), mcp__survey-platform__import_questions, mcp__survey-platform__create_survey, mcp__survey-platform__get_results, mcp__survey-platform__summarize_results
+allowed-tools: Read, Write, Edit, Bash(node:*), Bash(npm:*), Bash(python:*), Bash(pip:*), Bash(pdftoppm:*), Bash(notebooklm:*), mcp__survey-platform__create_quiz_from_csv, mcp__survey-platform__import_questions, mcp__survey-platform__create_survey, mcp__survey-platform__get_results, mcp__survey-platform__summarize_results
 argument-hint: "[amne (valfritt)]"
 ---
 
