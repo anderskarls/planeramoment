@@ -42,7 +42,7 @@ Aktiveras automatiskt när du diskuterar undervisning, lektionsplanering eller p
 Testa lokalt:
 
 ```bash
-claude --plugin-dir /home/anders/momentplanering
+claude --plugin-dir C:\Brain\resources\planeramoment
 ```
 
 ## Kurser

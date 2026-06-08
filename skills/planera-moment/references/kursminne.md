@@ -9,13 +9,13 @@ En fil per kurs i `.claude/planera-moment/minne/`:
 .claude/planera-moment/minne/internationella-relationer.md
 ```
 
-Filnamnet ar kursnamnet i kebab-case (gemener, bindestreck).
+Filnamnet är kursnamnet i kebab-case (gemener, bindestreck).
 
 Varje minnesfil har denna struktur:
 
 ```markdown
 ---
-kurs: [Kursens fullstandiga namn]
+kurs: [Kursens fullständiga namn]
 senast_uppdaterad: YYYY-MM-DD
 antal_moment: [N]
 ---
@@ -23,45 +23,60 @@ antal_moment: [N]
 # Kursminne: [Kursnamn]
 
 ## Pedagogiska preferenser
-- [Lardom fran justering, t.ex. "Foredrar EPA framfor traditionella genomgangar"]
+- [Lärdom från justering, t.ex. "Föredrar EPA framför traditionella genomgångar"]
 - [...]
 
-## Tidsfordelning
-- [T.ex. "Kortar larargenomgangen till forman for elevaktivt arbete i rollkarnan"]
+## Tidsfördelning
+- [T.ex. "Kortar lärargenomgången till förmån för elevaktivt arbete i rollkärnan"]
 - [...]
 
 ## Aktiviteter och metoder
-- [T.ex. "Gillar debattovningar, anvander dem ofta som brottningsform"]
-- [T.ex. "Valjer alltid bort rollspel for denna grupp"]
+- [T.ex. "Gillar debattövningar, använder dem ofta som brottningsform"]
+- [T.ex. "Väljer alltid bort rollspel för denna grupp"]
 - [...]
 
 ## Differentiering
-- [T.ex. "Lagger alltid till meningsstartar som stod mot E"]
+- [T.ex. "Lägger alltid till meningsstartare som stöd mot E"]
 - [...]
 
-## Innehallspreferenser
-- [T.ex. "Vill alltid ha primorkallor med, inte bara larobokstexter"]
+## Innehållspreferenser
+- [T.ex. "Vill alltid ha primärkällor med, inte bara lärobokstexter"]
 - [...]
 
-## Ovrigt
-- [Andra monster som inte passar ovan]
+## Övrigt
+- [Andra mönster som inte passar ovan]
 - [...]
 
-## Tvargaende tradar mellan moment
-- [T.ex. "Antikens arv-momentet - vack tillbaka i renässans-momentet, upplysnings-momentet, fascism-momentet"]
-- [Format: nar X-moment kommer, vack koppling till Y-moment med fraga/verktyg Z]
+## Tvärgående trådar mellan moment
+- [T.ex. "Antikens arv-momentet - väck tillbaka i renässans-momentet, upplysnings-momentet, fascism-momentet"]
+- [Format: när X-moment kommer, väck koppling till Y-moment med fråga/verktyg Z]
 - [...]
 
 ## Historik
-| Datum | Moment | Nyckellardom |
+| Datum | Moment | Nyckellärdom |
 |-------|--------|-------------|
 | YYYY-MM-DD | [Temanamn] | [Kort sammanfattning] |
 ```
 
-## Regler for minneshantering
+## Regler för minneshantering
 
-- **Skriv aldrig over** - lagg till nya lardomar, ta inte bort gamla
-- **Generalisera** - spara inte "andrade tid i lektion 3 fran 10 till 15 min" utan "foredrar langre guidad ovning, kortar explicit instruktion"
-- **Undvik redundans** - om en lardom redan finns, forstark den med en notering istallet for att duplicera
-- **Max 5 punkter per kategori** - om det blir fler, sla ihop eller ersatt de minst specifika
-- **Var arlig** - om det inte finns tydliga monster efter bara ett moment, skriv fa punkter. Minnet vaxer organiskt.
+- **Skriv aldrig över** - lägg till nya lärdomar, ta inte bort gamla
+- **Generalisera** - spara inte "ändrade tid i lektion 3 från 10 till 15 min" utan "föredrar längre guidad övning, kortar explicit instruktion"
+- **Undvik redundans** - om en lärdom redan finns, förstärk den med en notering istället för att duplicera
+- **Max 5 punkter per kategori** - om det blir fler, slå ihop eller ersätt de minst specifika
+- **Var ärlig** - om det inte finns tydliga mönster efter bara ett moment, skriv få punkter. Minnet växer organiskt.
+
+## När minnet uppdateras
+
+Som default uppdateras kursminnet i **Avslutningen** (en samlad analys av hela momentet - se `references/avslutning.md`).
+
+### Mid-flight uppdateringar
+
+Om läraren under planeringsdialogen **explicit säger** något i stil med:
+- "spara detta i kursminnet"
+- "kom ihåg det här till nästa moment"
+- "lägg till i kursminnet att..."
+
+→ uppdatera kursminnesfilen **direkt** (inte vid Avslutning), bekräfta för läraren ("Sparat: [kort beskrivning]"), och notera i momentplan.md under "Tvärgående trådar > Inter-moment" att kursminnet uppdaterades vid denna plats.
+
+Avslutningens kursminnes-uppdatering blir då en *sammanfattning + utfyllnad av det som inte fångades mid-flight*, inte enda tillfället.

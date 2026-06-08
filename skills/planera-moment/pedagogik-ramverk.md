@@ -4,6 +4,19 @@ Denna fil innehåller det pedagogiska ramverk som styr /planera-moment. Det är 
 
 Ramverket ersätter den tidigare sex-fas-modellen som lektionsstruktur. Sex-fas är avvisad på fyra grunder: rigid sekvens, för instrumentell, single-lektion-fokuserad, omöjlig att utföra konsekvent.
 
+## Teoretisk härkomst
+
+Ramverket är pragmatiskt motiverat, men fyra teoretiker färgar det - särskilt rollerna *brottning* och *syntes* (nivå 4):
+
+- **Diana Hess** - kontroversiella frågor som motor för demokratisk fostran (samhällskunskap; grunden för Hess-gate på nivå 1a)
+- **Robin Alexander** - dialogisk undervisning som epistemisk praktik (utforska-diskursmålet på nivå 5)
+- **Sam Wineburg** - disciplinärt tänkande och historisk frågeteknik (historia; frågetypologin på nivå 1b)
+- **Wolfgang Klafki** - kategorial bildning, exemplariskt lärande, samtidsrelevans
+
+Dessa är inspirationskällor, inte teoretisk gravitationskraft - ramverket motiveras pragmatiskt.
+
+**Meta-mönster som löper genom hela ramverket:** *"Skydda golvet universellt, släpp taket selektivt."* Scaffolda alltid det som krävs för att eleven ska kunna brottas (Princip 1, Princip 3), men håll inte tillbaka det som låter starka elever gå djupt. Asymmetrisk risk.
+
 ## 1. Grundprinciper för momentplanering
 
 Ett undervisningsmoment (5-10 lektioner) är den primära planeringsenheten. Varje moment ska vara förankrat i tre delar av ämnesplanen:

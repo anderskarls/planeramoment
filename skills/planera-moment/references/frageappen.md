@@ -1,97 +1,97 @@
-# Steg 5b: Fragor till frageappen (Survey Platform)
+# Steg 5b: Frågor till frågeappen (Survey Platform)
 
-Detta steg exporterar fragor direkt till lararens frageapp via MCP-servern `survey-platform`. Frageappen anvands for quiz och enkat i klassrummet - eleverna svarar pa fragor kopplade till undervisningen.
+Detta steg exporterar frågor direkt till lärarens frågeapp via MCP-servern `survey-platform`. Frågeappen används för quiz och enkät i klassrummet - eleverna svarar på frågor kopplade till undervisningen.
 
-## Forberedelse
+## Förberedelse
 
-1. Kontrollera att MCP-verktyget `mcp__survey-platform__create_quiz_from_csv` ar tillgangligt. Om inte, informera lararen: "Frageappen ar inte kopplad just nu. Jag sparar fragorna som CSV istallet sa du kan importera dem manuellt." Generera da en CSV-fil till `Undervisningsmaterial/[Amne]/[Tema]/fragor.csv` och hoppa over resten av detta steg.
+1. Kontrollera att MCP-verktyget `mcp__survey-platform__create_quiz_from_csv` är tillgängligt. Om inte, informera läraren: "Frågeappen är inte kopplad just nu. Jag sparar frågorna som CSV istället så du kan importera dem manuellt." Generera då en CSV-fil till `Undervisningsmaterial/[Ämne]/[Tema]/fragor.csv` och hoppa över resten av detta steg.
 
-2. Hamta tillgangliga kurser via MCP-resursen `survey://courses`. Presentera listan och lat lararen valja vilken kurs fragorna ska kopplas till. Om kursen inte finns - informera lararen att den behover skapas i appen forst.
+2. Hämta tillgängliga kurser via MCP-resursen `survey://courses`. Presentera listan och låt läraren välja vilken kurs frågorna ska kopplas till. Om kursen inte finns - informera läraren att den behöver skapas i appen först.
 
-## Fragegenerering
+## Frågegenerering
 
-Generera fragor i tva kategorier:
+Generera frågor i två kategorier:
 
-**A. Lektionsfragor (per lektion)**
-For varje lektion, skapa 5-8 fragor:
+**A. Lektionsfrågor (per lektion)**
+För varje lektion, skapa 5-8 frågor:
 - ~70% MULTIPLE_CHOICE med 4 svarsalternativ (ett korrekt)
-- ~30% FREE_TEXT for oppna reflektioner
-- Fragorna ska spegla lektionens larandemal och innehall
-- Flervalsfragor ska testa forstaelse, inte bara faktaminne - inkludera fragor pa analysera/vardera-niva
+- ~30% FREE_TEXT för öppna reflektioner
+- Frågorna ska spegla lektionens lärandemål och innehåll
+- Flervalsfrågor ska testa förståelse, inte bara faktaminne - inkludera frågor på analysera/värdera-nivå
 - Distraktorer (felaktiga alternativ) ska vara rimliga, inte uppenbara
-- Inkludera lektionens exit ticket som en av fragorna
+- Inkludera lektionens exit ticket som en av frågorna
 
-**B. Momentfragor (overgripande)**
-Skapa 5-10 fragor som spanner over hela momentet:
-- Syntesfragor som kopplar ihop innehall fran flera lektioner
-- Fragor pa hogre taxonomiska nivaer (jamfora, vardera, argumentera)
-- Lampliga som formativ avslutscheck eller repetition
+**B. Momentfrågor (övergripande)**
+Skapa 5-10 frågor som spänner över hela momentet:
+- Syntesfrågor som kopplar ihop innehåll från flera lektioner
+- Frågor på högre taxonomiska nivåer (jämföra, värdera, argumentera)
+- Lämpliga som formativ avslutscheck eller repetition
 
-**AI-svaghetscheck for fragor (evidensbaserad):**
-- Ar fragorna pa varierande taxonomiska nivaer (inte bara "vad heter...")?
-- Har flervalsfragar *plausibla* distraktorer - baserade pa elevers faktiska missuppfattningar, inte slumpfakta?
-- Undviker distraktorer cue-ledande monster (langsta alternativet, "alla ovan", "ingen av dem")?
-- Tacker fragorna de centrala larandemalen? (Specificitetslagen: testning ar lokal - det du inte fragar om blir inte starkare)
-- Inkluderar oppna fragor mojlighet till analys/reflektion?
-- **Verb-kalibrering**: Anvander fragorna "vardera/jamfor/argumentera" for C/A-niva, inte "beskriv/forklara"?
-- **Sweet spot-kalibrering**: Strava efter fragor dar eleverna lyckas svara ratt i 60-85% av fallen pa forsta forsoket (Pyke et al. 2025). Under 60% = frustration, over 85% = ingen larandeeffekt.
-- **AI-genererade fragor**: Rakna med ~31% forkastningstakt (Ahmed, Kerr & O'Malley 2025). Generera ~15 fragor for att behalla 10. Kontrollera fakta mot NotebookLM-kallor.
-- **Format-matching**: MCQ-ovning tranar bara for MCQ-prov. Om sluttestet ar essa, inkludera VSAQ/fritext-fragor i banken.
-- **Spacing-formel**: Planera retrieval review sa att samma fraga ateranvands efter ~10% av det retentionsintervall du vill uppnaa (for ett prov om 4 veckor → repetera efter ~3 dagar).
+**AI-svaghetscheck för frågor (evidensbaserad):**
+- Är frågorna på varierande taxonomiska nivåer (inte bara "vad heter...")?
+- Har flervalsfrågor *plausibla* distraktorer - baserade på elevers faktiska missuppfattningar, inte slumpfakta?
+- Undviker distraktorer cue-ledande mönster (längsta alternativet, "alla ovan", "ingen av dem")?
+- Täcker frågorna de centrala lärandemålen? (Specificitetslagen: testning är lokal - det du inte frågar om blir inte starkare)
+- Inkluderar öppna frågor möjlighet till analys/reflektion?
+- **Verb-kalibrering**: Använder frågorna "värdera/jämför/argumentera" för C/A-nivå, inte "beskriv/förklara"?
+- **Sweet spot-kalibrering**: Sträva efter frågor där eleverna lyckas svara rätt i 60-85% av fallen på första försöket (Pyke et al. 2025). Under 60% = frustration, över 85% = ingen lärandeeffekt.
+- **AI-genererade frågor**: Räkna med ~31% förkastningstakt (Ahmed, Kerr & O'Malley 2025). Generera ~15 frågor för att behålla 10. Kontrollera fakta mot NotebookLM-källor.
+- **Format-matching**: MCQ-övning tränar bara för MCQ-prov. Om sluttestet är essä, inkludera VSAQ/fritext-frågor i banken.
+- **Spacing-formel**: Planera retrieval review så att samma fråga återanvänds efter ~10% av det retentionsintervall du vill uppnå (för ett prov om 4 veckor → repetera efter ~3 dagar).
 
-**Lamplig AI-feedbacktyp per frageformat:**
-- **MCQ**: elaborativ feedback (forklarar varfor ratt/fel) - sarskilt kraftfullt nar eleven svarade fel (hypercorrection)
-- **VSAQ/fritext**: elaborativ feedback ar *nodvandig* - utan den ar transfer-effekten nastan noll
-- Undvik: enbart "ratt/fel" pa oppna svar - minimal pedagogisk nytta
+**Lämplig AI-feedbacktyp per frågeformat:**
+- **MCQ**: elaborativ feedback (förklarar varför rätt/fel) - särskilt kraftfullt när eleven svarade fel (hypercorrection)
+- **VSAQ/fritext**: elaborativ feedback är *nödvändig* - utan den är transfer-effekten nästan noll
+- Undvik: enbart "rätt/fel" på öppna svar - minimal pedagogisk nytta
 
-## Presentation och godkannande
+## Presentation och godkännande
 
-Presentera fragorna grupperade per lektion i en oversiktlig lista:
+Presentera frågorna grupperade per lektion i en överskådlig lista:
 ```
 Lektion 1: [Titel]
-  1. (MULTIPLE_CHOICE) [fragetext] → Korrekt: [svar]
-  2. (FREE_TEXT) [fragetext]
+  1. (MULTIPLE_CHOICE) [frågetext] → Korrekt: [svar]
+  2. (FREE_TEXT) [frågetext]
   ...
 
 Lektion 2: [Titel]
   ...
 
-Momentfragor (overgripande):
+Momentfrågor (övergripande):
   ...
 ```
 
-Fraga lararen: "Vill du andra, lagga till eller ta bort nagon fraga innan jag exporterar till appen?"
+Fråga läraren: "Vill du ändra, lägga till eller ta bort någon fråga innan jag exporterar till appen?"
 
-## Export till frageappen
+## Export till frågeappen
 
-Nar lararen godkant fragorna anvands MCP-verktyget `create_quiz_from_csv` - det importerar fragorna till frageappen OCH skapar quizzen i ett enda anrop, sa du behover aldrig halla reda pa fraga-ID:n.
+När läraren godkänt frågorna används MCP-verktyget `create_quiz_from_csv` - det importerar frågorna till frågeappen OCH skapar quizzen i ett enda anrop, så du behöver aldrig hålla reda på fråga-ID:n.
 
-CSV-format (samma for alla anrop):
+CSV-format (samma för alla anrop):
 ```
 topic,type,text,option1,option2,option3,option4,correctAnswer
 ```
-- For MULTIPLE_CHOICE med korrekt svar: fyll i `correctAnswer` (exakt samma text som ratt alternativ).
-- For FREE_TEXT: lamna option- och correctAnswer-kolumnerna tomma.
-- Fragornas ordning i quizzen foljer raderna i CSV:n.
+- För MULTIPLE_CHOICE med korrekt svar: fyll i `correctAnswer` (exakt samma text som rätt alternativ).
+- För FREE_TEXT: lämna option- och correctAnswer-kolumnerna tomma.
+- Frågornas ordning i quizzen följer raderna i CSV:n.
 
 1. **Skapa en quiz per lektion** - Ett `create_quiz_from_csv`-anrop per lektion:
-   - `course_id`: kursen lararen valde
+   - `course_id`: kursen läraren valde
    - `title`: `[Tema] - Lektion N: [Titel]`
-   - `csv_content`: lektionens fragor, med topic-kolumnen satt till `[Tema] - Lektion N: [Titel]`
+   - `csv_content`: lektionens frågor, med topic-kolumnen satt till `[Tema] - Lektion N: [Titel]`
    - `mode`: `QUIZ`
-   - (`lock_mode`: `true` endast om lararen vill kora lektionen som prov)
+   - (`lock_mode`: `true` endast om läraren vill köra lektionen som prov)
 
-2. **Skapa momentquiz** - Ett sista `create_quiz_from_csv`-anrop med de overgripande momentfragorna:
+2. **Skapa momentquiz** - Ett sista `create_quiz_from_csv`-anrop med de övergripande momentfrågorna:
    - `title`: `[Tema] - Momentquiz`
-   - `csv_content`: momentfragorna, med topic-kolumnen satt till `[Tema] - Overgripande`
+   - `csv_content`: momentfrågorna, med topic-kolumnen satt till `[Tema] - Övergripande`
    - `mode`: `QUIZ`
 
-   Verktyget returnerar `shareCode` och `url` (`/s/[kod]`) for varje skapad quiz - spara dem till nasta steg.
+   Verktyget returnerar `shareCode` och `url` (`/s/[kod]`) för varje skapad quiz - spara dem till nästa steg.
 
-3. **Presentera resultat** for lararen:
+3. **Presentera resultat** för läraren:
    ```
-   Exporterat till frageappen:
-   - [N] fragor importerade
+   Exporterat till frågeappen:
+   - [N] frågor importerade
    - Quiz skapade:
      - Lektion 1: [Titel] - delningskod: [kod]
      - Lektion 2: [Titel] - delningskod: [kod]
@@ -101,8 +101,8 @@ topic,type,text,option1,option2,option3,option4,correctAnswer
 
 4. **Spara delningskoder** till momentplanen (`momentplan.md`) under en ny sektion:
    ```markdown
-   ## Frageapp (Survey Platform)
-   | Quiz | Delningskod | Antal fragor |
+   ## Frågeapp (Survey Platform)
+   | Quiz | Delningskod | Antal frågor |
    |------|------------|-------------|
    | Lektion 1: [Titel] | [kod] | [N] |
    | ... | ... | ... |
