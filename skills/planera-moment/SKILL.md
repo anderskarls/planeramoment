@@ -29,10 +29,29 @@ Genomför en 7-stegsprocess för att planera ett komplett undervisningsmoment. G
 Denna fil är en **orkestrerare**. Varje steg har en egen referensfil under `references/` med den fullständiga vägledningen. **Läs in respektive stegfil först när du når det steget** - ladda inte alla i förväg. Stegfilerna refererar i sin tur till struktur-/metodfiler (gy11/gy25, pedagogiska-metoder, lektionsplanering) som laddas vid behov.
 
 Skapa output-kataloger för momentet på två platser:
-- **Markdown (.md)** sparas i vaultet: `Undervisningsmaterial/[Ämne]/[Tema]/`
+- **Markdown (.md)** sparas i vaultet: `output/lessons/[Ämne]/[Tema]/`
 - **Word (.docx)** sparas utanför vaultet: `C:\Undervisningsmaterial\[Ämne]\[Tema]\`
 
-Strukturen är identisk på båda platser (t.ex. `Historia/Franska revolutionen/`). Ämne ska ha stor bokstav, tema ska vara läsbart med mellanslag. Skapa katalogerna om de inte finns.
+Strukturen är identisk på båda platser (t.ex. `Historia/Franska revolutionen/`). Ämne ska ha stor bokstav, tema ska vara läsbart med mellanslag. Skapa katalogerna om de inte finns. Vilken ämnesmapp en kurs hör till anges i `kurser.json` (fältet `amnesmapp`).
+
+---
+
+## Återupptagande - kör ALLTID denna kontroll först
+
+Ett moment spänner ofta över flera sessioner. Innan du startar steg 1: ta reda på om detta är ett **nytt moment eller en fortsättning**.
+
+1. Om tema/ämne framgår av `$ARGUMENTS` eller dialogen: kontrollera om `output/lessons/[Ämne]/[Tema]/momentplan.md` redan finns. Om tema är okänt: fråga läraren "Nytt moment, eller fortsätter vi på ett påbörjat?" och lista ev. befintliga momentmappar med momentplan.md.
+2. **Om en momentplan.md finns:** läs den. Sektionerna speglar stegen - identifiera senaste avklarade steg:
+   - `Designval Root-1b` → steg 1 klart
+   - `Nivå 2 - Bedömningsmål` + `Lärandemål` → steg 2 klart
+   - `Nivå 4 - Rollsekvens` + `Nivå 5 - Brottningsform` → steg 3 klart
+   - `Lektionssekvens (rollmappning)` → steg 4 klart
+   - `Frågeapp (Survey Platform)` → steg 5b klart; `Videoöversikter` → steg 5c klart
+3. **Inventera artefakter på disk** mot Completion Checklist: vilka `lektion-N.md`/`.docx`, `elevuppgift-lektion-N.*`, `presentation-lektion-N.html`, `video/*.mp4`, `momentoversikt.html` finns redan?
+4. **Återställ arbetskontexten** utan att ställa om designfrågorna: ladda rätt referensfiler för systemet (steg 1.3), aktivera notebooken (steg 1.4) och läs kursminnet (steg 1.5).
+5. **Sammanfatta läget** för läraren ("Steg 1-4 klara, lektion 1-2 av 6 genererade, inga presentationer ännu") och föreslå att fortsätta från nästa ogjorda punkt. Läraren kan välja att backa.
+
+Skapa ALDRIG om befintliga godkända artefakter utan att fråga. Om läraren bekräftar nytt moment: fortsätt till steg 1 som vanligt.
 
 ---
 
@@ -52,7 +71,7 @@ Mekanismerna **M-i** (default + alternativ), **M-ii** (override-prompt), **M-iii
 
 ## Kursminne - lärande mellan moment
 
-Skillen har ett kursspecifikt minne (en fil per kurs i `.claude/planera-moment/minne/[kursnamn-kebab-case].md`) som gör att den blir bättre över tid. Lärarens justeringar under planeringen fångas upp och används i framtida moment för samma kurs.
+Skillen har ett kursspecifikt minne (en fil per kurs i vaultet: `output/lessons/_kursminne/[kursminne-slug].md`, där sluggen anges per kurs i `kurser.json`) som gör att den blir bättre över tid. Lärarens justeringar under planeringen fångas upp och används i framtida moment för samma kurs. Minnet ligger i vaultet så att det syncas mellan maskiner via Obsidian Sync.
 
 För filformat, regler för minneshantering och när minnet uppdateras (default vid Avslutning + mid-flight när läraren explicit ber om det), läs: `references/kursminne.md`
 
@@ -60,7 +79,7 @@ För filformat, regler för minneshantering och när minnet uppdateras (default 
 
 ## NotebookLM-integration (primär källkälla)
 
-NotebookLM är den primära källan för ämnesinnehåll - källgrundat material med inbyggda referenshänvisningar. Varje kurs kopplas till en notebook via `notebook-config.json`. Notebooken aktiveras i steg 1 och frågas genom steg 1, 3, 5 och 6.
+NotebookLM är den primära källan för ämnesinnehåll - källgrundat material med inbyggda referenshänvisningar. Varje kurs kopplas till en notebook via fältet `notebook_id` i `kurser.json`. Notebooken aktiveras i steg 1 och frågas genom steg 1, 3, 5 och 6.
 
 För CLI-kommandon (`notebooklm use` / `ask` / konversations-ID) och frågeprinciper, läs: `references/notebooklm-anvandning.md`
 
@@ -140,7 +159,7 @@ Om `$ARGUMENTS` innehåller "enskild-lektion" eller om läraren specifikt ber om
 
 | Steg | Input från | Output till |
 |------|-----------|-------------|
-| 1 | Användare + amnesplaner.md + notebook-config.json + **kursminne** | momentplan.md |
+| 1 | Användare + kurser.json + amnesplaner.md + **kursminne** | momentplan.md |
 | 2 | Steg 1 + gy11/struktur.md eller gy25/struktur.md (rätt system per kurs) | momentplan.md (uppdaterad) |
 | 3 | Steg 1-2 + pedagogik-ramverk.md (nivå 4-5) + pedagogiska-metoder.md + vault-sök + **NotebookLM** | momentplan.md (rollsekvens + brottningsform) |
 | 4 | Steg 1-3 (rollsekvens) + lektionsplanering.md | momentplan.md (lektionssekvens/rollmappning) |
@@ -162,7 +181,7 @@ Om `$ARGUMENTS` innehåller "enskild-lektion" eller om läraren specifikt ber om
 - [ ] Videoöversikter genererade (momentöversikt + förförståelse-videor för lektioner med förberedelsematerial), nedladdade som .mp4 och loggade i momentplan.md (om notebook aktiv)
 - [ ] Presentationer genererade som reveal.js HTML för lektioner med instruktionsmoment
 - [ ] Momentöversikt genererad som .html (med delningskoder om frågor exporterades, och videolänkar om videor genererades)
-- [ ] .md-filer sparade i vaultet (`Undervisningsmaterial/[Ämne]/[Tema]/`), .docx-filer i `C:\Undervisningsmaterial\[Ämne]\[Tema]\`
+- [ ] .md-filer sparade i vaultet (`output/lessons/[Ämne]/[Tema]/`), .docx-filer i `C:\Undervisningsmaterial\[Ämne]\[Tema]\`
 - [ ] AI-svaghetscheck genomförd på alla lektionsplaner
 - [ ] Exit ticket-slinga verifierad (varje exit ticket mäter rollens exit och informerar nästa retrieval-öppning)
 - [ ] Kursminne uppdaterat med lärdomar från detta moment

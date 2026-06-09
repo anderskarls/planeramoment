@@ -33,4 +33,4 @@ Baserat på data från steg 1-4 och kompletteringarna ovan:
    - Lärandemål i elevnära formulering
 4. Presentera resultatet för läraren och fråga om justeringar.
 
-Spara till `Undervisningsmaterial/[Ämne]/[Tema]/momentoversikt.html`.
+Spara till `output/lessons/[Ämne]/[Tema]/momentoversikt.html`.

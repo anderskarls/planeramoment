@@ -4,7 +4,7 @@ Detta steg exporterar frågor direkt till lärarens frågeapp via MCP-servern `s
 
 ## Förberedelse
 
-1. Kontrollera att MCP-verktyget `mcp__survey-platform__create_quiz_from_csv` är tillgängligt. Om inte, informera läraren: "Frågeappen är inte kopplad just nu. Jag sparar frågorna som CSV istället så du kan importera dem manuellt." Generera då en CSV-fil till `Undervisningsmaterial/[Ämne]/[Tema]/fragor.csv` och hoppa över resten av detta steg.
+1. Kontrollera att MCP-verktyget `mcp__survey-platform__create_quiz_from_csv` är tillgängligt. Om inte, informera läraren: "Frågeappen är inte kopplad just nu. Jag sparar frågorna som CSV istället så du kan importera dem manuellt." Generera då en CSV-fil till `output/lessons/[Ämne]/[Tema]/fragor.csv` och hoppa över resten av detta steg.
 
 2. Hämta tillgängliga kurser via MCP-resursen `survey://courses`. Presentera listan och låt läraren välja vilken kurs frågorna ska kopplas till. Om kursen inte finns - informera läraren att den behöver skapas i appen först.
 

@@ -2,14 +2,14 @@
 
 ## Lagringsformat
 
-En fil per kurs i `.claude/planera-moment/minne/`:
+En fil per kurs i vaultet under `output/lessons/_kursminne/`:
 ```
-.claude/planera-moment/minne/historia-1b.md
-.claude/planera-moment/minne/samhallskunskap-1a1.md
-.claude/planera-moment/minne/internationella-relationer.md
+output/lessons/_kursminne/historia-niva-1b.md
+output/lessons/_kursminne/samhallskunskap-1a2.md
+output/lessons/_kursminne/internationella-relationer.md
 ```
 
-Filnamnet är kursnamnet i kebab-case (gemener, bindestreck).
+Filnamnet är kursens `kursminne`-slug från `kurser.json`. Minnet ligger i vaultet (inte i `.claude/`) så att det syncas mellan maskiner via Obsidian Sync och är synligt i Obsidian.
 
 Varje minnesfil har denna struktur:
 

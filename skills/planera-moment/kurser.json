@@ -1,0 +1,50 @@
+{
+  "_beskrivning": "Enda källan för kurslistan. Steg 1 (planera-moment), kommandot planera-lektion och kursminnet läser härifrån. Uppdatera HÄR när kursutbudet ändras - inte i referensfilerna.",
+  "kurser": [
+    {
+      "namn": "Samhällskunskap 1a2",
+      "kortnamn": "Sh 1a2",
+      "system": "GY11",
+      "poang": 50,
+      "amnesmapp": "Samhällskunskap",
+      "kursminne": "samhallskunskap-1a2",
+      "notebook_id": ""
+    },
+    {
+      "namn": "Internationella relationer",
+      "kortnamn": "IR",
+      "system": "GY11",
+      "poang": 100,
+      "amnesmapp": "Samhällskunskap",
+      "kursminne": "internationella-relationer",
+      "notebook_id": ""
+    },
+    {
+      "namn": "Samhällskunskap Nivå 1b",
+      "kortnamn": "Sh Nivå 1b",
+      "system": "GY25",
+      "poang": 100,
+      "amnesmapp": "Samhällskunskap",
+      "kursminne": "samhallskunskap-niva-1b",
+      "notebook_id": ""
+    },
+    {
+      "namn": "Historia Nivå 1b",
+      "kortnamn": "Hi Nivå 1b",
+      "system": "GY25",
+      "poang": 100,
+      "amnesmapp": "Historia",
+      "kursminne": "historia-niva-1b",
+      "notebook_id": "be38a766-c460-4031-b57f-9a7118e55d8a"
+    }
+  ],
+  "referensfiler": {
+    "GY11": ["references/gy11/struktur.md", "references/gy11/amnesplaner.md"],
+    "GY25": ["references/gy25/struktur.md", "references/gy25/amnesplaner.md"]
+  },
+  "ovriga_notebooks": {
+    "_beskrivning": "Notebooks utan koppling till aktuell kurslista (bevarade från notebook-config.json). Kör 'notebooklm list --json' för att se alla tillgängliga.",
+    "historia 1a1": "1bc8bd88-16ca-4b2a-b8c6-c62e6dcf2bce",
+    "geografi 1": "b76b154a-a4fc-4de4-967b-257c2155e22d"
+  }
+}

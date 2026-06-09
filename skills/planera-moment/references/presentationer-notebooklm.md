@@ -4,7 +4,7 @@ Presentationer genereras som self-contained reveal.js HTML-filer med hjälp av s
 
 Läs in slides-skillen innan du börjar: `.claude/skills/slides/SKILL.md`
 
-Generera presentationer för varje lektion som har ett instruktions-/presentationsmoment. Generera **en presentation i taget**. Spara till `Undervisningsmaterial/[Ämne]/[Tema]/presentation-lektion-[N].html`.
+Generera presentationer för varje lektion som har ett instruktions-/presentationsmoment. Generera **en presentation i taget**. Spara till `output/lessons/[Ämne]/[Tema]/presentation-lektion-[N].html`.
 
 ## Innehållshämtning från NotebookLM
 
@@ -65,4 +65,4 @@ För varje presentation:
 
 4. **Presentera för läraren** och fråga om feedback innan du går vidare till nästa presentation.
 
-Spara till `Undervisningsmaterial/[Ämne]/[Tema]/presentation-lektion-[N].html`.
+Spara till `output/lessons/[Ämne]/[Tema]/presentation-lektion-[N].html`.

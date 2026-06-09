@@ -18,13 +18,14 @@ Detta kommando är den lätta, fristående vägen. Vill användaren planera ett 
 
 ## Steg 1: Läs format och vault-kontext
 
-Läs den rollbaserade formatreferensen:
+Läs den rollbaserade formatreferensen och kurslistan:
 - `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/references/lektionsformat.md`
+- `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/kurser.json` (enda källan för kurser, system och ämnesmappar)
 
 Sök och läs relevant kontext i vaultet:
 
 1. Använd Glob för att hitta reflektioner i `raw/reflections/` - läs de senaste och mest relevanta
-2. Sök efter befintliga planeringar i `Undervisningsmaterial/[Ämne]/`
+2. Sök efter befintliga planeringar i `output/lessons/[Ämne]/`
 3. Sök i `raw/personal-notes/` efter relevanta planer eller idéer
 
 Sammanfatta kort om du hittade något relevant.
@@ -34,7 +35,7 @@ Sammanfatta kort om du hittade något relevant.
 Tolka vad användaren angett och identifiera vad som saknas.
 
 Obligatorisk information:
-- **Kurs** - Samhällskunskap 1a2, Internationella relationer, Samhällskunskap Nivå 1b, eller Historia Nivå 1b
+- **Kurs** - en av kurserna i `kurser.json`
 - **Tema** - vad lektionen handlar om
 - **Roll** - vilken roll lektionen spelar (se nedan)
 - **Lektionslängd** - default 60 minuter
@@ -63,9 +64,7 @@ Samla alla frågor i ett AskUserQuestion-anrop.
 
 ## Steg 3: Skapa lektionsplanering
 
-Bestäm rätt ämnesmapp:
-- Samhällskunskap 1a2, Internationella relationer, Samhällskunskap Nivå 1b → `Undervisningsmaterial/Samhällskunskap/`
-- Historia Nivå 1b → `Undervisningsmaterial/Historia/`
+Bestäm rätt ämnesmapp via kursens `amnesmapp`-fält i `kurser.json`: `output/lessons/[amnesmapp]/`
 
 Skapa filen med ett beskrivande namn: `[Lektionsnamn].md`. Tillhör lektionen ett befintligt moment, lägg den i momentets temamapp och länka till momentplanen och övriga lektioner.
 

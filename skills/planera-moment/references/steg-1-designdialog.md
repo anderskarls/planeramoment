@@ -10,32 +10,17 @@ Om `$ARGUMENTS` angavs, använd det som ämne. Annars fråga: "Vilket ämne vill
 
 ### 1.2 Kurs
 
-Presentera kurser per system. Filtrera efter valt ämne.
-
-**GY11-kurser (avvecklas successivt):**
-- Samhällskunskap 1a2 (50 p)
-- Internationella relationer (100 p)
-
-**GY25-kurser:**
-- Samhällskunskap Nivå 1b (100 p)
-- Historia Nivå 1b (100 p)
+Läs kurslistan från `kurser.json` (i skillens rot). Presentera kurserna grupperade per system (GY11 avvecklas successivt), filtrerade efter valt ämne, med poäng. Hårdkoda aldrig kurslistan - `kurser.json` är enda källan.
 
 ### 1.3 System-detektering och referensladdning
 
-Baserat på kursval, identifiera system och ladda rätt referensfiler. Bekräfta för läraren.
-
-| Kurs | System | Filer att ladda |
-|---|---|---|
-| Sh 1a2 | GY11 | `references/gy11/struktur.md` + `references/gy11/amnesplaner.md` |
-| Internationella relationer | GY11 | (samma) |
-| Sh Nivå 1b | GY25 | `references/gy25/struktur.md` + `references/gy25/amnesplaner.md` |
-| Hi Nivå 1b | GY25 | (samma) |
+Den valda kursens post i `kurser.json` anger `system` (GY11/GY25). Ladda systemets referensfiler enligt `referensfiler`-mappningen i samma fil. Bekräfta för läraren.
 
 Bekräfta: "Detta moment går under [GY11 / GY25] - jag använder [kunskapskrav-modellen / betygskriterier-modellen] och kommer formulera lärandemål med [systemets värdeord]."
 
 ### 1.4 NotebookLM-koppling
 
-Slå upp notebook-ID i `notebook-config.json`. Om det finns, aktivera:
+Slå upp kursens `notebook_id` i `kurser.json`. Om det finns, aktivera:
 ```bash
 notebooklm use [NOTEBOOK_ID]
 ```
@@ -43,7 +28,7 @@ Bekräfta för läraren. Om ID saknas, informera om fallback till Claudes inbygg
 
 ### 1.5 Kursminne - försörjer M-i:s defaults
 
-Läs `.claude/planera-moment/minne/[kursnamn-kebab-case].md` om den finns. **Detta minne försörjer M-i:s defaults nedströms.** När skillen i 1.7-1.8 (och senare 2.x) föreslår defaults ska de vägas mot minnet.
+Läs `output/lessons/_kursminne/[kursminne-slug].md` om den finns (sluggen står i kursens post i `kurser.json`). **Detta minne försörjer M-i:s defaults nedströms.** När skillen i 1.7-1.8 (och senare 2.x) föreslår defaults ska de vägas mot minnet.
 
 Presentera kort: "Tidigare moment i [kursnamn] visar mönster - t.ex. [1-2 saker som verkar relevanta för det här momentet]. Jag använder dem som **default men inte tvång** - säg till nu om något inte passar detta moment innan vi börjar, så slipper vi korrigera halvvägs in."
 
@@ -154,7 +139,7 @@ Om läraren inte har någon tvärgående tråd, hoppa över - det är frivilligt
 
 ### 1.11 Sammanfattning och momentplan.md (M-iv)
 
-Sammanfatta valen och be läraren bekräfta. Skapa `Undervisningsmaterial/[Ämne]/[Tema]/momentplan.md`:
+Sammanfatta valen och be läraren bekräfta. Skapa `output/lessons/[Ämne]/[Tema]/momentplan.md`:
 
 ```markdown
 # Momentplan: [Tema]

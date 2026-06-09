@@ -31,7 +31,7 @@ Skapa en enskild lektionsplanering utan att planera ett helt moment.
 
 Aktiveras automatiskt när du diskuterar undervisning, lektionsplanering eller pedagogik. Ger Claude kunskap om:
 
-- Dina kurser (Sh1a1, Sh3, Internationella relationer, Hi1b)
+- Dina kurser (se `skills/planera-moment/kurser.json`)
 - Vaultets struktur och filformat
 - Betygsnivåer (E/C/A) och kunskapskrav
 - Pedagogiska metoder och lektionsstruktur
@@ -47,9 +47,11 @@ claude --plugin-dir C:\Brain\resources\planeramoment
 
 ## Kurser
 
-| Kurs | Typ |
-|------|-----|
-| Samhällskunskap 1a1 | Yrkesförberedande |
-| Samhällskunskap 3 | Fördjupning |
-| Internationella relationer | Fördjupning |
-| Historia 1b | Högskoleförberedande |
+Kurslistan (namn, system GY11/GY25, ämnesmapp, NotebookLM-koppling) underhålls på ETT ställe: `skills/planera-moment/kurser.json`. Aktuella kurser läsåret 2026/27:
+
+| Kurs | System |
+|------|--------|
+| Samhällskunskap 1a2 | GY11 |
+| Internationella relationer | GY11 |
+| Samhällskunskap Nivå 1b | GY25 |
+| Historia Nivå 1b | GY25 |

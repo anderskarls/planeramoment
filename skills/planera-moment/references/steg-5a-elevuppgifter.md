@@ -39,7 +39,7 @@ Använd samma docx-metod som lektionsplanerna. Format:
 - Sidfot med kursnamn och lektionstitel
 
 **Spara i båda format:**
-- **Markdown:** `Undervisningsmaterial/[Ämne]/[Tema]/elevuppgift-lektion-[N].md` (i vaultet)
+- **Markdown:** `output/lessons/[Ämne]/[Tema]/elevuppgift-lektion-[N].md` (i vaultet)
 - **Word:** `C:\Undervisningsmaterial\[Ämne]\[Tema]\elevuppgift-lektion-[N].docx`
 
 (Samma mönster för källmaterial: `kallmaterial-lektion-[N].md` / `.docx`)

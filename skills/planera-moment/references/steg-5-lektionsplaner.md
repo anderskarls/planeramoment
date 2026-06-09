@@ -86,7 +86,7 @@ Skriv ett Node.js-script som genererar .docx-filen och kör det.
 Validera filen med `python resources/office-scripts/validate.py`.
 
 **Spara i bada format:**
-- **Markdown:** `Undervisningsmaterial/[Ämne]/[Tema]/lektion-[N].md` (i vaultet)
+- **Markdown:** `output/lessons/[Ämne]/[Tema]/lektion-[N].md` (i vaultet)
 - **Word:** `C:\Undervisningsmaterial\[Ämne]\[Tema]\lektion-[N].docx`
 
 Markdown-versionen ska innehålla samma innehåll som Word-dokumentet men formaterat som ren markdown (rubriker, tabeller, listor).
