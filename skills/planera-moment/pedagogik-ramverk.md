@@ -312,4 +312,5 @@ Ladda rätt katalog baserat på vilken kurs som valts i Steg 1 - inte båda samt
 - **`references/presentationsteknik.md`** - principer för pedagogiska presentationer.
 - **`references/arkiv-presentationer.md`** - designsystemet Arkiv v2.1 (boilerplate, slide-katalog) för reveal.js-presentationer.
 - **`references/frageappen.md`** - guide för export till survey-platform-appen.
+- **`references/wiki-anvandning.md`** - uppslagsprotokoll för lärarens kunskapsbas (wikin) + arbetsfördelning mot NotebookLM.
 - **`references/kursminne.md`** - format för kursminnesfiler per kurs.

@@ -14,7 +14,7 @@ description: >
   lektioner de vill ha. Denna skill ska INTE användas för enskilda dokument
   (använd docx/pptx), enskilda lektionsplaner utan momentkontext, eller
   HTML-momentöversikter från befintlig data (använd html-momentoversikt).
-allowed-tools: Read, Write, Edit, Bash(node:*), Bash(npm:*), Bash(python:*), Bash(pip:*), Bash(pdftoppm:*), Bash(notebooklm:*), mcp__survey-platform__create_quiz_from_csv, mcp__survey-platform__import_questions, mcp__survey-platform__create_survey, mcp__survey-platform__get_results, mcp__survey-platform__summarize_results
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash(node:*), Bash(npm:*), Bash(python:*), Bash(pip:*), Bash(pdftoppm:*), Bash(notebooklm:*), Bash(./resources/local-brain-search/run_search.sh:*), Bash(./resources/local-brain-search/run_connections.sh:*), mcp__survey-platform__create_quiz_from_csv, mcp__survey-platform__import_questions, mcp__survey-platform__create_survey, mcp__survey-platform__get_results, mcp__survey-platform__summarize_results
 argument-hint: "[ämne (valfritt)]"
 ---
 
@@ -77,11 +77,13 @@ För filformat, regler för minneshantering och när minnet uppdateras (default 
 
 ---
 
-## NotebookLM-integration (primär källkälla)
+## Två kunskapskällor: NotebookLM och wikin
 
-NotebookLM är den primära källan för ämnesinnehåll - källgrundat material med inbyggda referenshänvisningar. Varje kurs kopplas till en notebook via fältet `notebook_id` i `kurser.json`. Notebooken aktiveras i steg 1 och frågas genom steg 1, 3, 5 och 6.
+Planeringen lutar sig mot två källor med tydlig arbetsfördelning:
 
-För CLI-kommandon (`notebooklm use` / `ask` / konversations-ID) och frågeprinciper, läs: `references/notebooklm-anvandning.md`
+**NotebookLM (primär källa för ämnesinnehåll).** Källgrundat material med inbyggda referenshänvisningar - svarar på "vad ska eleverna lära sig om X?". Varje kurs kopplas till en notebook via fältet `notebook_id` i `kurser.json`. Notebooken aktiveras i steg 1 och frågas genom steg 1, 3, 5 och 6. För CLI-kommandon (`notebooklm use` / `ask` / konversations-ID) och frågeprinciper, läs: `references/notebooklm-anvandning.md`
+
+**Wikin (lärarens kunskapsbas).** Vaultets `wiki/` (index.md → topics/concepts/sources) bär lärarens ackumulerade pedagogiska evidens, didaktiska synteser och ämnessynteser - svarar på "hur undervisar jag detta bra, och vad vet jag redan?". Konsulteras i steg 1, 3 och 5; fynd som påverkar designval dokumenteras med `[[wikilänkar]]` i momentplanens sektion `## Kunskapsunderlag (wiki)`. För uppslagsprotokoll, arbetsfördelning och presentationsregler, läs: `references/wiki-anvandning.md`
 
 ---
 
@@ -159,11 +161,11 @@ Om `$ARGUMENTS` innehåller "enskild-lektion" eller om läraren specifikt ber om
 
 | Steg | Input från | Output till |
 |------|-----------|-------------|
-| 1 | Användare + kurser.json + amnesplaner.md + **kursminne** | momentplan.md |
+| 1 | Användare + kurser.json + amnesplaner.md + **kursminne** + **wiki** (tema-uppslag) | momentplan.md |
 | 2 | Steg 1 + gy11/struktur.md eller gy25/struktur.md (rätt system per kurs) | momentplan.md (uppdaterad) |
-| 3 | Steg 1-2 + pedagogik-ramverk.md (nivå 4-5) + pedagogiska-metoder.md + vault-sök + **NotebookLM** | momentplan.md (rollsekvens + brottningsform) |
+| 3 | Steg 1-2 + pedagogik-ramverk.md (nivå 4-5) + pedagogiska-metoder.md + **wiki** (metoder + reflektioner) + **NotebookLM** | momentplan.md (rollsekvens + brottningsform) |
 | 4 | Steg 1-3 (rollsekvens) + lektionsplanering.md | momentplan.md (lektionssekvens/rollmappning) |
-| 5 | Steg 1-4 + lektionsplanering.md + docx SKILL.md + **NotebookLM** | lektion-N.md (vault) + lektion-N.docx (C:\Undervisningsmaterial\) |
+| 5 | Steg 1-4 + lektionsplanering.md + docx SKILL.md + **NotebookLM** + **wiki** (didaktik per lektion) | lektion-N.md (vault) + lektion-N.docx (C:\Undervisningsmaterial\) |
 | 5a | Steg 5 (godkänd lektionsplan) + docx SKILL.md | elevuppgift-lektion-N.md + .docx, kallmaterial-lektion-N.md + .docx |
 | 5b | Steg 1-5 + **MCP survey-platform** | frågor i databasen + momentplan.md (uppdaterad) |
 | 5c | Steg 1 (notebook) + Steg 4-5 (lektionsteman + förberedelsematerial) + **NotebookLM-CLI** | video-moment-oversikt.mp4 + video-forforstaelse-lektion-N.mp4 + momentplan.md (uppdaterad) |
@@ -182,6 +184,7 @@ Om `$ARGUMENTS` innehåller "enskild-lektion" eller om läraren specifikt ber om
 - [ ] Presentationer genererade som reveal.js HTML för lektioner med instruktionsmoment
 - [ ] Momentöversikt genererad som .html (med delningskoder om frågor exporterades, och videolänkar om videor genererades)
 - [ ] .md-filer sparade i vaultet (`output/lessons/[Ämne]/[Tema]/`), .docx-filer i `C:\Undervisningsmaterial\[Ämne]\[Tema]\`
+- [ ] Kunskapsunderlag (wiki) dokumenterat i momentplan.md med [[länkar]] (eller markerat tomt)
 - [ ] AI-svaghetscheck genomförd på alla lektionsplaner
 - [ ] Exit ticket-slinga verifierad (varje exit ticket mäter rollens exit och informerar nästa retrieval-öppning)
 - [ ] Kursminne uppdaterat med lärdomar från detta moment

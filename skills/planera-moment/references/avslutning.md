@@ -17,7 +17,7 @@ När alla steg är klara:
    - `video/video-moment-oversikt.mp4` - momentöversikt-video för elever (NotebookLM)
    - `video/video-forforstaelse-lektion-N.mp4` - förförståelse-videor inför lektioner med förberedelsematerial (NotebookLM)
 2. Fråga om läraren vill justera något.
-3. **Kunskapsbasintegration (H4):** Föreslå att läraren skriver en reflektion efter momentet med hjälp av mallen i `Mallar/Lektionsreflektion.md` (om den finns). Reflektionen kan sedan användas för att förbättra framtida moment.
+3. **Wiki-slingan (H4):** Föreslå att läraren skriver en reflektion efter momentet med hjälp av mallen i `templates/Lektionsreflektion.md` (om den finns). Påminn om slingan: reflektionen ingestas till wikin (`/ingest`) och blir en del av kunskapsbasen som nästa moments planering läser i steg 1.5.5, 3 och 5. Peka på momentplanens `## Kunskapsunderlag (wiki)` - den visar vilka wiki-sidor som bar detta moment och är en naturlig startpunkt för reflektionen ("stämde kunskapsbasens råd i klassrummet?").
 4. Nämn kort vad som kan byggas vidare i framtiden: flashcards, elevmaterial, formativa bedömningsuppgifter.
 5. Tipsa om att `momentoversikt.html` kan publiceras via Google Sites: skapa en ny sida, välj "Bädda in" > "Embed code" och klistra in HTML-koden, eller ladda upp filen och länka till den.
 

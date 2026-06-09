@@ -8,6 +8,7 @@ allowed-tools:
   - Glob
   - Grep
   - AskUserQuestion
+  - Bash(./resources/local-brain-search/run_search.sh:*)
 ---
 
 # Skapa enskild lektionsplanering
@@ -27,6 +28,11 @@ Sök och läs relevant kontext i vaultet:
 1. Använd Glob för att hitta reflektioner i `raw/reflections/` - läs de senaste och mest relevanta
 2. Sök efter befintliga planeringar i `output/lessons/[Ämne]/`
 3. Sök i `raw/personal-notes/` efter relevanta planer eller idéer
+4. **Wiki-uppslag:** läs `index.md` (vaultets rot) och sök kunskapsbasen på lektionens tema + roll:
+   ```bash
+   ./resources/local-brain-search/run_search.sh "[tema] [roll/metod]" --limit 5 --json
+   ```
+   Läs de 2-3 mest relevanta wiki-sidorna. Wikifynd matar lärarinstruktioner, differentiering och exit ticket-kalibrering - citera med `[[länkar]]` i lektionsplanen. Hittas inget: gå vidare utan kommentar.
 
 Sammanfatta kort om du hittade något relevant.
 

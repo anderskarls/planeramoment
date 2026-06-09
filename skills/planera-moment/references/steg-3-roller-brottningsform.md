@@ -4,11 +4,16 @@ Detta steg fortsätter designdialogen genom Momentplaneringsramverkets nivå 4 (
 
 Läs in metodreferensen (metodbibliotek organiserat efter funktion - försörjer rollernas konkreta aktiviteter): `references/pedagogiska-metoder.md`
 
-**Kunskapsbasintegration (H4):** Sök vaultet via Local Brain Search efter relevanta reflektioner från liknande moment och permanenta anteckningar om pedagogik:
+**Wiki-uppslag (H4):** Konsultera lärarens kunskapsbas inför roll- och formvalen (protokoll i `references/wiki-anvandning.md`). Två sökningar:
+
 ```bash
 ./resources/local-brain-search/run_search.sh "[ämnet/temat] pedagogik reflektion" --limit 5 --json
 ```
-Om relevanta resultat hittas, presentera dem kort för läraren: "Jag hittade dessa reflektioner från tidigare undervisning som kan vara relevanta..."
+```bash
+./resources/local-brain-search/run_search.sh "[kandidatform/metod, t.ex. sokratiskt seminarium debatt] [frågetypen]" --limit 5 --json
+```
+
+Den första fångar reflektioner och lärdomar från liknande moment, den andra didaktisk evidens om de former/metoder som är aktuella för Brottning-rollen. Läs de mest relevanta sidorna och väg in dem i M-i-defaults (rollurval 3.1, diskursmål/form 3.2). Presentera kort med `[[länkar]]`: "Wikin har relevant material - [[sida]] säger [en rad]." Sidor som påverkar val dokumenteras i momentplanens `## Kunskapsunderlag (wiki)`.
 
 **NotebookLM-forskning:** Om en notebook är aktiv, hämta ämnesinnehåll som grund för rollernas innehåll:
 ```bash

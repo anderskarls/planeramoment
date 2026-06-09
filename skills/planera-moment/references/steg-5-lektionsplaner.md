@@ -25,6 +25,18 @@ Använd svaren som grund för (mappat mot lektionens roll, inte fasta faser):
 - **Differentiering**: fördjupningsmaterial (mot A) från notebookens källor
 Inkludera NotebookLM:s källhänvisningar i lektionsplanens materialsektion.
 
+**Wiki-uppslag per lektion:** Innan lektionen genereras, slå även upp lärarens kunskapsbas (protokoll i `references/wiki-anvandning.md`):
+```bash
+./resources/local-brain-search/run_search.sh "[lektionens roll/metod] [lektionens tema]" --limit 5 --json
+```
+Komplettera med ämnes-MOC:en från steg 1.5.5 om en sådan finns (den pekar ofta på sidor om just denna lektions delområde). Wikifynden matar **lärarens sida** av lektionsplanen, där NotebookLM matar **elevens**:
+- **Lärarinstruktioner**: didaktiska fynd om rollens aktivitet (t.ex. vanliga fallgropar i formen, kalibrering, frågeteknik)
+- **Retrieval-öppning och exit ticket**: kalibrering mot kunskapsbasens evidens (svårighetsgrad, frågeverb)
+- **Differentiering**: tekniker och stödstrukturer kunskapsbasen dokumenterat
+- **Ämnesvinklar**: synteser och perspektiv från ingestade källor som skärper innehållet
+
+Citera använda sidor med `[[länk]]` i lektionsplanens materialsektion och lägg till dem i momentplanens `## Kunskapsunderlag (wiki)`. Hittas inget relevant: gå vidare utan kommentar.
+
 ### Lektionens ram (tre evidensprinciper, inte faser)
 
 Varje lektion ramas av tre principer som är ortogonala mot rollinnehållet - de gäller oavsett roll:

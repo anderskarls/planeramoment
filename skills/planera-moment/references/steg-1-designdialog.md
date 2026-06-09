@@ -39,6 +39,21 @@ Tonregler för kursminnes-presentation:
 
 Om filen inte finns, säg ingenting.
 
+### 1.5.5 Wiki-uppslag på temat
+
+När ämne/tema är känt (från $ARGUMENTS eller 1.1): slå upp temat i wikin enligt protokollet i `references/wiki-anvandning.md`:
+
+1. Läs `index.md` (vaultets rot) och identifiera relevanta sidor - särskilt en eventuell **ämnes-MOC** för temat (t.ex. en MOC byggd inför just detta moment), relevanta concepts och tidigare reflektioner.
+2. Komplettera med semantisk sökning:
+   ```bash
+   ./resources/local-brain-search/run_search.sh "[temat] [kursen]" --limit 5 --json
+   ```
+3. Läs de 2-3 mest relevanta sidorna.
+
+Presentera kort (samma ton som kursminnet): "Wikin har material om temat - t.ex. [[sida]] som [en rad om bidraget]. Jag använder det som underlag för förslagen framåt." Lyft högst 2-3 fynd. Hittas inget relevant: säg ingenting.
+
+Fynden informerar nedströms: förslag på brottningsfråga (1.6), skärpningsfilter (1.6.5), Hess-default (1.7) och CI-urval (1.9). Sidor som faktiskt påverkar val dokumenteras i momentplanens `## Kunskapsunderlag (wiki)` (1.11).
+
 ### 1.6 Root: Brottningsfrågan
 
 Fråga: "Vilken fråga ska eleverna brottas med under detta moment?"
@@ -172,6 +187,10 @@ Sammanfatta valen och be läraren bekräfta. Skapa `output/lessons/[Ämne]/[Tema
 ### Tvärgående trådar (valbart)
 - **Intra-moment:** [bivinkel eller "ingen"]
 - **Inter-moment:** [framtida koppling sparad i kursminne, eller "ingen"]
+
+## Kunskapsunderlag (wiki)
+- [[sida]] - [vad sidan bidrog med till vilket val]
+- *(fylls på löpande genom steg 1-5; tom sektion om wikin inte gav något)*
 
 ## Override-räknare
 - **Antal overrides hittills:** [N]
