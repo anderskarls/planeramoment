@@ -1,8 +1,10 @@
-# Steg 6: Presentationer (reveal.js HTML via slides-skillen)
+# Steg 6: Presentationer (reveal.js HTML i designsystemet Arkiv)
 
-Presentationer genereras som self-contained reveal.js HTML-filer med hjälp av slides-skillen. Innehållet hämtas från NotebookLM för att säkerställa att presentationerna är förankrade i källmaterialet.
+Presentationer genereras som self-contained reveal.js HTML-filer i designsystemet Arkiv v2.1. Innehållet hämtas från NotebookLM för att säkerställa att presentationerna är förankrade i källmaterialet.
 
-Läs in slides-skillen innan du börjar: `.claude/skills/slides/SKILL.md`
+Läs in innan du börjar:
+- `references/arkiv-presentationer.md` - Arkiv v2.1: boilerplate (komplett CSS), slide-katalog och konventioner
+- `references/presentationsteknik.md` - pedagogiska principer för klassrumspresentationer
 
 Generera presentationer för varje lektion som har ett instruktions-/presentationsmoment. Generera **en presentation i taget**. Spara till `output/lessons/[Ämne]/[Tema]/presentation-lektion-[N].html`.
 
@@ -34,7 +36,7 @@ Generera presentationer för varje lektion som har ett instruktions-/presentatio
 
 För varje presentation:
 
-1. **Samla innehåll** från lektionsplanen (steg 5) och NotebookLM-svaren. Matcha innehållet mot Arkivs slide-typer:
+1. **Samla innehåll** från lektionsplanen (steg 5) och NotebookLM-svaren. Matcha innehållet mot Arkivs slide-typer (full katalog i `arkiv-presentationer.md`):
    - Nyckelbegrepp och fakta → `content`
    - Diskussionsfrågor → `discuss` eller `question`
    - Primärkälla/citat → `quote` eller `callout` (variant `kalla`)
@@ -42,7 +44,7 @@ För varje presentation:
    - Kronologi → `timeline` (vertikal eller horisontell)
    - Sammanfattning → `close`
 
-2. **Generera presentationen** i designsystemet Arkiv (se slides-skillen). Följ Arkivs principer:
+2. **Generera presentationen** i designsystemet Arkiv (boilerplate och markup-mönster i `arkiv-presentationer.md`). Följ Arkivs principer:
    - Använd Arkivs designtokens utan undantag - papper `#F4EDE1`, Cormorant Garamond i rubriker, bordeaux som signaturfärg
    - Rubriker bär mening: frågor som titlar, ett kursivt nyckelord per rubrik (`<em>ord</em>`)
    - Max 3 nyckelpunkter per slide
@@ -50,7 +52,7 @@ För varje presentation:
    - Talarnoter på varje slide med lärarhandledning och tidsuppskattningar
    - Inga emojis - bara typografiska tecken (`▸ ● ▪ § №`)
 
-3. **Kvalitetskontroll** - kör slides-skillens Arkiv-checklista innan du presenterar för läraren:
+3. **Kvalitetskontroll** - kör Arkiv-checklistan innan du presenterar för läraren:
    - Papperston `#F4EDE1` på alla slides?
    - Masthead (meta_left/meta_right) + baseline (Mitt designsystem · Arkiv + sidnummer) på varje slide?
    - Max 2 accentfärger per slide, bordeaux som primär?

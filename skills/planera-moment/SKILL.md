@@ -129,7 +129,7 @@ Output: frågor i databasen + delningskoder i `momentplan.md`.
 Generera elevriktade videor: en momentöversikt-video + förförståelse-videor inför de lektioner som har elevriktat förberedelsematerial levererat i förväg (Princip 3). Laddas ner som `.mp4`, länkas från momentöversikten (steg 7). Kräver aktiv notebook och inloggad CLI. **Läs och följ `references/videooversikt-notebooklm.md`.**
 Output: `video/video-*.mp4` + Videoöversikter-tabell i `momentplan.md`.
 
-### Steg 6: Presentationer (reveal.js HTML via slides-skillen)
+### Steg 6: Presentationer (reveal.js HTML i designsystemet Arkiv)
 
 Generera presentationer för lektioner med instruktionsmoment, i designsystemet Arkiv, med NotebookLM-förankrat innehåll. **Läs och följ `references/presentationer-notebooklm.md`.**
 Output: `presentation-lektion-N.html`.
@@ -167,7 +167,7 @@ Om `$ARGUMENTS` innehåller "enskild-lektion" eller om läraren specifikt ber om
 | 5a | Steg 5 (godkänd lektionsplan) + docx SKILL.md | elevuppgift-lektion-N.md + .docx, kallmaterial-lektion-N.md + .docx |
 | 5b | Steg 1-5 + **MCP survey-platform** | frågor i databasen + momentplan.md (uppdaterad) |
 | 5c | Steg 1 (notebook) + Steg 4-5 (lektionsteman + förberedelsematerial) + **NotebookLM-CLI** | video-moment-oversikt.mp4 + video-forforstaelse-lektion-N.mp4 + momentplan.md (uppdaterad) |
-| 6 | Steg 1-4 + slides SKILL.md + **NotebookLM** (innehåll) | presentation-lektion-N.html |
+| 6 | Steg 1-4 + arkiv-presentationer.md + presentationsteknik.md + **NotebookLM** (innehåll) | presentation-lektion-N.html |
 | 7 | Steg 1-4 + html-momentoversikt SKILL.md + lärar-input + ev. delningskoder + ev. videolänkar | momentoversikt.html |
 
 ## Completion Checklist

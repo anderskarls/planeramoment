@@ -4,7 +4,7 @@
 
 **OBS (video):** Om videor genererades i steg 5c, länka dem i momentöversikten - momentöversikt-videon högst upp (intro/repetition) och varje förförståelse-video i respektive lektions Förberedelser-fält ("Titta på denna video före lektionen"). Hämta elevlänkarna från momentplanens "Videoöversikter"-tabell. Om en länk ännu saknas (läraren inte laddat upp .mp4:n), lämna en tydlig platshållare.
 
-Läs in HTML-momentöversikt-skillen: `.claude/skills/html-momentoversikt/SKILL.md`
+Läs in HTML-momentöversikt-skillen (bundlad i pluginen): `${CLAUDE_PLUGIN_ROOT}/skills/html-momentoversikt/SKILL.md`
 
 Momentöversikten är en fristående HTML-sida som ger eleverna en samlad överblick av hela momentet - datum, innehåll, förberedelser och mål. Sidan kan publiceras via Google Sites eller liknande.
 

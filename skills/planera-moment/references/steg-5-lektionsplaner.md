@@ -1,6 +1,6 @@
 # Steg 5: Detaljerade lektionsplaner (Word-dokument)
 
-Läs in docx-skillen: `.claude/skills/docx/SKILL.md`
+Läs in docx-skillen (bundlad i pluginen): `${CLAUDE_PLUGIN_ROOT}/skills/docx/SKILL.md`
 
 Säkerställ att `docx`-paketet är installerat: `npm install -g docx`
 
@@ -83,7 +83,7 @@ Skapa varje godkänd lektionsplan som ett professionellt Word-dokument med `docx
 - Teckensnitt: Arial, 12pt brödtext
 
 Skriv ett Node.js-script som genererar .docx-filen och kör det.
-Validera filen med `python resources/office-scripts/validate.py`.
+Validera filen med `python ${CLAUDE_PLUGIN_ROOT}/skills/docx/scripts/office/validate.py` (på Windows: sätt `PYTHONUTF8=1` i miljön, annars fallerar valideringen på svenska tecken).
 
 **Spara i bada format:**
 - **Markdown:** `output/lessons/[Ämne]/[Tema]/lektion-[N].md` (i vaultet)
