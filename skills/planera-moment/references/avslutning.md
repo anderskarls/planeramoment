@@ -11,7 +11,7 @@ När alla steg är klara:
    - `presentation-lektion-N.html` - klassrumspresentationer (reveal.js HTML)
    - `momentoversikt.html` - momentöversikt för elever (HTML)
 
-   **Utanför vaultet** (`C:\Undervisningsmaterial\[Ämne]\[Tema]\`):
+   **Utanför vaultet** (`[Word-mappen]\[Ämne]\[Tema]\` - se Sökvägar i SKILL.md):
    - `lektion-N.docx` - detaljerade lektionsplaner (Word)
    - `elevuppgift-lektion-N.docx` - elevuppgifter, arbetsblad och källmaterial (Word)
    - `video/video-moment-oversikt.mp4` - momentöversikt-video för elever (NotebookLM)
@@ -35,4 +35,4 @@ När alla steg är klara:
 
 7. **Peka på slingans andra halva:** Påminn läraren om att köra `/reflektera-moment` **efter** att momentet undervisats. Då förs utfallet (höll frågan, nådde rollerna sina exit, satt förutsättningarna, var dina overrides rätt) tillbaka till kursminnets `## Utfall`-sektion och försörjer framtida defaults med det som faktiskt fungerade - inte bara det du föredrog vid planeringsbordet. Det är så systemet blir bättre över tid på riktigt.
 
-Avsluta med: "Ditt moment är klart! Markdown-filerna finns i vaultet under `output/lessons/[Ämne]/[Tema]/` och Word-dokumenten finns i `C:\Undervisningsmaterial\[Ämne]\[Tema]\`. Presentationerna är HTML-filer (öppna i webbläsaren och tryck S för talarnoter) och momentöversikten är en HTML-sida som du kan dela med eleverna via Google Sites - redo att använda direkt. Lycka till med undervisningen!"
+Avsluta med: "Ditt moment är klart! Markdown-filerna finns i vaultet under `output/lessons/[Ämne]/[Tema]/` och Word-dokumenten finns i Word-mappen (`[Word-mappen]\[Ämne]\[Tema]\` - ange den resolvade sökvägen). Presentationerna är HTML-filer (öppna i webbläsaren och tryck S för talarnoter) och momentöversikten är en HTML-sida som du kan dela med eleverna via Google Sites - redo att använda direkt. Lycka till med undervisningen!"

@@ -64,7 +64,7 @@ Fråga: "Vill du lägga till eller ta bort någon video innan jag genererar? (Ge
 Fokusprompten är det positionella argumentet till `generate video`. Skriv den på svenska och scoppa den mot innehållet.
 
 **Momentöversikt:**
-> "Skapa en pedagogisk översiktsvideo för gymnasieelever om [tema]. Utgå från momentets brottningsfråga: '[frågan ordagrant]'. Täck de centrala innehållspunkterna [lista] så att eleverna får en helhetsbild de kan använda för att förbereda sig och repetera. Gymnasienivå, på svenska."
+> "Skapa en pedagogisk översiktsvideo för gymnasieelever om [tema]. Utgå från momentets drivande fråga: '[frågan ordagrant]'. Täck de centrala innehållspunkterna [lista] så att eleverna får en helhetsbild de kan använda för att förbereda sig och repetera. Gymnasienivå, på svenska."
 
 **Förförståelse (per lektion):**
 > "Skapa en kort förberedelsevideo för gymnasieelever inför en lektion om [lektionens tema]. Efter videon ska eleven kunna [förförståelsepaketets/förutsättningarnas innehåll, t.ex. medeltidens grova tidsindelning tidig/hög/sen och vad periodisering betyder]. Detta är material eleven tittar på före lektionen. Gymnasienivå, på svenska."
@@ -92,10 +92,10 @@ Starta alla videor utan att blockera (de genereras parallellt server-side), vän
    notebooklm artifact rename [ID] "Förförståelse inför Lektion [N] - [Titel]"
    ```
 
-4. **Ladda ner** till `.mp4`:
+4. **Ladda ner** till `.mp4` i Word-mappens `video/`-undermapp (utanför vaultet - stora binärer; Word-mappen definieras i SKILL.md:s Sökvägar-sektion):
    ```bash
-   notebooklm download video -a [ID] "[output]/video/video-moment-oversikt.mp4" --json
-   notebooklm download video -a [ID] "[output]/video/video-forforstaelse-lektion-[N].mp4" --json
+   notebooklm download video -a [ID] "[Word-mappen]/[Ämne]/[Tema]/video/video-moment-oversikt.mp4" --json
+   notebooklm download video -a [ID] "[Word-mappen]/[Ämne]/[Tema]/video/video-forforstaelse-lektion-[N].mp4" --json
    ```
 
 **Enklare alternativ** (en i taget, långsammare): hoppa över `--no-wait` och kör `generate video "..." --wait --timeout 1800 --json`, ladda sedan ner direkt.

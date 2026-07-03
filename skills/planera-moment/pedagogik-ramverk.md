@@ -335,7 +335,7 @@ Ladda rätt katalog baserat på vilken kurs som valts i Steg 1 - inte båda samt
 
 ### Ämnesplansoberoende referenser
 
-- **`references/pedagogiska-metoder.md`** - evidensbaserade undervisningsmetoder. *Obs: kan innehålla sex-fas-bundna avsnitt - vid konflikt vinner detta dokument.*
+- **`references/pedagogiska-metoder.md`** - evidensbaserade undervisningsmetoder.
 - **`references/lektionsplanering.md`** - rollbaserad mall och principer för detaljerade lektionsplaner (nivå 4-5). Ersätter den tidigare sex-fas-modellen.
 - **`references/presentationsteknik.md`** - principer för pedagogiska presentationer.
 - **`references/arkiv-presentationer.md`** - designsystemet Arkiv v2.1 (boilerplate, slide-katalog) för reveal.js-presentationer.

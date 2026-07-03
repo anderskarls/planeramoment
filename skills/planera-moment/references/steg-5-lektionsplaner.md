@@ -8,6 +8,8 @@ Läs in lektionsplaneringsreferensen (rollbaserad mall + ramprinciper): `referen
 
 Generera **en lektion i taget**, rollbaserat. Varje lektion realiserar de roller den tilldelades i Steg 4 - lektionens inre förlopp formas av rollen/rollerna och (för Brottning) diskursmålet + formen från 3.2. **Ingen fast fassekvens.**
 
+*I snabbläge: generera alla lektionsplaner i följd, presentera en samlad översikt, invänta en godkännanderunda. Kvalitetskontrollen nedan körs ändå per lektion.*
+
 **NotebookLM-innehållshämtning:** Innan varje lektion genereras, hämta relevant innehåll från notebooken. Anpassa frågorna efter lektionens tema:
 ```bash
 notebooklm ask --json "Ge mig fakta, nyckelbegrepp och konkreta exempel om [lektionens specifika tema]. Inkludera källhänvisningar."
@@ -39,11 +41,11 @@ Citera använda sidor med `[[länk]]` i lektionsplanens materialsektion och läg
 
 ### Lektionens ram (tre evidensprinciper, inte faser)
 
-Varje lektion ramas av tre principer som är ortogonala mot rollinnehållet - de gäller oavsett roll:
+Varje lektion ramas av tre principer, ortogonala mot rollinnehållet (full motivering: `lektionsplanering.md` avsnitt 1 - kanonisk):
 
-1. **Öppna med retrieval** (spaced practice): aktiv återkallelse från tidigare lektioner, styrd av föregående lektions exit ticket-data. (Momentets första lektion: aktivera förkunskaper istället.)
-2. **Elevaktiv tid > 50%** av lektionen. Rosenshines fynd att framgångsrika lärare lägger ~57% av tiden på guidad övning gäller fortfarande - men som **teknik inom de roller där eleven arbetar mot en exit**, inte som en universell, tvingande fas.
-3. **Avsluta med exit ticket + framåtkoppling**: en fråga som mäter rollens exit + en preview av nästa lektion.
+1. **Öppna med retrieval** (spaced practice; första lektionen: aktivera förkunskaper istället).
+2. **Elevaktiv tid > 50%** (sikta 60%+).
+3. **Avsluta med exit ticket + framåtkoppling** som mäter rollens exit.
 
 **Kärnan mellan öppning och avslut formas av lektionens roll** (se `lektionsplanering.md` för rollspecifik kärnvägledning). Kort:
 
@@ -70,15 +72,15 @@ Varje lektionsplan ska innehålla:
 - **Exit ticket** (H2) - en specifik fråga som mäter rollens exit + instruktion för hur resultaten informerar nästa lektion
 - **Koppling till bedömningsmål/kunskapskrav** - hur lektionen bidrar till E/C/A-progressionen
 
-### Kvalitetskontroll (obligatorisk) - kör innan du presenterar varje lektionsplan
+### AI-svaghetscheck och kvalitetskontroll (obligatorisk) - kör innan du presenterar varje lektionsplan
 
-**Standardkontroller:**
 - Realiserar lektionen sin tilldelade roll, och mäter exit ticket den rollens exit?
 - Öppnar lektionen med retrieval kopplad till föregående lektion (utom momentets första)?
-- Överstiger elevaktiv tid 50% av total tid?
+- Beräkna elevaktiv tid ur tidtabellen och ange den explicit i lektionsplanen som "Elevaktiv tid: X av Y min (Z%)" - kravet är >50%, sikta 60%+.
 - För Brottning-lektioner: matchar förloppet diskursmålet + formen från 3.2 (inte en generisk genomgång)?
 - Är differentieringen konkret (inte "stöd svagare elever")?
-- Finns [VERIFIERA]-taggar vid osäkra faktapåståenden?
+- Är faktapåståenden källgrundade (NotebookLM) eller [VERIFIERA]-taggade?
+- Är exemplen konkreta och ämnesspecifika (inte generiska AI-exempel)?
 - Kopplar lektionen framåt till nästa?
 
 
@@ -99,6 +101,6 @@ Validera filen med `python ${CLAUDE_PLUGIN_ROOT}/skills/docx/scripts/office/vali
 
 **Spara i bada format:**
 - **Markdown:** `output/lessons/[Ämne]/[Tema]/lektion-[N].md` (i vaultet)
-- **Word:** `C:\Undervisningsmaterial\[Ämne]\[Tema]\lektion-[N].docx`
+- **Word:** `[Word-mappen]\[Ämne]\[Tema]\lektion-[N].docx` (Word-mappen definierad i SKILL.md:s Sökvägar-sektion)
 
 Markdown-versionen ska innehålla samma innehåll som Word-dokumentet men formaterat som ren markdown (rubriker, tabeller, listor).

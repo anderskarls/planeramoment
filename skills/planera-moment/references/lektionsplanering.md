@@ -22,8 +22,10 @@ Tre principer ramar varje lektion. De är ortogonala mot rollinnehållet och gä
 
 Vad lektionskärnan ser ut som beror på vilken roll lektionen realiserar. För varje roll: vad eleven exit:ar med, typisk kärnaktivitet, och vilken sorts exit ticket som mäter rätt sak.
 
+*Rollernas kanoniska definition och exits: `pedagogik-ramverk.md` nivå 4 (och arbetstabellen i steg-3 3.1) - vid skillnad vinner ramverket. Nedan den lektionsnära utökningen: kärnaktivitet + exit ticket-exempel per roll.*
+
 ### Frågeförankring
-- **Exit:** eleven förstår brottningsfrågan och varför den är värd att brottas med.
+- **Exit:** eleven förstår den drivande frågan (brottningsfråga / kunna-göra-mål / undersökande fråga) och varför den är värd att brottas med.
 - **Kärna:** presentera frågan, gör dess spänning levande (en händelse, ett dilemma, en kontrast). Knyt an till elevernas värld.
 - **Exit ticket:** "Formulera med egna ord vad frågan handlar om och varför den inte har ett enkelt svar."
 
@@ -83,11 +85,7 @@ Brottning-lektionen är den mest krävande och planeras noggrannast. **Diskursm�
 | Klargöra | Begreppslig precision | Begreppsseminarium, definitionsförhandling |
 | Pröva | Hypotes-test mot källor | Källkritiskt seminarium, evidens-jury |
 
-**Gruppstorleksgolv + struktur:** storleken sätter golvet för möjliga former (sokratiskt seminarium kollapsar vid >18; Harkness designad för 10-14; exploratory talk kräver 3-4/grupp). Storlek räcker inte - **struktur krävs**: utan strukturerade talturer dominerar 3-5 elever talutrymmet (Larsson 2007). Ange alltid den mekanism som säkrar talutrymme (t.ex. talkort, roterande roller, tysta skrivrundor före tal).
-
-**Position-tilldelning (Hess-gate):** om frågan klassats tippande (Steg 1.7) - lägg position-tilldelning ovanpå vald form som stark default, för att skydda elever med utsatt minoritetsposition.
-
-**Variering:** upprepa inte samma form mer än en gång i momentet utan motivering.
+**Gruppstorlek + struktur, position-tilldelning (Hess-gate) och variering:** de fyra formvalsprinciperna härleds i Steg 3.2 (kanonisk hemvist: `pedagogik-ramverk.md` nivå 5). Kortversion: gruppstorleken sätter golvet för möjliga former och kräver alltid en strukturmekanism som säkrar talutrymme (Larsson 2007); tippande frågor (1.7) får position-tilldelning som stark default; samma form upprepas inte utan motivering. Vald form + gruppstruktur kommer från momentplanens nivå 5 - realisera den här, härled inte om.
 
 ---
 
@@ -104,7 +102,7 @@ Lektion N:
 Planering inför Lektion N+1:
   Nådde de rollens exit? -> Fortsätt i sekvensen
   Lucka kvar?            -> Adressera i nästa retrieval-öppning
-  (Inför Brottning: sitter förutsättningarna? -> annars stötta innan)
+  (Inför momentets kärnaktivitet: sitter förutsättningarna? -> annars stötta innan)
          |
 Lektion N+1:
   Öppning: Retrieval [adresserar gap från Lektion N]
@@ -163,6 +161,8 @@ Lektion N+1:
 
 ## Elevaktiviteter
 - [Specifika instruktioner med tydliga steg]
+
+**Elevaktiv tid: ca [X] av [Y] minuter ([Z]%)** (beräknas ur lektionsförloppet; kravet är >50%, sikta 60%+)
 
 ## Differentiering
 - **Stöd (mot E):** [konkreta stödstrukturer: mallar, ledande frågor, ordbank]

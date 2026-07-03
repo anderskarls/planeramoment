@@ -8,6 +8,8 @@ Läs in innan du börjar:
 
 Generera presentationer för varje lektion som har ett instruktions-/presentationsmoment. Generera **en presentation i taget**. Spara till `output/lessons/[Ämne]/[Tema]/presentation-lektion-[N].html`.
 
+*I snabbläge: generera alla presentationer i följd, presentera en samlad översikt, invänta en godkännanderunda. Kvalitetskontrollen (Arkiv-checklistan) körs ändå per presentation.*
+
 ## Innehållshämtning från NotebookLM
 
 Om en notebook är aktiv (steg 1), hämta relevant innehåll innan varje presentation genereras. Anpassa frågorna efter lektionens tema:
@@ -52,18 +54,21 @@ För varje presentation:
    - Talarnoter på varje slide med lärarhandledning och tidsuppskattningar
    - Inga emojis - bara typografiska tecken (`▸ ● ▪ § №`)
 
-3. **Kvalitetskontroll** - kör Arkiv-checklistan innan du presenterar för läraren:
-   - Papperston `#F4EDE1` på alla slides?
-   - Masthead (meta_left/meta_right) + baseline (Mitt designsystem · Arkiv + sidnummer) på varje slide?
+3. **Kvalitetskontroll** - kör först den mekaniska validatorn, gå därefter igenom de icke-mekaniska punkterna:
+
+   Kör först (på Windows: `PYTHONUTF8=1`):
+   ```bash
+   python ${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/scripts/validate_arkiv.py [fil]
+   ```
+   Den täcker papperston `#F4EDE1`, de tre typsnitten, talarnoter på varje slide, emoji-frihet, masthead-täckning och en heuristik för max 3 nyckelpunkter. Åtgärda alla FAIL innan du går vidare.
+
+   Gå sedan igenom de icke-mekaniska punkterna för hand:
+   - Baseline (Arkiv · v2.1 + sidnummer) på varje standardslide?
    - Max 2 accentfärger per slide, bordeaux som primär?
    - Ett kursivt nyckelord per rubrik - max?
    - Frågor som titlar där möjligt?
-   - Max 3 nyckelpunkter per slide?
    - Brödtext max 42 em bred?
    - Diskussionspaus var 3-4:e slide?
-   - Inga emojis - bara `▸ ● ▪ § №`?
-   - Talarnoter på varje slide?
-   - Cormorant Garamond + Inter Tight + JetBrains Mono laddade från Google Fonts?
 
 4. **Presentera för läraren** och fråga om feedback innan du går vidare till nästa presentation.
 

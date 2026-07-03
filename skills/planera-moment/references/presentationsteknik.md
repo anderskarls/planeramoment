@@ -1,5 +1,7 @@
 # Presentationsteknik - Pedagogiska presentationer för klassrummet
 
+Denna fil ger de pedagogiska principerna. Format och markup styrs av `arkiv-presentationer.md` (reveal.js/Arkiv v2.1) - presentationerna genereras direkt som HTML, inte som markdown att överföra.
+
 ## Grundprinciper
 
 Klassrumspresentationer skiljer sig från konferenspresentationer. De ska inte bara informera - de ska aktivera tänkande och stödja lärande.
@@ -81,42 +83,6 @@ Fråga: [Källkritisk fråga att diskutera]
 > Talarnoter: [Vilka likheter/skillnader som är viktiga att lyfta]
 ```
 
-## Output-format
-
-Generera presentationsinnehåll i Markdown. Läraren överför sedan till valfritt verktyg (PowerPoint, Google Slides, Keynote).
-
-```markdown
-# Presentation: [Lektionens titel]
-
-**Lektion:** [N] av [totalt antal]
-**Längd:** ca [X] minuter
-**Syfte:** [Vad presentationen ska åstadkomma]
-
----
-
-## Slide 1: [Titel/Fråga]
-
-[Innehåll - punkter, citat, eller instruktion]
-
-> **Talarnoter:** [Vad läraren säger och gör]
-> **Visuellt:** [Förslag på bild, karta, diagram eller annat visuellt stöd]
-> **Tid:** ca [X] min
-
----
-
-## Slide 2: [Titel/Fråga]
-
-[Innehåll]
-
-> **Talarnoter:** [...]
-> **Visuellt:** [...]
-> **Tid:** ca [X] min
-
----
-
-[Fortsätter för alla slides]
-```
-
 ## Kvalitetskontroll
 
 Innan presentationen levereras, kontrollera:
@@ -125,7 +91,6 @@ Innan presentationen levereras, kontrollera:
 - [ ] Används frågor som titlar (inte bara påståenden)?
 - [ ] Finns diskussionspauser minst var 3-4:e slide?
 - [ ] Finns talarnoter för varje slide?
-- [ ] Finns visuella förslag (inte bara text)?
 - [ ] Kopplar presentationen till den efterföljande elevaktiviteten?
 - [ ] Matchar innehållet lektionens lärandemål?
 - [ ] Är total presentationstid max 20 minuter?

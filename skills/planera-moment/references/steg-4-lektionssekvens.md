@@ -16,7 +16,7 @@ Läs in lektionsplaneringsreferensen: `references/lektionsplanering.md`
 
 3. **Identifiera:**
    - Var retrieval/spaced practice återkopplar till tidigare lektioner (särskilt Återbesök-rollen)
-   - **Hur varje lektions exit ticket-data informerar nästa lektions retrieval-öppning** (H2) - och särskilt: verifierar exit ticket-data inför Brottning-lektionen att förutsättningarna (2.4) sitter?
+   - **Hur varje lektions exit ticket-data informerar nästa lektions retrieval-öppning** (H2) - och särskilt: verifierar exit ticket-data inför Brottning-lektionen (eller inför momentets kärnaktivitet för färdighets-/översikts-moment) att förutsättningarna (2.4) sitter?
    - Var den mest kognitivt krävande lektionen ligger (ofta Brottning) - är placeringen rätt, och ligger förutsättningarna före?
    - Var det finns naturliga stoppunkter om läraren behöver anpassa
 

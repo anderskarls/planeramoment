@@ -20,7 +20,8 @@ Detta kommando är den lätta, fristående vägen. Vill användaren planera ett 
 ## Steg 1: Läs format och vault-kontext
 
 Läs den rollbaserade formatreferensen och kurslistan:
-- `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/references/lektionsformat.md`
+- `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/references/lektionsformat.md` (det fristående-specifika: frontmatter, kortfattad variant)
+- `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/references/lektionsplanering.md` (kanonisk: ram, rollvägledning, brottningsform, detaljerad mall)
 - `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/kurser.json` (enda källan för kurser, system och ämnesmappar)
 
 Sök och läs relevant kontext i vaultet:
@@ -60,7 +61,7 @@ Obligatorisk information:
 | Applikation | Förmåga att tillämpa på ett nytt fall |
 | Återbesök | Befäst, spaced retrieval av tidigare kärna |
 
-Är rollen **Brottning**, fråga också om diskursmål (Övertyga / Syntes / Utforska / Klargöra / Pröva) och gruppstorlek - formen härleds därifrån (se lektionsformat.md).
+Är rollen **Brottning**, fråga också om diskursmål (Övertyga / Syntes / Utforska / Klargöra / Pröva) och gruppstorlek - formen härleds därifrån (se lektionsplanering.md avsnitt 3).
 
 Fråga alltid om **detaljnivå**:
 - **Detaljerad** - fullständiga lärarinstruktioner, lektionsförlopp, differentiering, bilagor
@@ -74,7 +75,7 @@ Bestäm rätt ämnesmapp via kursens `amnesmapp`-fält i `kurser.json`: `output/
 
 Skapa filen med ett beskrivande namn: `[Lektionsnamn].md`. Tillhör lektionen ett befintligt moment, lägg den i momentets temamapp och länka till momentplanen och övriga lektioner.
 
-Följ formatet i `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/references/lektionsformat.md` - detaljerad eller kortfattad variant baserat på användarens val. Lektionsförloppet ska formas av rollen, inte av en fast fassekvens.
+Följ formatet baserat på användarens val: **detaljerad** variant enligt den kanoniska mallen i `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/references/lektionsplanering.md` avsnitt 5 (med frontmattern och fristående-anpassningarna från `lektionsformat.md`); **kortfattad** variant enligt `lektionsformat.md` Variant 2. Lektionsförloppet ska formas av rollen, inte av en fast fassekvens.
 
 ## Steg 4: Sammanfatta
 

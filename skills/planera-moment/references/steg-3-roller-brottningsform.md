@@ -26,7 +26,7 @@ Presentera en kort sammanfattning av vad notebooken innehåller om ämnet för l
 
 ### 3.1 Nivå 4 - Rollkomposition
 
-Ett moment komponeras av roller, inte fasta faser. **En roll definieras av vad eleven exit:ar med**, inte aktivitetens yttre form. De nio rollerna:
+Ett moment komponeras av roller, inte fasta faser. **En roll definieras av vad eleven exit:ar med**, inte aktivitetens yttre form. Kanonisk definition: `pedagogik-ramverk.md` nivå 4 - vid skillnad vinner ramverket. Tabellen nedan är arbetsdokumentet för detta steg. De nio rollerna:
 
 | # | Roll | Eleven exit:ar med |
 |---|------|--------------------|
@@ -117,7 +117,7 @@ Diskutera **formativa checkpoints** kopplade till **rollövergångar** - särski
 
 ### 3.5 Mönsterlarms-check (M-iii)
 
-Räkna overrides kumulativt från Steg 1-3 (1.7, 1.8, 2.2, 2.3, 2.4, 2.5, 3.1 rollurval, 3.2 diskursmål/form). Samma två triggers som i 2.6 (antal: 3+ totalt; typ-mönster: 3+ i samma kategori). Vid trigger, pausa med medium friktion och kräv skriftlig motivering. Spara i momentplan.md → Override-räknare.
+Räkna overrides kumulativt från Steg 1-3 (1.7, 1.8, 2.2, 2.3, 2.4, 2.5, 3.1 rollurval, 3.2 diskursmål/form). **Samma procedur och prompter som 2.6** (samma två triggers - antal: 3+ totalt; typ-mönster: 3+ i samma kategori) - räkna kumulativt. Vid trigger, pausa med medium friktion och kräv skriftlig motivering. Spara i momentplan.md → Override-räknare.
 
 ### 3.6 Sammanfattning och uppdatering av momentplan.md (M-iv)
 

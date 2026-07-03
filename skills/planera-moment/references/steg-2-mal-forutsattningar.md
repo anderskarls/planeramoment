@@ -47,7 +47,7 @@ Presentera med E/C/A-progressionen synlig. Fråga om läraren vill ändra/lägga
 
 **Override-prompt (M-ii):** Vid avvikelse - fråga om kontextläsningskategori.
 
-### 2.4 Nivå 3 - Förutsättningar för brottning
+### 2.4 Nivå 3 - Förutsättningar för kärnarbetet
 
 Identifiera **två kategorier**:
 
@@ -76,11 +76,11 @@ Presentera leveranstabellen för läraren, be hen justera. Acceptera inte en fö
 
 #### Verifikationsregel (mjuk + spårbar)
 
-Innan brottning släpps lös, bedöm mot **tre dimensioner** - be läraren resonera kring varje:
+Innan momentets kärnaktivitet (Brottning/Applikation/Syntes beroende på momenttyp) släpps lös, bedöm mot **tre dimensioner** - be läraren resonera kring varje:
 
 1. **Andel + spridning:** Hur stor del av klassen har förutsättningarna? Finns elever totalt utan?
-2. **Konsekvens av luckan:** Räcker det att tappa nyans, eller blir brottningen meningslös?
-3. **Frågetypens tolerans:** Hess-frågor tål okunnigt deltagande bättre än disciplinära källfrågor.
+2. **Konsekvens av luckan:** Räcker det att tappa nyans, eller blir kärnaktiviteten meningslös?
+3. **Frågetypens tolerans** (endast brottnings-moment; för övriga: bedöm förmågans/områdets tolerans för luckor)**:** Hess-frågor tål okunnigt deltagande bättre än disciplinära källfrågor.
 
 Inga hårda tröskelvärden. Lärarens bedömning står i centrum.
 
@@ -115,7 +115,7 @@ Sammanfatta nivå 2-3-besluten. Uppdatera `momentplan.md` med:
 ## Designval (Momentplaneringsramverket) - forts.
 
 ### Nivå 2 - Bedömningsmål
-- **"Lyckad brottning" innebär:** [...]
+- **Lyckat utfall innebär** (momenttyp-relativt - lyckad brottning / behärskad förmåga / fullgod helhetsförståelse)**:** [...]
 - **Default:** [...]
 - **Valt:** [...]
 - **Override:** [...]

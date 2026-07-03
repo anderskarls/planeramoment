@@ -10,11 +10,12 @@ description: >
   samhällskunskap, historia eller juridik. Triggas även av fraser som "planera
   ett moment", "planera-moment", "momentplanering", "jag vill planera", "hjälp
   mig planera", "skapa lektionsplaner", "planera undervisningen", "planera
-  lektioner om [ämne]", eller när användaren beskriver ett ämne/tema och antal
+  lektioner om [ämne]", "snabbläge" (kör steg 1-4 som en samlad designrunda),
+  eller när användaren beskriver ett ämne/tema och antal
   lektioner de vill ha. Denna skill ska INTE användas för enskilda dokument
   (använd docx/pptx), enskilda lektionsplaner utan momentkontext, eller
   HTML-momentöversikter från befintlig data (använd html-momentoversikt).
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash(node:*), Bash(npm:*), Bash(python:*), Bash(pip:*), Bash(pdftoppm:*), Bash(notebooklm:*), Bash(./resources/local-brain-search/run_search.sh:*), Bash(./resources/local-brain-search/run_connections.sh:*), mcp__survey-platform__create_quiz_from_csv, mcp__survey-platform__import_questions, mcp__survey-platform__create_survey, mcp__survey-platform__get_results, mcp__survey-platform__summarize_results
+allowed-tools: Read, Write, Edit, Glob, Grep, AskUserQuestion, Bash(node:*), Bash(npm:*), Bash(python:*), Bash(pip:*), Bash(pdftoppm:*), Bash(notebooklm:*), Bash(./resources/local-brain-search/run_search.sh:*), Bash(./resources/local-brain-search/run_connections.sh:*), ListMcpResourcesTool, ReadMcpResourceTool, mcp__survey-platform__create_quiz_from_csv, mcp__survey-platform__import_questions, mcp__survey-platform__create_survey, mcp__survey-platform__import_moment, mcp__survey-platform__get_moment_report, mcp__survey-platform__get_results, mcp__survey-platform__summarize_results
 argument-hint: "[ämne (valfritt)]"
 ---
 
@@ -30,9 +31,17 @@ Denna fil är en **orkestrerare**. Varje steg har en egen referensfil under `ref
 
 Skapa output-kataloger för momentet på två platser:
 - **Markdown (.md)** sparas i vaultet: `output/lessons/[Ämne]/[Tema]/`
-- **Word (.docx)** sparas utanför vaultet: `C:\Undervisningsmaterial\[Ämne]\[Tema]\`
+- **Word (.docx)** sparas utanför vaultet: `[Word-mappen]\[Ämne]\[Tema]\` (se **Sökvägar** nedan)
 
 Strukturen är identisk på båda platser (t.ex. `Historia/Franska revolutionen/`). Ämne ska ha stor bokstav, tema ska vara läsbart med mellanslag. Skapa katalogerna om de inte finns. Vilken ämnesmapp en kurs hör till anges i `kurser.json` (fältet `amnesmapp`).
+
+## Sökvägar
+
+Skillen använder tre platser. Resolva dem i början av arbetet:
+
+- **Vaultrot.** Läs `$VAULT_BASE_PATH` från `.claude/settings.md` i arbetskatalogen om filen finns; annars anta att cwd är vaultroten. Alla `output/lessons/...`-sökvägar är relativa vaultroten.
+- **Word-mappen** (`[Word-mappen]` i stegfilerna). Läs nyckeln `WORD_OUTPUT_PATH` från samma `.claude/settings.md`; om nyckeln saknas är defaulten `C:\Undervisningsmaterial`. Under den läggs `[Ämne]\[Tema]\` (samma struktur som i vaultet). Här sparas .docx-filer och videor - stora binärer hålls utanför vaultet.
+- **Sökskripten.** `[vaultrot]/resources/local-brain-search/run_search.sh` (och `run_connections.sh`). Faller de bort finns en fallback beskriven i `references/wiki-anvandning.md` (index.md + Grep över `wiki/`). Sökskripts-anropen förutsätter att cwd = vaultroten (normalfallet när sessionen startar där).
 
 ---
 
@@ -47,7 +56,7 @@ Ett moment spänner ofta över flera sessioner. Innan du startar steg 1: ta reda
    - `Nivå 4 - Rollsekvens` + `Nivå 5 - Brottningsform` → steg 3 klart
    - `Lektionssekvens (rollmappning)` → steg 4 klart
    - `Frågeapp (Survey Platform)` → steg 5b klart; `Videoöversikter` → steg 5c klart
-3. **Inventera artefakter på disk** mot Completion Checklist: vilka `lektion-N.md`/`.docx`, `elevuppgift-lektion-N.*`, `presentation-lektion-N.html`, `video/*.mp4`, `momentoversikt.html` finns redan?
+3. **Inventera artefakter på disk** mot Completion Checklist: vilka `lektion-N.md`/`.docx`, `elevuppgift-lektion-N.*`, `presentation-lektion-N.html`, `video/*.mp4`, `momentoversikt.html` finns redan? (`.docx` och `video/*.mp4` ligger i Word-mappen, inte i vaultmappen - se Sökvägar.)
 4. **Återställ arbetskontexten** utan att ställa om designfrågorna: ladda rätt referensfiler för systemet (steg 1.3), aktivera notebooken (steg 1.4) och läs kursminnet (steg 1.5).
 5. **Sammanfatta läget** för läraren ("Steg 1-4 klara, lektion 1-2 av 6 genererade, inga presentationer ännu") och föreslå att fortsätta från nästa ogjorda punkt. Läraren kan välja att backa.
 
@@ -66,6 +75,8 @@ Skapa ALDRIG om befintliga godkända artefakter utan att fråga. Om läraren bek
 Inom samma dialog-turn räcker det att packa upp en gång. I nya turns: packa upp igen om läraren inte uttryckligen visat att hen har principen aktivt i huvudet.
 
 Mekanismerna **M-i** (default + alternativ), **M-ii** (override-prompt), **M-iii** (mönsterlarm) och **M-iv** (spårdokumentation i momentplan.md) aktiveras genom hela steg 1-3. Full beskrivning i `pedagogik-ramverk.md`.
+
+**Använd AskUserQuestion för M-i-val med slutna alternativ** (momenttyp, Hess-klassificering, frågetyp, diskursmål, form): defaulten som första alternativ märkt "(Rekommenderad)", övriga med en rads beskrivning. Öppna val (frågeformulering, lärandemål) förblir fri dialog. M-ii:s turn-disciplin gäller oförändrat: blanda aldrig en override-kategorisering och ett nytt val i samma fråga.
 
 ---
 
@@ -123,8 +134,8 @@ Output: `elevuppgift-lektion-N.md` + `.docx` (samma mönster för `kallmaterial-
 
 ### Steg 5b: Frågor till frågeappen (Survey Platform)
 
-Exportera klassrumsquiz till lärarens frågeapp via MCP. **Läs och följ `references/frageappen.md`.**
-Output: frågor i databasen + delningskoder i `momentplan.md`.
+Exportera klassrumsquiz till lärarens frågeapp via MCP. Om elevuppgifter genererats (steg 5a) kan hela momentet även importeras som ett sammanhållet moment (`import_moment`), så eleverna följer lektionsbågen, lämnar in digitalt och läraren kan ta ut en momentrapport (`get_moment_report`). **Läs och följ `references/frageappen.md`.**
+Output: frågor + ev. moment med elevuppgifter i databasen + delningskoder i `momentplan.md`.
 
 ### Steg 5c: Videoöversikter för elever (NotebookLM)
 
@@ -157,6 +168,12 @@ Om `$ARGUMENTS` innehåller "enskild-lektion" eller om läraren specifikt ber om
 
 ---
 
+## Tillval: Snabbläge
+
+Om `$ARGUMENTS` innehåller "snabb"/"express", eller läraren ber om det: kör steg 1-4 som EN samlad designrunda i stället för fyra godkännanderundor. Skillen tar fram defaults för hela kedjan (momenttyp → fråga → Hess/typologi → bedömningsmål → lärandemål → förutsättningar → roller → form → lektionssekvens), presenterar allt som en enda sammanhållen designöversikt och ber läraren godkänna eller peka ut vad som ska ändras. M-ii (override-prompt) och M-iii (mönsterlarm) gäller fortfarande fullt ut för de val läraren ändrar. Kursminne och wiki-uppslag körs som vanligt och matar defaults.
+
+I steg 5/5a/6 erbjuds batchgenerering: generera alla lektionsplaner (eller alla presentationer) i följd och presentera en samlad ändringslista, i stället för godkännande per artefakt. Kvalitetskontrollerna körs per artefakt precis som i normalläget.
+
 ## State Dependencies
 
 | Steg | Input från | Output till |
@@ -165,9 +182,9 @@ Om `$ARGUMENTS` innehåller "enskild-lektion" eller om läraren specifikt ber om
 | 2 | Steg 1 + gy11/struktur.md eller gy25/struktur.md (rätt system per kurs) | momentplan.md (uppdaterad) |
 | 3 | Steg 1-2 + pedagogik-ramverk.md (nivå 4-5) + pedagogiska-metoder.md + **wiki** (metoder + reflektioner) + **NotebookLM** | momentplan.md (rollsekvens + brottningsform) |
 | 4 | Steg 1-3 (rollsekvens) + lektionsplanering.md | momentplan.md (lektionssekvens/rollmappning) |
-| 5 | Steg 1-4 + lektionsplanering.md + docx SKILL.md + **NotebookLM** + **wiki** (didaktik per lektion) | lektion-N.md (vault) + lektion-N.docx (C:\Undervisningsmaterial\) |
+| 5 | Steg 1-4 + lektionsplanering.md + docx SKILL.md + **NotebookLM** + **wiki** (didaktik per lektion) | lektion-N.md (vault) + lektion-N.docx ([Word-mappen]\) |
 | 5a | Steg 5 (godkänd lektionsplan) + docx SKILL.md | elevuppgift-lektion-N.md + .docx, kallmaterial-lektion-N.md + .docx |
-| 5b | Steg 1-5 + **MCP survey-platform** | frågor i databasen + momentplan.md (uppdaterad) |
+| 5b | Steg 1-5 + Steg 5a (elevuppgifter) + **MCP survey-platform** | frågor + ev. moment med elevuppgifter i databasen + momentplan.md (uppdaterad) |
 | 5c | Steg 1 (notebook) + Steg 4-5 (lektionsteman + förberedelsematerial) + **NotebookLM-CLI** | video-moment-oversikt.mp4 + video-forforstaelse-lektion-N.mp4 + momentplan.md (uppdaterad) |
 | 6 | Steg 1-4 + arkiv-presentationer.md + presentationsteknik.md + **NotebookLM** (innehåll) | presentation-lektion-N.html |
 | 7 | Steg 1-4 + html-momentoversikt SKILL.md + lärar-input + ev. delningskoder + ev. videolänkar | momentoversikt.html |
@@ -178,13 +195,14 @@ Om `$ARGUMENTS` innehåller "enskild-lektion" eller om läraren specifikt ber om
 - [ ] Rollsekvens (nivå 4) dokumenterad; core-roller för momenttypen finns (brottnings-moment: Frågeförankring+Brottning+Syntes; färdighet: +Begreppsbygge+Applikation; översikt: +Perspektiv-/Begreppsbygge+Syntes)
 - [ ] Brottningsform (nivå 5) dokumenterad *om momentet har en Brottning-roll* (annars ej tillämpligt)
 - [ ] Varje lektion realiserar sin tilldelade roll; exit ticket mäter rollens exit
-- [ ] Alla lektionsplaner genererade som .md (vault) och .docx (C:\Undervisningsmaterial\)
-- [ ] Elevuppgifter genererade som .md (vault) och .docx (C:\Undervisningsmaterial\) för varje lektion
+- [ ] Alla lektionsplaner genererade som .md (vault) och .docx ([Word-mappen]\)
+- [ ] Elevuppgifter genererade som .md (vault) och .docx ([Word-mappen]\) för varje lektion
 - [ ] Frågor genererade och exporterade till frågeappen (eller sparade som CSV om MCP ej tillgängligt)
+- [ ] Moment med elevuppgifter exporterat till frågeappen (om läraren valde det)
 - [ ] Videoöversikter genererade (momentöversikt + förförståelse-videor för lektioner med förberedelsematerial), nedladdade som .mp4 och loggade i momentplan.md (om notebook aktiv)
 - [ ] Presentationer genererade som reveal.js HTML för lektioner med instruktionsmoment
 - [ ] Momentöversikt genererad som .html (med delningskoder om frågor exporterades, och videolänkar om videor genererades)
-- [ ] .md-filer sparade i vaultet (`output/lessons/[Ämne]/[Tema]/`), .docx-filer i `C:\Undervisningsmaterial\[Ämne]\[Tema]\`
+- [ ] .md-filer sparade i vaultet (`output/lessons/[Ämne]/[Tema]/`), .docx-filer i `[Word-mappen]\[Ämne]\[Tema]\`
 - [ ] Kunskapsunderlag (wiki) dokumenterat i momentplan.md med [[länkar]] (eller markerat tomt)
 - [ ] AI-svaghetscheck genomförd på alla lektionsplaner
 - [ ] Exit ticket-slinga verifierad (varje exit ticket mäter rollens exit och informerar nästa retrieval-öppning)

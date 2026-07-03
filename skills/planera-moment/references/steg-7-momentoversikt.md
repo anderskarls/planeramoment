@@ -22,7 +22,7 @@ Du har redan all pedagogisk data från steg 1-4. Fråga läraren om:
 Baserat på data från steg 1-4 och kompletteringarna ovan:
 
 1. Välj en färgpalett och typografi som matchar ämnet (se skillen). Presentera valet kort för läraren.
-2. Omformulera lärandemålen till **elevnära språk** - inga kunskapskravsformuleringar, utan konkreta beskrivningar av vad eleven ska kunna.
+2. Omformulera lärandemålen till **elevnära språk** - inga kunskapskravsformuleringar och aldrig utskrivna E/C/A-etiketter (betygsbokstäver är planeringsspråk), utan konkreta beskrivningar av vad eleven ska kunna.
 3. Generera en **self-contained HTML-fil** enligt skillens specifikation:
    - All CSS inline i `<style>`-block
    - Semantisk HTML med korrekt `lang="sv"`

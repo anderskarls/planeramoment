@@ -8,9 +8,13 @@ Gå igenom den godkända lektionsplanen och identifiera vilka elevmaterial som b
 
 - **Arbetsblad/uppgiftsblad** - strukturerade frågor, analysuppgifter, jämförelseövningar med tydliga instruktioner och utrymme för elevsvar
 - **Källmaterial** - sammanställda källtexter, utdrag, citat, bilder eller data som eleverna ska arbeta med. Inkludera källhänvisningar. Om NotebookLM är aktivt, använd källor därifrån
-- **Analysuppgifter** - konkreta uppgifter med stegvisa instruktioner, frågeställningar som stiger i komplexitet (E-C-A-progression)
+- **Analysuppgifter** - konkreta uppgifter med stegvisa instruktioner, frågeställningar som stiger i komplexitet (E-C-A-progression - synlig för läraren i planen, aldrig som etiketter i elevdokumentet)
 
 Ibland räcker ett dokument per lektion, ibland behövs flera (t.ex. ett källkompendium + ett arbetsblad). Anpassa efter lektionens innehåll.
+
+**Två hårda regler för elevriktat material:**
+- **Inkludera ALDRIG lektionens exit ticket i arbetsbladet** - exit tickets körs digitalt via frågeappen (steg 5b).
+- **Skriv aldrig ut E/C/A-etiketter i elevriktade dokument.** E/C/A är planeringsspråk. Differentiering i elevdokument uttrycks som stödrutor och fördjupning/stjärnmarkering - inte som betygsbokstäver.
 
 ### Innehåll och struktur
 
@@ -27,6 +31,7 @@ Varje elevuppgift ska:
 - Är instruktionerna tillräckligt tydliga för att eleven ska kunna börja arbeta utan ytterligare förklaring?
 - Finns både stöd (mot E) och utmaning (mot A) inbyggt?
 - Är språknivån anpassad för gymnasieelever (inte lärarspråk)?
+- Är dokumentet fritt från exit ticket (görs digitalt i frågeappen) och från E/C/A-etiketter (planeringsspråk, aldrig i elevdokument)?
 
 ### Generera som Word-dokument (.docx)
 
@@ -40,7 +45,7 @@ Använd samma docx-metod som lektionsplanerna. Format:
 
 **Spara i båda format:**
 - **Markdown:** `output/lessons/[Ämne]/[Tema]/elevuppgift-lektion-[N].md` (i vaultet)
-- **Word:** `C:\Undervisningsmaterial\[Ämne]\[Tema]\elevuppgift-lektion-[N].docx`
+- **Word:** `[Word-mappen]\[Ämne]\[Tema]\elevuppgift-lektion-[N].docx` (Word-mappen definierad i SKILL.md:s Sökvägar-sektion)
 
 (Samma mönster för källmaterial: `kallmaterial-lektion-[N].md` / `.docx`)
 
