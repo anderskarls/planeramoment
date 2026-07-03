@@ -54,31 +54,59 @@ Presentera kort (samma ton som kursminnet): "Wikin har material om temat - t.ex.
 
 Fynden informerar nedströms: förslag på brottningsfråga (1.6), skärpningsfilter (1.6.5), Hess-default (1.7) och CI-urval (1.9). Sidor som faktiskt påverkar val dokumenteras i momentplanens `## Kunskapsunderlag (wiki)` (1.11).
 
-### 1.6 Root: Brottningsfrågan
+### 1.5.7 Nivå 0 - Momenttyp
 
-Fråga: "Vilken fråga ska eleverna brottas med under detta moment?"
+Innan roten: fastställ **momenttypen**. Inte varje moment drivs av en omtvistad fråga - att tvinga in en kontrovers där innehållet inte bär en är lika inautentiskt som att brotta över en sluten fråga. Se `pedagogik-ramverk.md`, nivå 0.
 
-Stöd läraren att formulera en kärnfråga som kan driva 5-10 lektioner. Om läraren behöver hjälp att fokusera, ställ:
-- "Vad ska eleverna kunna säga, försvara eller överväga efter momentet som de inte kan idag?"
-- "Finns det en aktuell händelse, ett dilemma eller en spänning som kan vara ingången?"
+**Default-rekommendation (M-i):** Föreslå typ utifrån ämne/tema + ev. kursminne, presentera alla tre med en rad var, be om val:
 
-Spara frågan ordagrant.
+| Momenttyp | Roten är | Signal |
+|---|---|---|
+| **Brottnings-moment** | En omtvistad fråga | Läraren kan formulera en "bör / är det rätt att"-fråga med två försvarbara sidor |
+| **Färdighets-moment** | En förmåga att utveckla | Målet är att kunna göra något (värdera källor, läsa statistik, skriva analys) |
+| **Översikts-moment** | Ett skeende/område att förstå i bredd | Målet är att förstå en epok/ett förlopp, ingen tvingande motkraft |
+
+Momenttypen styr nedströms: vad roten är (1.6), om spänningstestet gäller (1.6.5), om Hess-gaten aktiveras (1.7), och vilka core-roller som krävs (steg 3.1). Bekräfta valet och spara det - det är första fältet i momentplanen (1.11).
+
+**Blandtyp:** om momentet genuint är både-och, välj den typ vars rot driver flest lektioner och notera den andra som sekundär inriktning.
+
+**Override-prompt (M-ii):** momenttyp är ett lärarval, inte en ramverksdefault med golv - ingen kategori-2-5-prompt behövs här. Men om läraren väljer brottnings-moment och sedan i 1.6 inte kan formulera en fråga som passerar spänningstestet, återvänd hit och pröva om en annan typ passar bättre.
+
+### 1.6 Root: Den drivande frågan
+
+Vad roten är beror på momenttypen (1.5.7):
+
+- **Brottnings-moment:** "Vilken fråga ska eleverna brottas med under detta moment?" - en kontroversiell/öppen kärnfråga.
+- **Färdighets-moment:** "Vilken förmåga ska momentet bygga?" - formulera som ett kunna-göra-mål (t.ex. "eleven ska kunna källkritiskt värdera en historisk primärkälla").
+- **Översikts-moment:** "Vilken öppen fråga organiserar undersökningen?" - en bred undersökande fråga (t.ex. "hur och varför spreds reformationen genom Europa?").
+
+Stöd läraren att formulera något som kan driva 5-10 lektioner. Om hjälp behövs:
+- "Vad ska eleverna kunna säga, försvara, göra eller överväga efter momentet som de inte kan idag?"
+- (Brottning:) "Finns det en aktuell händelse, ett dilemma eller en spänning som kan vara ingången?"
+
+Spara frågan/målet ordagrant. Nedströms kallas detta **den drivande frågan** oavsett typ.
 
 ### 1.6.5 Skärpningsfilter - innan klassificering
 
-Innan frågan klassificeras (1.7-1.8), testa den mot tre kriterier. Varje test ska kunna besvaras "ja" - annars föreslå skärpning innan vi går vidare.
+Testa den drivande frågan/målet mot kriterierna nedan. Vilka som gäller beror på momenttypen (1.5.7).
 
-1. **Spänningstest:** Har frågan en inbyggd spänning (X *vs* Y, kontrast, värdekonflikt) eller är den öppet undersökande utan motkraft? Frågor utan inbyggd spänning ger inte brottning - eleverna kan svara "lite av varje" och få rätt.
+**Gäller alla momenttyper:**
 
-2. **Bärighetstest:** Kan frågan driva *varje* lektion i momentet, eller bara introducera momentet? En momentintro-fråga blir tom från lektion 3 och framåt.
+1. **Bärighetstest:** Kan frågan/målet driva *varje* lektion i momentet, eller bara introducera det? En momentintro-fråga blir tom från lektion 3 och framåt.
 
-3. **Default-genererings-test:** Kan skillen själv ge en konkret default-Hess-klassificering med säkerhet baserat på frågans formulering? Om inte - frågan är för vag för att klassificeras.
+**Gäller endast brottnings-moment:**
 
-**Om ett test fallerar:** Presentera 2-3 skärpningar enligt M-i (default + alternativ med pedagogisk motivering). Be läraren välja eller forma något eget. Acceptera *inte* den ursprungliga vaga frågan om något test fallerade - det är skillens jobb att skydda momentet från luddigheten, inte tvärtom.
+2. **Spänningstest:** Har frågan en inbyggd spänning (X *vs* Y, kontrast, värdekonflikt) eller är den öppet undersökande utan motkraft? En brottningsfråga utan inbyggd spänning ger inte brottning - eleverna kan svara "lite av varje" och få rätt. *(Översikts-moment ska tvärtom vara öppet undersökande - för dem är avsaknad av motkraft rätt, inte fel.)*
 
-**Om alla tre tester passerar:** Gå direkt till 1.7.
+3. **Default-genererings-test:** Kan skillen själv ge en konkret default-Hess-klassificering (1.7) med säkerhet? Om inte - frågan är för vag för att klassificeras.
 
-### 1.7 Nivå 1a - Hess-gate
+**Om ett tillämpligt test fallerar:** Presentera 2-3 skärpningar enligt M-i (default + alternativ med pedagogisk motivering). Be läraren välja eller forma något eget. Acceptera *inte* den ursprungliga vaga frågan - det är skillens jobb att skydda momentet från luddigheten. Om en brottningsfråga upprepat fallerar spänningstestet: återvänd till 1.5.7 och pröva om momentet egentligen är ett översikts- eller färdighets-moment.
+
+**Om tillämpliga tester passerar:** brottnings-moment → gå till 1.7. Färdighets-/översikts-moment → hoppa 1.7-1.8 (Hess-gate och frågetypologi gäller inte) och gå direkt till 1.9.
+
+### 1.7 Nivå 1a - Hess-gate (endast brottnings-moment)
+
+*Hoppa över detta steg och 1.8 för färdighets- och översikts-moment - gå till 1.9.*
 
 Klassificera frågan (Hess 2009): **sluten | tippande | öppen**.
 
@@ -162,23 +190,28 @@ Sammanfatta valen och be läraren bekräfta. Skapa `output/lessons/[Ämne]/[Tema
 ## Grundinformation
 - **Ämne/Kurs:** [val]
 - **System:** GY11 | GY25
+- **Momenttyp:** [brottnings-moment | färdighets-moment | översikts-moment] (ev. sekundär inriktning: [...])
 - **Centralt innehåll:** [valda punkter]
 - **Antal lektioner:** [N] × [X] minuter
 - **Tema/vinkel:** [ev.]
 
 ## Designval (Momentplaneringsramverket)
 
-### Root: Brottningsfråga
-> [frågan ordagrant]
+### Nivå 0 - Momenttyp
+- **Vald typ:** [brottnings- | färdighets- | översikts-moment]
+- **Motivering:** [varför denna typ passar temat]
 
-### Nivå 1a - Hess-gate
-- **Klassificering:** [sluten | tippande | öppen]
+### Root: Drivande fråga
+> [frågan/målet ordagrant]
+
+### Nivå 1a - Hess-gate *(endast brottnings-moment)*
+- **Klassificering:** [sluten | tippande | öppen | *ej tillämpligt - ej brottnings-moment*]
 - **Default:** [systemets rekommendation]
 - **Valt:** [lärarens val]
 - **Override:** [Nej | Ja - kategori X kontextläsning: "..."]
 
-### Nivå 1b - Frågetypologi
-- **Primär typ:** [...]
+### Nivå 1b - Frågetypologi *(endast brottnings-moment)*
+- **Primär typ:** [... | *ej tillämpligt*]
 - **Sekundär typ:** [... eller "ingen"]
 - **Default:** [...]
 - **Valt:** [...]

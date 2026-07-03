@@ -42,7 +42,7 @@ Ett moment spänner ofta över flera sessioner. Innan du startar steg 1: ta reda
 
 1. Om tema/ämne framgår av `$ARGUMENTS` eller dialogen: kontrollera om `output/lessons/[Ämne]/[Tema]/momentplan.md` redan finns. Om tema är okänt: fråga läraren "Nytt moment, eller fortsätter vi på ett påbörjat?" och lista ev. befintliga momentmappar med momentplan.md.
 2. **Om en momentplan.md finns:** läs den. Sektionerna speglar stegen - identifiera senaste avklarade steg:
-   - `Designval Root-1b` → steg 1 klart
+   - `Nivå 0 - Momenttyp` + `Root: Drivande fråga` (+ 1a-1b för brottnings-moment) → steg 1 klart
    - `Nivå 2 - Bedömningsmål` + `Lärandemål` → steg 2 klart
    - `Nivå 4 - Rollsekvens` + `Nivå 5 - Brottningsform` → steg 3 klart
    - `Lektionssekvens (rollmappning)` → steg 4 klart
@@ -91,14 +91,14 @@ Planeringen lutar sig mot två källor med tydlig arbetsfördelning:
 
 Varje steg nedan: läs stegfilen, följ den, invänta lärarens godkännande innan nästa steg.
 
-### Steg 1: Ämne, kurs, system och designdialog (Root → 1a → 1b)
+### Steg 1: Ämne, kurs, system och designdialog (Momenttyp → Root → 1a → 1b)
 
-Driver dialogen genom ramverkets översta nivåer: ämne/kurs/system + referensladdning, NotebookLM-koppling, kursminne, brottningsfråga, skärpningsfilter, Hess-gate (1a), frågetypologi (1b), centralt innehåll och tvärgående trådar. **Läs och följ `references/steg-1-designdialog.md`.**
-Output: skapar `momentplan.md` (Grundinformation + Designval Root-1b + Override-räknare).
+Driver dialogen genom ramverkets översta nivåer: ämne/kurs/system + referensladdning, NotebookLM-koppling, kursminne, **momenttyp (nivå 0: brottnings- / färdighets- / översikts-moment)**, drivande fråga, skärpningsfilter, Hess-gate (1a - endast brottnings-moment), frågetypologi (1b - endast brottnings-moment), centralt innehåll och tvärgående trådar. **Läs och följ `references/steg-1-designdialog.md`.**
+Output: skapar `momentplan.md` (Grundinformation inkl. momenttyp + Designval nivå 0-1b + Override-räknare).
 
 ### Steg 2: Bedömningsmål, lärandemål och förutsättningar (nivå 2 → 3)
 
-Bedömningsmål ("vad är lyckad brottning?"), 3-5 lärandemål med E/C/A-progression, förutsättningar (innehåll + begrepp) med leveransplan, verifikationsregel och mönsterlarms-check. **Läs och följ `references/steg-2-mal-forutsattningar.md`.**
+Bedömningsmål ("vad är lyckat utfall?" - momenttyp-relativt: lyckad brottning / behärskad förmåga / fullgod helhetsförståelse), 3-5 lärandemål med E/C/A-progression, förutsättningar (innehåll + begrepp) med leveransplan, verifikationsregel och mönsterlarms-check. **Läs och följ `references/steg-2-mal-forutsattningar.md`.**
 Output: uppdaterar `momentplan.md` (nivå 2-3 + lärandemål).
 
 ### Steg 3: Rollsekvens (nivå 4) och brottningsform (nivå 5)
@@ -174,8 +174,9 @@ Om `$ARGUMENTS` innehåller "enskild-lektion" eller om läraren specifikt ber om
 
 ## Completion Checklist
 
-- [ ] momentplan.md skapad med alla steg dokumenterade
-- [ ] Rollsekvens (nivå 4) + brottningsform (nivå 5) dokumenterade i momentplan.md
+- [ ] momentplan.md skapad med alla steg dokumenterade (inkl. momenttyp, nivå 0)
+- [ ] Rollsekvens (nivå 4) dokumenterad; core-roller för momenttypen finns (brottnings-moment: Frågeförankring+Brottning+Syntes; färdighet: +Begreppsbygge+Applikation; översikt: +Perspektiv-/Begreppsbygge+Syntes)
+- [ ] Brottningsform (nivå 5) dokumenterad *om momentet har en Brottning-roll* (annars ej tillämpligt)
 - [ ] Varje lektion realiserar sin tilldelade roll; exit ticket mäter rollens exit
 - [ ] Alla lektionsplaner genererade som .md (vault) och .docx (C:\Undervisningsmaterial\)
 - [ ] Elevuppgifter genererade som .md (vault) och .docx (C:\Undervisningsmaterial\) för varje lektion

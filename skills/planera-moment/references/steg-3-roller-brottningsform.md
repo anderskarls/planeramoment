@@ -40,11 +40,17 @@ Ett moment komponeras av roller, inte fasta faser. **En roll definieras av vad e
 | 8 | Applikation | Förmågan att tillämpa på ett nytt fall |
 | 9 | Återbesök | Befäst, spaced retrieval av momentets kärna (ofta i senare moment) |
 
-**Core (måste finnas):** Frågeförankring + Brottning + Syntes.
+**Core (måste finnas) - beror på momenttypen (nivå 0, satt i steg 1.5.7):**
+- **Brottnings-moment:** Frågeförankring + Brottning + Syntes
+- **Färdighets-moment:** Frågeförankring + Begreppsbygge + Applikation
+- **Översikts-moment:** Frågeförankring + Perspektiv-/Begreppsbygge + Syntes
+
+Frågeförankring är core i alla typer. En Brottning-roll får förekomma valfritt i färdighets- och översikts-moment men är inte obligatorisk där - då hoppas nivå 5 (3.2) över.
 
 **Hårda ordningsregler (får inte brytas):**
 - Frågeförankring först
-- Brottning före Syntes
+- Brottning före Syntes (när Brottning används)
+- Applikation efter det den tillämpar
 - Metareflektion sist (om den används)
 
 **Soft default-ordning för övriga** (får brytas med motivering): Frågeförankring → Provokation → Begreppsbygge → Perspektivbygge → Brottning → Syntes → Applikation → Metareflektion → (Återbesök, ofta i senare moment).
@@ -66,7 +72,7 @@ Presentera förslaget som en numrerad rollsekvens. För **varje roll**: ange des
 
 ### 3.2 Nivå 5 - Diskursmål och brottningsform
 
-Gäller Brottning-rollen. **Diskursmålet är primärt val; formen är terminal output, deriverad** (Felton, Crowell & Liu 2015: diskursmålet - inte formatets etikett - avgör om my-side-bias uppstår).
+Gäller Brottning-rollen. **Om momentet inte har någon Brottning-roll** (färdighets-/översikts-moment utan brottning) - hoppa över hela 3.2 och gå till 3.3. **Diskursmålet är primärt val; formen är terminal output, deriverad** (Felton, Crowell & Liu 2015: diskursmålet - inte formatets etikett - avgör om my-side-bias uppstår).
 
 **Steg A - Härled diskursmål (M-i).** Fem diskursmål:
 

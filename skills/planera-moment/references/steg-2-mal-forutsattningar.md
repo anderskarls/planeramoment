@@ -8,11 +8,14 @@ Baserat på system från Steg 1.3, läs:
 - **GY11:** `references/gy11/struktur.md`
 - **GY25:** `references/gy25/struktur.md`
 
-### 2.2 Nivå 2 - Bedömningsmål: Vad är lyckad brottning?
+### 2.2 Nivå 2 - Bedömningsmål: Vad är lyckat utfall?
 
-Fråga: "Vad ska 'lyckad brottning' innebära för eleverna i detta moment?"
+Frågan formuleras momenttyp-relativt (nivå 0, satt i 1.5.7):
+- **Brottnings-moment:** "Vad ska 'lyckad brottning' innebära för eleverna i detta moment?"
+- **Färdighets-moment:** "Hur ser behärskad förmåga ut - vad ska eleven kunna göra, och hur bra?"
+- **Översikts-moment:** "Vad är en fullgod helhetsförståelse av området?"
 
-**Default-rekommendation (M-i):** Skillen föreslår bedömningsmål baserat på frågetypen från 1.8 + kursminne. Exempel-mappning:
+**Default-rekommendation (M-i):** För brottnings-moment föreslår skillen bedömningsmål baserat på frågetypen från 1.8 + kursminne (mappning nedan). För färdighets-/översikts-moment (ingen frågetyp): härled bedömningsmålet från förmågan/området + de betygskriterie-verb som är centrala för momentet + kursminne. Exempel-mappning (brottning):
 
 | Frågetyp (1.8) | Default-bedömningsmål |
 |---|---|
@@ -24,7 +27,7 @@ Fråga: "Vad ska 'lyckad brottning' innebära för eleverna i detta moment?"
 
 Visa default + alternativ. Be om val.
 
-**Viktigt:** Vissa bedömningsmål låser diskursmålet (Steg 5 nivå 5 - byggs senare). T.ex. "kan formulera motståndarens starkaste position" → låser syntes-DNA.
+**Viktigt (endast brottnings-moment):** Vissa bedömningsmål låser diskursmålet (nivå 5, härleds i Steg 3.2). T.ex. "kan formulera motståndarens starkaste position" → låser syntes-DNA.
 
 **Override-prompt (M-ii):** Vid avvikelse från default - fråga om kontextläsningskategori.
 

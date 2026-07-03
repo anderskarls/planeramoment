@@ -47,6 +47,11 @@ antal_moment: [N]
 - [Andra mönster som inte passar ovan]
 - [...]
 
+## Utfall (från genomförda moment)
+- [Lärdom validerad mot klassrummet, taggad med ramverkselement. T.ex. "**Form:** sokratiskt seminarium i helklass kollapsade i talutrymme - använd fishbowl eller smågrupp i denna klass (moment: franska revolutionen, 2026-05-20)"]
+- [T.ex. "**Override:** default-diskursmål Övertyga gav my-side-bias i värdefrågor - Syntes fungerade bättre, omkalibrera default för denna kurs"]
+- [...]
+
 ## Tvärgående trådar mellan moment
 - [T.ex. "Antikens arv-momentet - väck tillbaka i renässans-momentet, upplysnings-momentet, fascism-momentet"]
 - [Format: när X-moment kommer, väck koppling till Y-moment med fråga/verktyg Z]
@@ -65,10 +70,17 @@ antal_moment: [N]
 - **Undvik redundans** - om en lärdom redan finns, förstärk den med en notering istället för att duplicera
 - **Max 5 punkter per kategori** - om det blir fler, slå ihop eller ersätt de minst specifika
 - **Var ärlig** - om det inte finns tydliga mönster efter bara ett moment, skriv få punkter. Minnet växer organiskt.
+- **Skilj utfall från preferens** - `## Utfall (från genomförda moment)` är för det som *hände i klassrummet* (validerat mot verkligheten); preferenssektionerna är för det läraren *ville under planeringen*. Blanda dem inte - utfall är starkare signal för defaults och ska kunna särskiljas. Utfallssektionen fylls av `/reflektera-moment`, inte av planeringsdialogen.
 
 ## När minnet uppdateras
 
-Som default uppdateras kursminnet i **Avslutningen** (en samlad analys av hela momentet - se `references/avslutning.md`).
+Minnet uppdateras vid tre tillfällen:
+
+1. **Avslutningen** av `/planera-moment` - preferenslärdomar från planeringsdialogen (se `references/avslutning.md`).
+2. **`/reflektera-moment`** efter att momentet undervisats - utfallslärdomar till `## Utfall (från genomförda moment)` (se `references/reflektera-moment.md`). Detta är slingans andra halva: planering fångar preferens, reflektion fångar utfall.
+3. **Mid-flight** när läraren explicit ber om det (nedan).
+
+Avslutningens uppdatering (default) rör preferenssektionerna.
 
 ### Mid-flight uppdateringar
 

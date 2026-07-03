@@ -27,6 +27,14 @@ Skapa en enskild lektionsplanering utan att planera ett helt moment.
 /planera-lektion introduktion till politiska ideologier i Sh1a1
 ```
 
+### `/reflektera-moment`
+
+Reflektera över ett **genomfört** moment och mata tillbaka utfallet till kursminnet. Fångar vad som faktiskt hände i klassrummet (höll frågan, nådde rollerna sina exit, satt förutsättningarna, var dina overrides rätt) - inte bara planeringspreferenser. Stänger återkopplingsslingan så att framtida moment planeras utifrån det som fungerade.
+
+```
+/reflektera-moment franska revolutionen i Hi Nivå 1b
+```
+
 ## Skill: planera-moment
 
 Aktiveras automatiskt när du diskuterar undervisning, lektionsplanering eller pedagogik. Ger Claude kunskap om:

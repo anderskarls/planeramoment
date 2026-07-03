@@ -98,11 +98,29 @@ Det som skiljer ett bra moment från ett mediokert är **koherens** - att alla d
 
 Ramverket är ett **beslutsträd**, inte en mall. Det ger när-då-regler för pedagogiska konflikter på momentnivå. Designdialogen i Steg 1-2 av skillen drivs top-down genom trädets nivåer.
 
-### Root: Vilken fråga ska eleven brottas med?
+### Nivå 0 - Momenttyp (vad slags moment är detta?)
 
-All momentdesign börjar här. Inte "vilket centralt innehåll ska täckas" - utan vilken fråga som driver brottningen genom hela momentet.
+Innan roten: inte varje moment drivs av en omtvistad fråga. Att tvinga in en kontrovers där innehållet inte bär en är lika inautentiskt som att brotta över en sluten fråga (samma logik som Hess-gaten, fast baklänges). Ett källkritik-moment, ett moment om att läsa statistik, eller en epoköversikt är legitima moment utan en X-*vs*-Y-fråga i botten. Momenttypen väljs **först** och avgör vad "roten" är, vilka core-roller som krävs och vilka nedströms-noder som aktiveras.
 
-### Nivå 1a - Hess-gate (uteslutande filter)
+| Momenttyp | Roten är... | Drivande fråga/mål | Core-roller (måste finnas) | Hess-gate + spänningstest? |
+|---|---|---|---|---|
+| **Brottnings-moment** | En omtvistad fråga | Kontroversiell/öppen fråga med inbyggd spänning | Frågeförankring + **Brottning** + Syntes | **Ja - fullt** |
+| **Färdighets-moment** | En förmåga att utveckla | Ett "kunna-göra"-mål (t.ex. "källkritiskt värdera en historisk källa", "läsa och tolka statistik") | Frågeförankring + **Begreppsbygge** + **Applikation** | Nej |
+| **Översikts-moment** | Ett skeende/område att förstå i bredd | En öppen undersökande fråga utan tvingande motkraft (t.ex. "hur och varför spreds reformationen?") | Frågeförankring + Perspektiv-/Begreppsbygge + **Syntes** | Nej (men bärighetstest gäller) |
+
+**Default:** momenttypen härleds inte automatiskt - fråga läraren, men föreslå utifrån signaler. Kan läraren snabbt formulera en "bör / är det rätt att"-fråga med två försvarbara sidor → brottnings-moment. Är målet en förmåga (analysera, värdera källor, läsa statistik, skriva) → färdighets-moment. Är målet att förstå ett skeende/en epok i bredd → översikts-moment.
+
+**Brottning kan förekomma i alla typer** - ett färdighets- eller översikts-moment kan innehålla en Brottning-roll som ett enskilt moment, men den är då inte momentets rot. Omvänt behåller icke-brottnings-moment **hela** rollapparaten (nivå 4), evidensprinciperna (retrieval / elevaktiv tid / exit ticket), koherenskraven (constructive alignment, röd tråd) och Kontextprimatet (M-i–M-iv). Det enda som skiljer mellan typerna är: (a) vad roten är, (b) vilka core-roller som krävs, och (c) om Hess-gaten och spänningstestet aktiveras.
+
+**Blandtyp:** om ett moment genuint är både-och (t.ex. en epoköversikt som kulminerar i en värdefråga), välj den typ vars *rot* driver flest lektioner och notera den andra som sekundär inriktning i momentplanen.
+
+### Root: Den drivande frågan
+
+All momentdesign börjar här - men vad roten *är* beror på momenttypen (nivå 0). Brottnings-moment: vilken omtvistad fråga driver brottningen genom momentet. Färdighets-moment: vilken förmåga momentet ska bygga (formulerad som ett kunna-göra-mål). Översikts-moment: vilken öppen fråga som organiserar undersökningen. Gemensamt för alla tre: planera från frågan/målet, inte från "vilket centralt innehåll ska täckas".
+
+### Nivå 1a - Hess-gate (uteslutande filter - endast brottnings-moment)
+
+Gäller **bara brottnings-moment**. För färdighets- och översikts-moment hoppas 1a över - deras rot är inte en omtvistad fråga, så frågan om öppen/tippande/sluten är inte tillämplig.
 
 Innan frågetypologin: är frågan ens en momentfråga? Tre kategorier (Hess 2009):
 
@@ -129,9 +147,11 @@ Gäller bara öppna och tippande frågor.
 
 Frågetypen styr nedströms: bedömning (nivå 2), brottningsform (nivå 5), verifikationsregelns strikthet (nivå 3).
 
-### Nivå 2 - Vad är lyckad brottning?
+### Nivå 2 - Vad är lyckat utfall?
 
-**VAD bedöms:** rubrikinfrastruktur (se `wiki/concepts/rubrikkalibrering-ar-villkoret-for-reliabel-bedomning-i-tolkande-amnen.md`). Frågetypen avgör vilka kriterier som aktiveras. Disciplinära färdigheter och argumentation är *bedömningsobjekt* här - inte förutsättningar.
+*(För brottnings-moment: "vad är lyckad brottning?". För färdighets-moment: "hur ser behärskad förmåga ut?". För översikts-moment: "vad är en fullgod helhetsförståelse?". Samma nod, momenttyp-relativ formulering.)*
+
+**VAD bedöms:** rubrikinfrastruktur (se `wiki/concepts/rubrikkalibrering-ar-villkoret-for-reliabel-bedomning-i-tolkande-amnen.md`). Frågetypen (eller för färdighets-/översikts-moment: förmågan/området) avgör vilka kriterier som aktiveras. Disciplinära färdigheter och argumentation är *bedömningsobjekt* här - inte förutsättningar.
 
 **VEM brottas** (individ, par, smågrupp, helklass) är pedagogiskt val - inte graderad dimension.
 
@@ -166,11 +186,17 @@ Ett moment komponeras av roller, inte fasta faser:
 8. Applikation
 9. Återbesök
 
-**Core (måste finnas):** Frågeförankring + Brottning + Syntes.
+**Core (måste finnas) - momenttyp-relativt (nivå 0):**
+- **Brottnings-moment:** Frågeförankring + Brottning + Syntes
+- **Färdighets-moment:** Frågeförankring + Begreppsbygge + Applikation
+- **Översikts-moment:** Frågeförankring + Perspektiv-/Begreppsbygge + Syntes
+
+Frågeförankring är core i alla typer. Brottning är core *bara* i brottnings-moment (kan förekomma valfritt i övriga).
 
 **Hårda ordningsregler:**
 - Frågeförankring först
-- Brottning före syntes
+- Brottning före syntes (när Brottning används)
+- Applikation efter det den tillämpar (Begreppsbygge/Perspektivbygge)
 - Metareflektion sist (om den används)
 
 **Soft default-ordning** för övriga - får brytas med motivering.
@@ -247,7 +273,7 @@ Skillen håller Princip 2 levande genom fyra konkreta mekanismer som vävs in i 
    - **Typ-mönster:** 3+ overrides i samma kategori (2-5) inom samma moment, även om totalantalet är lägre
 
    När larmet triggas fyrar **medium pausning** - skillen kräver en skriftlig motivering innan dialogen fortsätter. Typ-mönster-larmet ska peka ut *vilken kategori* som dominerat och fråga: "Är ramverkets defaults systematiskt fel kalibrerade för denna kontext, eller har du glidit in i ett vanemönster?"
-- **M-iv Spårdokumentation i output:** `momentplan.md` dokumenterar varje val + ev. override med motivering. Underlag för F3 (`/reflektera-moment`, byggs senare).
+- **M-iv Spårdokumentation i output:** `momentplan.md` dokumenterar varje val + ev. override med motivering. Efter genomförandet fyller `/reflektera-moment` (F3) på med en `## Utfall`-sektion, så momentplanen blir en fullständig post av *val → resultat*. Utfallet matas också till kursminnets `## Utfall`-sektion och försörjer M-i:s defaults nästa gång - det är så Kontextprimatet självkorrigerar mot verkligheten, inte bara mot lärarens planeringspreferenser.
 
 ## 7. Evidensbaserade lärandestrategier
 
@@ -255,19 +281,21 @@ Bygg in dessa principer i varje moment (Brown, Roediger & McDaniel, *Make It Sti
 
 | Strategi | Beskrivning | Numeriskt riktmärke |
 |---|---|---|
-| **Retrieval practice** | Aktiv återkallelse, inte passiv repetition | Kalibrera mot 60-85% rätt på första försöket (Pyke et al. 2025) |
+| **Retrieval practice** | Aktiv återkallelse, inte passiv repetition | Sikta på ~70-85% rätt på första försöket - tillräckligt för känslan av framgång, tillräckligt svårt för att kräva ansträngning (desirable difficulty; Bjork & Bjork) |
 | **Spaced practice** | Återbesök tidigare begrepp i senare lektioner | Sweet spot: spacing ≈ 10% av retentionsintervallet. Prov om 4 veckor → quiz om ~3 dagar |
 | **Interleaving** | Variera problemtyper och perspektiv | Förklara *varför* för eleverna - annars saboterar de det (känns ineffektivt) |
 | **Elaboration** | Koppla nytt till befintlig kunskap | Elaborativ feedback är *nödvändig* för öppna svar (annars nästan noll transfer-effekt) |
 | **Concrete examples** | Konkreta exempel före abstrakta principer | - |
-| **Pretesting** | Gissa innan undervisning (produktivt misslyckande) | d = 0.6-1.2 (Mera et al. 2025). Fördröjd feedback 24-48h fungerar också |
+| **Pretesting** | Gissa innan undervisning (produktivt misslyckande) | Medelstor-stor effekt på det förtestade innehållet (Mera et al. 2025). Fördröjd feedback 24-48h fungerar också |
 
 ### Specificitetslagen - frågor testar inte bredare än de skrivs
 
-Testing effect, pretesting och retrieval practice är *lokala* interventioner. De förbättrar bara det innehåll de faktiskt frågar om. Fyra oberoende meta-analyser (Pan & Rickard 2018/2024; St. Hilaire et al. 2024; Glaser & Richter 2025; van Wijk et al. 2024):
+Testing effect, pretesting och retrieval practice är *lokala* interventioner. De förbättrar bara det innehåll de faktiskt frågar om. Den mest robusta meta-analysen på området (Pan & Rickard 2018, *Psychological Bulletin*, 192 effektstorlekar) visar:
 
-- Direkt transfer: d ≈ 0.40
-- Indirekt transfer: d ≈ 0.16 (ej signifikant)
+- Direkt transfer (nära det testade): d ≈ 0.40
+- Indirekt transfer (bredare än det testade): faller kraftigt mot noll
+
+Samma mönster i prequestion-forskningen: prequestions lyfte det specifikt förtestade innehållet (g ≈ 0.66) men gav ingen generell överföring till annat innehåll (g ≈ 0.01).
 
 **Praktisk konsekvens:** din frågebank är din blueprint för vad eleverna lär sig. Kartlägg *alla* kunskapskrav/betygskriterier och *alla* centralt innehåll-punkter du vill att eleverna ska behärska, och kontrollera att varje sådan punkt har minst en fråga.
 

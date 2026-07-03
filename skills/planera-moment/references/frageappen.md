@@ -34,7 +34,7 @@ Skapa 5-10 frågor som spänner över hela momentet:
 - Täcker frågorna de centrala lärandemålen? (Specificitetslagen: testning är lokal - det du inte frågar om blir inte starkare)
 - Inkluderar öppna frågor möjlighet till analys/reflektion?
 - **Verb-kalibrering**: Använder frågorna "värdera/jämför/argumentera" för C/A-nivå, inte "beskriv/förklara"?
-- **Sweet spot-kalibrering**: Sträva efter frågor där eleverna lyckas svara rätt i 60-85% av fallen på första försöket (Pyke et al. 2025). Under 60% = frustration, över 85% = ingen lärandeeffekt.
+- **Sweet spot-kalibrering**: Sträva efter frågor där eleverna lyckas svara rätt i ~70-85% av fallen på första försöket (desirable difficulty; Bjork & Bjork). För lågt = frustration, för högt = ingen lärandeeffekt.
 - **AI-genererade frågor**: Räkna med ~31% förkastningstakt (Ahmed, Kerr & O'Malley 2025). Generera ~15 frågor för att behålla 10. Kontrollera fakta mot NotebookLM-källor.
 - **Format-matching**: MCQ-övning tränar bara för MCQ-prov. Om sluttestet är essä, inkludera VSAQ/fritext-frågor i banken.
 - **Spacing-formel**: Planera retrieval review så att samma fråga återanvänds efter ~10% av det retentionsintervall du vill uppnå (för ett prov om 4 veckor → repetera efter ~3 dagar).
