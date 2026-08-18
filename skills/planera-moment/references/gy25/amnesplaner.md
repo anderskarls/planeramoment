@@ -101,6 +101,38 @@ Eleverna ska utveckla historisk bildning och historiemedvetande genom kunskaper 
 | Nivå 2b | 100 p | Fördjupning |
 | Nivå 3 | 100 p | Fördjupning |
 
+### Historia - Nivå 1a1 (50 p)
+
+**Nivåkod:** HIST1A10X. Källa: SKOLFS 2023:130, Skolverkets ämnesplan för Historia (HIST), hämtad 2026-08-17.
+**Kombinationsregel:** betyg som omfattar nivå 1a1 kan inte ingå i elevens examen tillsammans med betyg som omfattar nivå 1b.
+
+**Centralt innehåll (ordagrant):**
+
+**Historiskt innehåll**
+
+- Europeisk epokindelning med forntiden, antiken, medeltiden, tidigmodern tid och modern tid utifrån ett kronologiskt perspektiv.
+- Översikt över industrialisering samt framgångar och motgångar för demokratisering i olika delar av världen från upplysningstiden till nutid. Konsekvenser av industrialisering och demokratisering, till exempel när det gäller resursfördelning, miljö, mänskliga rättigheter och jämställdhet.
+- Centrala globala förändringsprocesser och händelser, till exempel jordbrukets utveckling, teknisk utveckling, förändrat resursutnyttjande, migration, kolonialism och frigörelse, folkmord, konflikter och internationellt samarbete.
+- De nationella minoriteternas, däribland urfolket samernas, historiska rötter i Sverige. Exkludering och inkludering av de nationella minoriteterna i samhället under olika tidsperioder. Rasism mot samer samt antisemitism och antiziganism i och utanför Sverige, historiska rötter och nutida uttryck.
+- Exempel på samband mellan skeenden i det förflutna och nutida förhållanden med relevans för framtiden.
+
+**Historiska begrepp, källor och historiebruk**
+
+- Tillämpning av historiska begrepp på olika historiska frågeställningar i relation till det historiska innehållet. Begreppen orsak och konsekvens samt kontinuitet och förändring.
+- Tolkning, granskning och värdering av historiska källor, till exempel arkivmaterial och databaser, som utgångspunkt för behandling av frågor kopplade till delar av det historiska innehållet.
+- Historiebruk med koppling till någon eller några delar av det historiska innehållet. Hur historia kan användas i till exempel vardagsliv, samhällsliv och politik och påverka människors identitet, värderingar och föreställningar.
+
+**Skillnader mot nivå 1b (planeringskritiska - egen analys, inte ordagrant):**
+
+- **Aktör och struktur ingår inte** i 1a1. Endast orsak/konsekvens och kontinuitet/förändring. 1a2 och 1b har alla tre.
+- **Ingen problematisering av tidsindelningar.** Epokindelningen behandlas kronologiskt, inte som kulturellt/politiskt betingad konstruktion.
+- **Inga långa historiska linjer** med fokus på levnadsvillkor och makt (finns i 1a2 och 1b).
+- **Ingen Sverigelins och inga landsjämförelser** i industrialisering/demokratisering. 1a1 säger "olika delar av världen"; 1b säger "Sverige och andra delar av världen" plus "Jämförelser mellan Sverige och andra länder".
+- Industrialisering och demokratisering behandlas som **översikt**.
+- Historiebruk kopplas till **någon eller några** delar av innehållet (1b: "delar").
+
+Betygskriterierna längre ned är ämnesgemensamma och gäller oförändrat även på nivå 1a1.
+
 ### Historia - Nivå 1b (100 p)
 
 **Centralt innehåll (ordagrant):**
