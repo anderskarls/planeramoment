@@ -15,7 +15,7 @@ Läs in metodreferensen (metodbibliotek organiserat efter funktion - försörjer
 
 Den första fångar reflektioner och lärdomar från liknande moment, den andra didaktisk evidens om de former/metoder som är aktuella för Brottning-rollen. Läs de mest relevanta sidorna och väg in dem i M-i-defaults (rollurval 3.1, diskursmål/form 3.2). Presentera kort med `[[länkar]]`: "Wikin har relevant material - [[sida]] säger [en rad]." Sidor som påverkar val dokumenteras i momentplanens `## Kunskapsunderlag (wiki)`.
 
-**NotebookLM-forskning:** Om en notebook är aktiv, hämta ämnesinnehåll som grund för rollernas innehåll:
+**NotebookLM-forskning:** Endast om momentplanen anger `**NotebookLM:** PÅ` (steg 1.4). Står det `AV`, hoppa tyst över uppslaget och fråga inte om igen. Hämta annars ämnesinnehåll som grund för rollernas innehåll - läs `error`-fältet i varje svar, ett fel betyder att auth dött (läge C i `references/notebooklm-anvandning.md`), inte att notebooken saknade material:
 ```bash
 notebooklm ask --json "Vilka centrala begrepp, teman och perspektiv finns kring [temat]? Vilka källor i notebooken är mest relevanta?"
 ```

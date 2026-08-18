@@ -57,7 +57,7 @@ Ett moment spänner ofta över flera sessioner. Innan du startar steg 1: ta reda
    - `Lektionssekvens (rollmappning)` → steg 4 klart
    - `Frågeapp (Survey Platform)` → steg 5b klart; `Videoöversikter` → steg 5c klart
 3. **Inventera artefakter på disk** mot Completion Checklist: vilka `lektion-N.md`/`.docx`, `elevuppgift-lektion-N.*`, `presentation-lektion-N.html`, `video/*.mp4`, `momentoversikt.html` finns redan? (`.docx` och `video/*.mp4` ligger i Word-mappen, inte i vaultmappen - se Sökvägar.)
-4. **Återställ arbetskontexten** utan att ställa om designfrågorna: ladda rätt referensfiler för systemet (steg 1.3), aktivera notebooken (steg 1.4) och läs kursminnet (steg 1.5).
+4. **Återställ arbetskontexten** utan att ställa om designfrågorna: ladda rätt referensfiler för systemet (steg 1.3), läs kursminnet (steg 1.5) och återställ NotebookLM-läget (steg 1.4). Står `**NotebookLM:** AV` i Grundinformationen gäller det beslutet vidare - fråga inte om igen. Står det `PÅ`, kontrollera om att inloggningen lever (`notebooklm list --json`, läs `error`-fältet) och aktivera notebooken; en ny session betyder ofta ny auth-status.
 5. **Sammanfatta läget** för läraren ("Steg 1-4 klara, lektion 1-2 av 6 genererade, inga presentationer ännu") och föreslå att fortsätta från nästa ogjorda punkt. Läraren kan välja att backa.
 
 Skapa ALDRIG om befintliga godkända artefakter utan att fråga. Om läraren bekräftar nytt moment: fortsätt till steg 1 som vanligt.
@@ -92,7 +92,9 @@ För filformat, regler för minneshantering och när minnet uppdateras (default 
 
 Planeringen lutar sig mot två källor med tydlig arbetsfördelning:
 
-**NotebookLM (primär källa för ämnesinnehåll).** Källgrundat material med inbyggda referenshänvisningar - svarar på "vad ska eleverna lära sig om X?". Varje kurs kopplas till en notebook via fältet `notebook_id` i `kurser.json`. Notebooken aktiveras i steg 1 och frågas genom steg 1, 3, 5 och 6. För CLI-kommandon (`notebooklm use` / `ask` / konversations-ID) och frågeprinciper, läs: `references/notebooklm-anvandning.md`
+**NotebookLM (primär källa för ämnesinnehåll).** Källgrundat material med inbyggda referenshänvisningar - svarar på "vad ska eleverna lära sig om X?". Varje kurs har en bred default-notebook via fältet `notebook_id` i `kurser.json`, och ett moment kan välja en egen momentnotebook i steg 1.4 (den skrivs i momentplanen, aldrig tillbaka till `kurser.json`). Notebooken aktiveras i steg 1 och frågas genom steg 1, 3, 5 och 6.
+
+NotebookLM är en extern tjänst vars inloggning dör tyst, och **CLI:n returnerar exit 0 även när auth är död** - använd aldrig `notebooklm doctor`, `auth check` eller exit-koden som test. Auth kontrolleras en gång i steg 1.4 (skarpt anrop + läs `error`-fältet), fallback-beslutet fattas en gång, och utfallet skrivs som `**NotebookLM:** PÅ/AV` i momentplanens Grundinformation. Är den AV hoppas alla notebook-uppslag över tyst och steg 5c utgår. För kontrollen, fallback-protokollet, CLI-kommandon och frågeprinciper, läs: `references/notebooklm-anvandning.md`
 
 **Wikin (lärarens kunskapsbas).** Vaultets `wiki/` (index.md → topics/concepts/sources) bär lärarens ackumulerade pedagogiska evidens, didaktiska synteser och ämnessynteser - svarar på "hur undervisar jag detta bra, och vad vet jag redan?". Konsulteras i steg 1, 3 och 5; fynd som påverkar designval dokumenteras med `[[wikilänkar]]` i momentplanens sektion `## Kunskapsunderlag (wiki)`. För uppslagsprotokoll, arbetsfördelning och presentationsregler, läs: `references/wiki-anvandning.md`
 

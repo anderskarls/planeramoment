@@ -1,5 +1,5 @@
 {
-  "_beskrivning": "Enda källan för kurslistan. Steg 1 (planera-moment), kommandot planera-lektion och kursminnet läser härifrån. Uppdatera HÄR när kursutbudet ändras - inte i referensfilerna.",
+  "_beskrivning": "Enda källan för kurslistan. Steg 1 (planera-moment), kommandot planera-lektion och kursminnet läser härifrån. Uppdatera HÄR när kursutbudet ändras - inte i referensfilerna. Fältet notebook_id är kursens BREDA default-notebook; ett enskilt moment kan välja en egen momentnotebook i steg 1.4, och den skrivs i momentplan.md - aldrig tillbaka hit.",
   "kurser": [
     {
       "namn": "Samhällskunskap 1a2",

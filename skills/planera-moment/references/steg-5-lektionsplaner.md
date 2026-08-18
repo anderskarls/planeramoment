@@ -10,7 +10,7 @@ Generera **en lektion i taget**, rollbaserat. Varje lektion realiserar de roller
 
 *I snabbläge: generera alla lektionsplaner i följd, presentera en samlad översikt, invänta en godkännanderunda. Kvalitetskontrollen nedan körs ändå per lektion.*
 
-**NotebookLM-innehållshämtning:** Innan varje lektion genereras, hämta relevant innehåll från notebooken. Anpassa frågorna efter lektionens tema:
+**NotebookLM-innehållshämtning:** Endast om momentplanen anger `**NotebookLM:** PÅ` (steg 1.4). Står det `AV`, hoppa tyst över uppslaget, tagga faktapåståenden `[VERIFIERA]` och fråga inte om igen. Hämta annars relevant innehåll från notebooken innan varje lektion genereras - läs `error`-fältet i varje svar, ett fel betyder att auth dött (läge C i `references/notebooklm-anvandning.md`), inte att notebooken saknade material. Anpassa frågorna efter lektionens tema:
 ```bash
 notebooklm ask --json "Ge mig fakta, nyckelbegrepp och konkreta exempel om [lektionens specifika tema]. Inkludera källhänvisningar."
 ```

@@ -8,16 +8,17 @@ Videorna laddas ner som `.mp4`-filer. Läraren lägger upp dem där eleverna nå
 
 ## Förutsättningar (gate innan steget körs)
 
-1. **Aktiv notebook (från Steg 1).** Videor genereras ur notebookens källor. Saknas notebook-ID för kursen kan steget inte köras - informera läraren: "Det finns ingen NotebookLM-notebook kopplad till den här kursen, så jag kan inte generera videor. Vill du hoppa över videosteget?" och hoppa över resten.
+1. **NotebookLM måste vara PÅ enligt momentplanen (steg 1.4).** Läs `**NotebookLM:**` under momentplanens `## Grundinformation`. Står det `AV` - oavsett om orsaken är saknat notebook-ID eller att läraren valde att planera utan inloggning - kan steget inte köras. Informera läraren: "Momentet planeras utan NotebookLM, så jag kan inte generera videor. Vi hoppar över videosteget." Ställ inte om beslutet här; det fattades i steg 1.
 
-2. **CLI:n måste vara inloggad.** Kontrollera:
+2. **Verifiera att inloggningen fortfarande lever.** Videogenerering tar flera minuter per video, så det är värt att kontrollera direkt innan - auth kan ha dött sedan steg 1. Kör ett skarpt kommando och läs `error`-fältet:
    ```bash
-   notebooklm doctor
+   notebooklm list --json
    ```
-   Om raden `Auth` visar `fail`/`not authenticated`: be läraren köra inloggningen själv (den öppnar en webbläsare och kan inte köras automatiskt):
-   > "NotebookLM-CLI:n är inte inloggad. Kör `! notebooklm login` här i chatten - en webbläsare öppnas där du loggar in med ditt Google-konto. Säg till när det är klart, så fortsätter jag."
+   `"error": true` → auth är död. Detta är läge C i `references/notebooklm-anvandning.md`: säg till läraren och ställ fallback-frågan en gång. Väljer läraren att fortsätta utan NotebookLM, hoppa över resten av steg 5c och uppdatera momentplanens NotebookLM-rad.
 
-   Fortsätt inte förrän auth är `pass`. Aktivera rätt notebook:
+   > **Använd aldrig `notebooklm doctor` eller exit-koden som auth-test** - båda ger falska positiva. Se `references/notebooklm-anvandning.md`.
+
+   Lever inloggningen, aktivera rätt notebook:
    ```bash
    notebooklm use [NOTEBOOK_ID]
    ```

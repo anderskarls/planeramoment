@@ -20,11 +20,36 @@ Bekräfta: "Detta moment går under [GY11 / GY25] - jag använder [kunskapskrav-
 
 ### 1.4 NotebookLM-koppling
 
-Slå upp kursens `notebook_id` i `kurser.json`. Om det finns, aktivera:
+Slå upp kursens `notebook_id` i `kurser.json`.
+
+**Saknas ID:** informera läraren om att momentet planeras utan NotebookLM (wiki + `[VERIFIERA]`-taggar). Fråga inget - det finns inget att logga in på.
+
+**Finns ID:** kontrollera att inloggningen lever *innan* du aktiverar notebooken. Kör ett skarpt kommando och läs `error`-fältet i JSON-svaret:
+```bash
+notebooklm list --json
+```
+- `"error": true` → auth är död. Ställ fallback-frågan (läge B) enligt `references/notebooklm-anvandning.md`.
+- Lista med notebooks → gå vidare till notebook-valet nedan.
+
+> **Lita aldrig på `notebooklm doctor`, `auth check` eller exit-koden** - CLI:n returnerar exit 0 även när auth är död. Fullständig motivering och fallback-protokoll: `references/notebooklm-anvandning.md`.
+
+**Notebook-val (M-i).** `notebook_id` i `kurser.json` är kursens **default** - en bred källsamling för hela kursen. Men källor är ofta momentspecifika, och läraren bygger gärna en egen notebook per moment. Använd listan du just hämtade: leta efter en notebook vars titel matchar momentets tema eller kurs.
+
+Presentera valet med AskUserQuestion när det finns en trolig momentnotebook, med den som default:
+- **[Titel] (`[ID]`)** - momentspecifik, [N] källor, senast ändrad [datum]
+- **Kursens default: [Titel] (`[ID]`)** - bred kurssamling ur `kurser.json`
+- **Ingen notebook** - planera med wiki + `[VERIFIERA]`-taggar
+
+Hittar du ingen kandidat utöver kursens default: aktivera defaulten och nämn i förbifarten att en momentspecifik notebook kan pekas ut om läraren har en.
+
+> **Titlar räcker inte för att skilja notebooks åt** - flera kan heta samma sak (t.ex. två "Historia 1a1"). Visa alltid ID och antal källor (`notebooklm source list -n [ID] --json`) så läraren väljer rätt. Vid tveksamhet: fråga, gissa inte.
+
+Aktivera den valda och bekräfta för läraren:
 ```bash
 notebooklm use [NOTEBOOK_ID]
 ```
-Bekräfta för läraren. Om ID saknas, informera om fallback till Claudes inbyggda kunskap med `[VERIFIERA]`-taggar.
+
+**Dokumentera utfallet** i momentplanens `## Grundinformation` (`**NotebookLM:** PÅ (notebook [ID] - [titel])` / `AV - kursen saknar notebook_id` / `AV - auth död [datum], lärarens val`). Beslutet gäller hela momentet och ska inte ställas om i senare steg. Skriv aldrig tillbaka ett momentval till `kurser.json` - den filen bär kursens default, inte momentets.
 
 ### 1.5 Kursminne - försörjer M-i:s defaults
 

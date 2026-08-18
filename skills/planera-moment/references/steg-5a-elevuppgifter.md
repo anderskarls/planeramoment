@@ -7,7 +7,7 @@ Eleverna behöver konkret material att arbeta med under lektionen - inte bara in
 Gå igenom den godkända lektionsplanen och identifiera vilka elevmaterial som behövs. Typiska exempel:
 
 - **Arbetsblad/uppgiftsblad** - strukturerade frågor, analysuppgifter, jämförelseövningar med tydliga instruktioner och utrymme för elevsvar
-- **Källmaterial** - sammanställda källtexter, utdrag, citat, bilder eller data som eleverna ska arbeta med. Inkludera källhänvisningar. Om NotebookLM är aktivt, använd källor därifrån
+- **Källmaterial** - sammanställda källtexter, utdrag, citat, bilder eller data som eleverna ska arbeta med. Inkludera källhänvisningar. Om momentplanen anger `**NotebookLM:** PÅ`, använd källor därifrån; står det `AV`, föreslå källor men markera dem som overifierade för läraren - hitta aldrig på sidhänvisningar eller citat som ser källgrundade ut
 - **Analysuppgifter** - konkreta uppgifter med stegvisa instruktioner, frågeställningar som stiger i komplexitet (E-C-A-progression - synlig för läraren i planen, aldrig som etiketter i elevdokumentet)
 
 Ibland räcker ett dokument per lektion, ibland behövs flera (t.ex. ett källkompendium + ett arbetsblad). Anpassa efter lektionens innehåll.
