@@ -75,6 +75,7 @@ topic,type,text,option1,option2,option3,option4,correctAnswer
 ```
 - För MULTIPLE_CHOICE med korrekt svar: fyll i `correctAnswer` (exakt samma text som rätt alternativ).
 - För FREE_TEXT: lämna option- och correctAnswer-kolumnerna tomma.
+- För REFLECTION (elevens självreflektion - inget rätt/fel, bedöms inte, ingår inte i quiz-statistiken): lämna option- och correctAnswer-kolumnerna tomma. Använd i `SURVEY`-läge.
 - Frågornas ordning i quizzen följer raderna i CSV:n.
 
 1. **Skapa en quiz per lektion** - Ett `create_quiz_from_csv`-anrop per lektion:
@@ -135,11 +136,21 @@ Använd MCP-verktyget `mcp__survey-platform__import_moment`. Bygg anropet från 
 - `assignments`: en post per elevuppgift, `{title, csv_content, lesson?, mode?, lock_mode?}`:
   - `title`: uppgiftens titel (t.ex. `Lektion N: [uppgiftsnamn]`).
   - `lesson`: lektionsnumret (matchar `lessons[].n`) som uppgiften hör till.
-  - `csv_content`: uppgiftens frågor i samma CSV-format som ovan (`topic,type,text,option1,...,correctAnswer`). En skrivuppgift (analysuppgift/exit ticket) blir en `FREE_TEXT`-rad; ett inbäddat quiz blir `MULTIPLE_CHOICE`-rader.
+  - `csv_content`: uppgiftens frågor i samma CSV-format som ovan (`topic,type,text,option1,...,correctAnswer`). En skrivuppgift (analysuppgift/exit ticket) blir en `FREE_TEXT`-rad; ett inbäddat quiz blir `MULTIPLE_CHOICE`-rader; en självreflektion blir en `REFLECTION`-rad (i `SURVEY`-läge).
   - `mode`: `QUIZ` för rättade frågor, `SURVEY` för öppna inlämningar/exit tickets.
   - `lock_mode`: `true` endast om uppgiften ska köras som prov.
 
 Bygg en `assignment` per `elevuppgift-lektion-N` (instruktionen hämtas ur dokumentets kontextsättning). Exit tickets läggs som `SURVEY`/`FREE_TEXT` per lektion (de trycks aldrig i arbetsbladen - de görs digitalt här).
+
+### Reflektionsuppgifter (självreflektion)
+
+Som default: lägg in en **reflektionsuppgift varannan lektion** i momentet. Detta är ett lärarval vid planeringen - fråga läraren om takten ("varje lektion, varannan, eller bara vid momentets slut?").
+
+En reflektionsuppgift är en egen `assignment` med `mode: SURVEY` och CSV-rader med `type: REFLECTION` - självreflektionsytor utan rätt/fel, t.ex. "Vad förstod du bäst idag?", "Vad skaver fortfarande?", "Vad vill du att vi tar upp nästa gång?". Eleverna ser dem som **"Reflektion"** i sin att-göra-vy (till skillnad från "Övning" för quiz).
+
+Efter genomförd vecka/lektion kör läraren `mcp__survey-platform__summarize_reflections` (per `course_code`, valfritt filtrerat på `unit_id`, `lesson` eller datumintervall) för att få ett underlag: vad fastnade eleverna på, vilka mönster syns, vad bör tas upp nästa lektion. Reflektioner hålls medvetet utanför quiz-/svarsprocent-statistiken i `get_moment_report` och redovisas i en egen sektion.
+
+Reflektionsfrågor följer samma regel som all elevriktad text: **inga betygsbokstäver (E/C/A)**.
 
 ### Spara resultatet
 
