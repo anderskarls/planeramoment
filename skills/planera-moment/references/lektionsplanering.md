@@ -11,7 +11,17 @@ Grundtanken: en lektion realiserar en eller flera **roller** (tilldelade i Steg 
 Tre principer ramar varje lektion. De är ortogonala mot rollinnehållet och gäller oavsett roll:
 
 1. **Öppna med retrieval (spaced practice).** Aktiv återkallelse från tidigare lektioner, styrd av föregående lektions exit ticket-data. Stärker minnesspår mer än passiv repetition. Momentets första lektion: aktivera förkunskaper om ämnesområdet istället.
-2. **Elevaktiv tid > 50%** (sikta 60%+). Rosenshines fynd att framgångsrika lärare lade ~57% av tiden på guidad övning gäller fortfarande - men som **teknik inom de roller där eleven arbetar mot en exit**, inte som en tvingande fas. Om tiden inte räcker: korta lärargenomgången, aldrig elevarbetet.
+2. **Elevaktiv tid: norm > 50% (sikta 60%+), golv 30%.** Rosenshines fynd att framgångsrika lärare lade ~57% av tiden på guidad övning gäller fortfarande - men som **teknik inom de roller där eleven arbetar mot en exit**, inte som en tvingande fas. Om tiden inte räcker: korta lärargenomgången, aldrig elevarbetet.
+
+   **Normen är inte en spärr.** Vissa elevgrupper kräver mer lärarledd undervisning för att strukturen ska hålla, och det är en legitim kontextläsning - inte ett planeringsfel. Tre lägen:
+
+   | Elevaktiv andel | Vad som händer |
+   |---|---|
+   | **> 50%** | Normalläget. Ingen åtgärd. |
+   | **30-50%** | Tillåtet, men utlöser **M-ii override-prompt**: *"Vilken kontextläsning motiverar den lägre andelen? Kategori 2-5 (Princip 2)."* Beslutet skrivs i lektionsplanen och räknas i momentplanens Override-räknare. |
+   | **< 30%** | Under golvet. Säg ifrån och peka ut var i förloppet elevarbete kan återtas. Läraren kan fortfarande välja att gå vidare - men det ska vara ett uttalat beslut, aldrig en tyst konsekvens av att tiden tog slut. |
+
+   Golvet finns för att skilja **kontextläsning** från **glidning**. En medvetet lärarledd lektion för en grupp som behöver det är kategori 2-3-arbete. En lektion som landar på 25% för att genomgången svällde är något annat.
 3. **Avsluta med exit ticket + framåtkoppling.** En fråga som mäter rollens exit + en kort preview av nästa lektion (stödjer encodering och förväntansuppbyggnad).
 
 **Kärnan mellan öppning och avslut formas av lektionens roll** (avsnitt 2). En lektion är alltså: öppning (retrieval) → rollkärna → avslut (exit ticket).
@@ -146,7 +156,7 @@ Lektion N+1:
 | X-Y min | Rollkärna: [roll] | [Aktivitet/form] | [Beskrivning] |
 | Y-Z min | Avslut (exit ticket) | [Aktivitet] | [Beskrivning] |
 
-(Tidsuppskattningar, inte fasta fasandelar. Elevaktiv tid > 50%.)
+(Tidsuppskattningar, inte fasta fasandelar. Elevaktiv tid: norm > 50%, golv 30%.)
 
 ## Brottningsform (endast Brottning-lektioner)
 - **Diskursmål:** [...]
@@ -162,7 +172,8 @@ Lektion N+1:
 ## Elevaktiviteter
 - [Specifika instruktioner med tydliga steg]
 
-**Elevaktiv tid: ca [X] av [Y] minuter ([Z]%)** (beräknas ur lektionsförloppet; kravet är >50%, sikta 60%+)
+**Elevaktiv tid: ca [X] av [Y] minuter ([Z]%)** (beräknas ur lektionsförloppet; norm >50%, sikta 60%+, golv 30%)
+- **Avvikelse från normen:** [utelämnas om Z > 50 | "Under norm (Z%) - kategori N: [lärarens kontextläsning]"]
 
 ## Differentiering
 - **Stöd (mot E):** [konkreta stödstrukturer: mallar, ledande frågor, ordbank]

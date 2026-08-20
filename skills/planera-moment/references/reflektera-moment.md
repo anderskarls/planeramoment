@@ -69,7 +69,13 @@ Detta är Kontextprimatets självkorrigering sluten mot utfall: en override som 
 
 ### 2.7 Elevaktiv tid och tid
 
-> "Landade elevaktiv tid över 50% i praktiken, eller åt genomgångar/logistik upp arbetstiden? Höll tidsplaneringen?"
+> "Landade elevaktiv tid där planen sa, eller åt genomgångar/logistik upp arbetstiden? Höll tidsplaneringen?"
+
+Planerades någon lektion **medvetet under normen 50%** (dokumenterat som override i momentplanen): fråga särskilt om den kontextläsningen höll.
+
+> "Den lägre elevaktiva andelen i lektion N motiverades med kategori [N]. Var det rätt för den här gruppen, eller behövde de mer eget arbete än du trodde?"
+
+Utfallet är starkare signal än planeringsbeslutet. Höll den lägre andelen är det en kurskalibrering värd att skriva till kursminnet - inte en avvikelse att rätta till nästa gång.
 
 ### 2.8 Fritt - vad ändrar du nästa gång?
 
@@ -114,7 +120,7 @@ Lägg till (eller uppdatera) en `## Utfall`-sektion sist i momentplanen. Detta f
 - **Förutsättningar (nivå 3):** [satt / luckor - verifikationsregeln träffsäker?]
 - **Override-utfall:** [per override: rätt / fel i klassrummet]
 - **Differentiering:** [golv höll? tak släppt?]
-- **Elevaktiv tid:** [>50% i praktiken? ja/nej]
+- **Elevaktiv tid:** [faktisk andel vs planerad; höll ev. medveten underskridning av normen?]
 - **Till nästa gång:** [lärarens konkreta ändring]
 ```
 

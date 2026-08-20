@@ -265,7 +265,7 @@ Skillen håller Princip 2 levande genom fyra konkreta mekanismer som vävs in i 
 - **M-i Default + alternativ-presentation:** Vid varje nod visar skillen *default-rekommendation baserad på tidigare val* + listar alternativ. Defaulten presenteras aktivt (med skäl), läraren accepterar eller väljer aktivt något annat.
 - **M-ii Override-prompt vid avvikelse:** Om läraren avviker från default frågar skillen uttryckligen: *"Vilken kontextläsning motiverar avvikelsen? Kategori 2-5 (Princip 2)."* Magkänsla utan kategori-2-5-stöd avvisas.
 
-   **M-ii triggas bara på avvikelser från ramverkets nod-defaults** (Hess, frågetyp, bedömningsmål, lärandemål, förutsättningar/leverans, Princip 3). Den triggas **inte** på avvikelser från kursminnes-preferenser - kursminnet är input till defaultgenerering, inte en default i sig. Läraren ska fritt kunna avfärda kursminnesmönster utan kategori-2-5-prompt.
+   **M-ii triggas bara på avvikelser från ramverkets nod-defaults** (Hess, frågetyp, bedömningsmål, lärandemål, förutsättningar/leverans, Princip 3, elevaktiv tid under normen 50%). Den triggas **inte** på avvikelser från kursminnes-preferenser - kursminnet är input till defaultgenerering, inte en default i sig. Läraren ska fritt kunna avfärda kursminnesmönster utan kategori-2-5-prompt.
 
    **Turn-disciplin:** Om både M-ii-prompt och en omformulering/val-prompt behövs i samma steg, **dela upp i två turns** - be först läraren bekräfta kategorisering, vänta på svar, ställ sedan val-prompten. Två svar i en turn gör det otydligt vilket svar som adresserar vad.
 - **M-iii Mönsterräknare automatiserad:** Skillen håller intern räkning av overrides per moment. Larm triggas på två sätt:
@@ -318,7 +318,7 @@ All output ska uppfylla:
 
 - **Lärandemål** använder observerbara verb som matchar Gy11:s kunskapskravsverb / GY25:s betygskriterieverb
 - **Lektionsplaner** har tidsplanering med minutangivelser
-- **Elevaktiv tid** överstiger 50% av lektionens totala tid
+- **Elevaktiv tid** överstiger 50% av lektionens totala tid (norm; golv 30% med M-ii-motivering - se `references/lektionsplanering.md` avsnitt 1)
 - **Presentationer** har max 3 nyckelpunkter per slide
 - **Differentiering** är konkret och specifik i varje lektion (inte vag efterhandskonstruktion)
 - **Faktagranskning:** vid osäkerhet skriv `[VERIFIERA]`

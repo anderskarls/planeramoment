@@ -44,7 +44,7 @@ Citera använda sidor med `[[länk]]` i lektionsplanens materialsektion och läg
 Varje lektion ramas av tre principer, ortogonala mot rollinnehållet (full motivering: `lektionsplanering.md` avsnitt 1 - kanonisk):
 
 1. **Öppna med retrieval** (spaced practice; första lektionen: aktivera förkunskaper istället).
-2. **Elevaktiv tid > 50%** (sikta 60%+).
+2. **Elevaktiv tid: norm > 50% (sikta 60%+), golv 30%** - mellan 30 och 50% krävs en M-ii-motivering, under 30% säger skillen ifrån (`lektionsplanering.md` avsnitt 1 - kanonisk).
 3. **Avsluta med exit ticket + framåtkoppling** som mäter rollens exit.
 
 **Kärnan mellan öppning och avslut formas av lektionens roll** (se `lektionsplanering.md` för rollspecifik kärnvägledning). Kort:
@@ -76,7 +76,11 @@ Varje lektionsplan ska innehålla:
 
 - Realiserar lektionen sin tilldelade roll, och mäter exit ticket den rollens exit?
 - Öppnar lektionen med retrieval kopplad till föregående lektion (utom momentets första)?
-- Beräkna elevaktiv tid ur tidtabellen och ange den explicit i lektionsplanen som "Elevaktiv tid: X av Y min (Z%)" - kravet är >50%, sikta 60%+.
+- Beräkna elevaktiv tid ur tidtabellen och ange den explicit i lektionsplanen som "Elevaktiv tid: X av Y min (Z%)". Norm >50% (sikta 60%+), golv 30%. Hantera utfallet så här:
+   - **Z > 50:** normalläge, gå vidare utan kommentar.
+   - **30 ≤ Z ≤ 50:** presentera lektionsplanen som vanligt, men ställ M-ii-prompten i **egen turn** innan du frågar om justeringar: *"Lektionen landar på Z% elevaktiv tid, under normen 50%. Vilken kontextläsning motiverar det? Kategori 2-5."* Skriv lärarens svar i lektionsplanens elevaktiv tid-fält och räkna upp momentplanens Override-räknare. Har läraren redan motiverat samma sak för en tidigare lektion i momentet: hänvisa till det beslutet i stället för att fråga om igen.
+   - **Z < 30:** stanna. Säg att lektionen ligger under golvet, peka ut var i förloppet elevarbete kan återtas, och fråga om läraren vill att du justerar eller vill gå vidare ändå. Går läraren vidare: dokumentera som override med kategori 2-5.
+   - Är det **tiden** som tagit slut snarare än ett medvetet val - korta lärargenomgången, aldrig elevarbetet.
 - För Brottning-lektioner: matchar förloppet diskursmålet + formen från 3.2 (inte en generisk genomgång)?
 - Är differentieringen konkret (inte "stöd svagare elever")?
 - Är faktapåståenden källgrundade (NotebookLM) eller [VERIFIERA]-taggade?

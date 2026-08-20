@@ -89,7 +89,7 @@ Avsluta med:
 - Skriv alltid på **svenska**
 - Bygg vidare på vault-kontexten - referera till reflektioner och tidigare erfarenheter
 - **Rollbaserad ram:** öppna med retrieval (spaced practice) → rollkärna (formas av rollen) → avsluta med exit ticket som mäter rollens exit. Ingen fast fassekvens
-- Sikta på minst 60% elevaktiv tid i detaljerade planeringar
+- Elevaktiv tid i detaljerade planeringar: sikta 60%, norm >50%, golv 30%. Under normen kräver en uttalad kontextläsning (kategori 2-5) - vissa elevgrupper behöver mer lärarledd undervisning
 - Inkludera differentiering (stöd mot E, utmaning mot A) i detaljerade planeringar
 - Inkludera bilagor (sorteringskort, tabeller etc.) direkt i lektionsfilen för detaljerade planeringar
 - Anpassa språk och nivå efter kursen
