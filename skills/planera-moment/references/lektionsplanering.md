@@ -124,72 +124,126 @@ Lektion N+1:
 
 ---
 
-## 5. Mall för lektionsplan (rollbaserad)
+## 5. Mall för lektionsplan (klassrumsvyn)
+
+Lektionsplanen läses på **skärm i klassrummet**, som en HTML-sida byggd ur markdownen (`scripts/bygg-lektionsplan.py`). Läraren redigerar aldrig HTML:en - markdownen är källan. Formatet är byggt för överblick och lyder tre skrivregler:
+
+1. **Varje minut beskrivs en gång.** Allt som hör till ett tidsblock - vad eleverna gör, vad läraren säger, vad läraren håller koll på - står under blockets egen `###`-rubrik. Det finns ingen separat förloppstabell, ingen separat lärarinstruktionslista och ingen separat elevaktivitetslista. Tidslinjen i HTML:en byggs ur rubrikerna.
+2. **Göra och motivera hålls isär.** Klassrumsvyn (allt ovanför `## Bakgrund`) säger vad som ska hända. Varför - roll och exit, lärandemål, koppling till bedömningsmål, Princip-avsteg, overrides, ändringshistorik, källor och wikilänkar - står i `## Bakgrund`, som är hopfälld i HTML:en. Skriv inte ramverkets vokabulär (roll, exit, nivå 3, Brottning, Princip 3, override) i klassrumsvyn; säg vad det betyder i handling.
+3. **Kort och konkret.** En punkt är en handling eller en observation, inte ett resonemang. Ordagranna repliker skrivs som `Säg:`-rader - bara det läraren faktiskt ska säga, inte sammanfattningar av det. Detaljer som bara behövs ibland (stationsspecifika noter, vändfrågor, reglerna till en gruppövning) läggs som `####`-fördjupning under sitt block och fälls ihop.
+
+Ett fullständigt exempel finns i `exempel/lektionsplan-exempel.md` (Hi 1b, Antiken L4) med den byggda sidan bredvid.
 
 ```markdown
+---
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+type: lektionsplan
+lektion: [N]
+titel: [Titel]
+kurs: [Kurs]
+grupper: [Grupp (antal), Grupp (antal)]
+moment: [Momentets titel]
+langd: [minuter]
+elevaktiv: [elevaktiva minuter]
+roll: [Roll]
+---
+
 # Lektion [N]: [Titel]
 
-**Kurs:** [Kurs]
-**Moment:** [Momentets titel]
-**Lektionslängd:** [X] minuter
+> [Vad eleverna går ut med, i en mening - rollens exit uttryckt i klartext.]
 
-## Roll(er)
-- **Roll:** [vilken/vilka av de 9 rollerna lektionen realiserar]
-- **Eleven exit:ar med:** [rollens bedömningsmål-relativa exit i detta moment]
+## Före lektionen
 
-## Lärandemål för lektionen
-- [Vilka av momentets lärandemål som primärt adresseras]
+- [ ] [Förberedelse som en handling: skriv ut, dela in, läs av exit ticket, skriv på tavlan ...]
+- [ ] [Förutsättningar som levereras i förväg: vad, till vem, när]
 
-## Förberedelse
-- [Vad läraren behöver förbereda]
-- [Förutsättningar: Princip 3-leverans - vad levereras i förväg, elevens ansvar]
+## Genom hela lektionen
 
-## Retrieval-öppning
-- Baserat på exit ticket från lektion [N-1]: [specifik koppling]
-- Begrepp/frågor att återaktualisera: [lista]
+[Utelämnas om inget gäller hela passet. Annars: återkommande repliker och regler.]
 
-## Lektionsförlopp
+Säg: "[replik som återkommer]" - [när den används]
 
-| Tid | Moment | Aktivitet | Beskrivning |
-|-----|--------|-----------|-------------|
-| 0-X min | Öppning (retrieval) | [Aktivitet] | [Beskrivning] |
-| X-Y min | Rollkärna: [roll] | [Aktivitet/form] | [Beskrivning] |
-| Y-Z min | Avslut (exit ticket) | [Aktivitet] | [Beskrivning] |
+## Förlopp
 
-(Tidsuppskattningar, inte fasta fasandelar. Elevaktiv tid: norm > 50%, golv 30%.)
+Om tiden inte räcker: [vad som kortas först, och vad som aldrig får krympa]
 
-## Brottningsform (endast Brottning-lektioner)
-- **Diskursmål:** [...]
-- **Form:** [...]
-- **Gruppstorlek + strukturmekanism:** [...]
-- **Position-tilldelning:** [Ja, tippande fråga | Ej tillämpligt]
+### 0-5 · Öppning: [retrieval kopplad till lektion N-1:s exit ticket]
 
-## Lärarinstruktioner
-- **Öppning:** [specifika retrieval-frågor]
-- **Rollkärna:** [nyckelformuleringar, worked examples, hur formen/gruppen faciliteras, cirkuleringsfrågor]
-- **Avslut:** [exit ticket-fråga, preview av nästa lektion]
+Eleverna: [vad eleverna gör, i en mening]
 
-## Elevaktiviteter
-- [Specifika instruktioner med tydliga steg]
+- [Hur exit ticket-högarna används]
 
-**Elevaktiv tid: ca [X] av [Y] minuter ([Z]%)** (beräknas ur lektionsförloppet; norm >50%, sikta 60%+, golv 30%)
-- **Avvikelse från normen:** [utelämnas om Z > 50 | "Under norm (Z%) - kategori N: [lärarens kontextläsning]"]
+Säg: "[övergången till dagens lektion]"
 
-## Differentiering
-- **Stöd (mot E):** [konkreta stödstrukturer: mallar, ledande frågor, ordbank]
-- **Utmaning (mot A):** [öppnare frågor, fler perspektiv, komplexa kopplingar]
-- **Princip 3-undantag:** [elever med dokumenterat stöd i Brottning]
+### 5-25 · [Rollkärnans första del]
+
+Eleverna: [...]
+
+- [Vad läraren gör eller håller koll på]
+
+Säg: "[nyckelformulering, ordagrant]"
+
+#### [Fördjupning som bara behövs ibland]
+
+- [...]
+
+### 25-30 · Exit ticket och avslut
+
+Eleverna: [...]
+
+Säg: "[framåtkoppling till nästa lektion]"
 
 ## Exit ticket
-- **Fråga:** [mäter rollens exit]
-- **Användning:** [hur resultaten informerar nästa lektions retrieval-öppning]
+
+**[Frågan, som den ställs]**
+
+- **Rätt:** [...]
+- *"[Distraktor]"* - [vad valet avslöjar]
+
+## Efter lektionen
+
+- [ ] [Hur exit ticket-resultaten sorteras och vad de styr i nästa lektion]
+
+## Differentiering
+
+- **Stöd (mot E):** [konkreta stödstrukturer och minimikrav]
+- **Utmaning (mot A):** [...]
+- **Princip 3-undantag:** [elever med dokumenterat stöd]
 
 ## Material
-- [Lista över allt material som behövs]
 
-## Koppling till bedömningsmål/kunskapskrav
-- [Hur lektionen bidrar till E/C/A-progressionen]
+- [Allt som behövs, med filnamn]
+
+## Bakgrund
+
+### Roll och mål
+
+**Roll:** [roll(er)] - eleven exit:ar med [...].
+**Lärandemål:** [vilka av momentets mål, med E/C/A-progression]
+**Bedömningsmålet:** [hur lektionen bidrar]
+
+### Brottningsform
+
+[Endast Brottning-lektioner: diskursmål, form, gruppstorlek + strukturmekanism, position-tilldelning.]
+
+### Elevaktiv tid
+
+Ca [X] av [Y] min ([Z] %): [uppdelning per block]. [Vid Z ≤ 50: "Under norm - kategori N: lärarens kontextläsning".]
+
+### Ändringar
+
+[Datum och vad som ändrats, med override-kategori. Utelämnas för en ny lektion.]
+
+### Källor
+
+**NotebookLM:** [källhänvisningar]
+**Wiki:** [[wikilänkar]]
 ```
+
+**Tidsblock:** rubriken är alltid `### start-slut · Titel` i minuter från lektionens början. Blocken ska täcka hela lektionen utan luckor, och sista blockets slut ska vara lika med `langd`. Brottningsformen styr blockens innehåll - rollkärnan i en Brottning-lektion är formens egna faser som separata block (t.ex. förberedelse, inre cirkel, rotation, uppsamling).
+
+**Elevaktiv tid** räknas ur blocken och skrivs både som `elevaktiv` i frontmattern (visas som stapel i HTML:en) och med uppdelning under `### Elevaktiv tid` i Bakgrund.
 
 ---
 

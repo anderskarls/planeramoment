@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>L4 Fyra röster ur Rom - lektionsplan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+
+:root{
+  color-scheme:light;
+  --papper:#F4EDE1; --papper2:#EBE1CF; --black:#1F1A15; --black2:#4A3F33;
+  --linje:#2A221A; --bordeaux:#7A2E2E; --marin:#2C3E55; --oliv:#5A6A3A;
+  --ocker:#B8862F; --harfin:rgba(42,34,26,.14); --nu:rgba(184,134,47,.16);
+  --m-papper:#191512; --m-papper2:#231E18; --m-black:#EFE6D8; --m-black2:#B6A895;
+  --m-linje:#7A6B5C; --m-bordeaux:#E2907E; --m-marin:#89A8CB; --m-oliv:#A3B872;
+  --m-ocker:#D8A94D; --m-harfin:rgba(239,230,216,.14); --m-nu:rgba(216,169,77,.14);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --matt:780px; --kant:28px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-tema]){color-scheme:dark;
+    --papper:var(--m-papper); --papper2:var(--m-papper2); --black:var(--m-black); --black2:var(--m-black2);
+    --linje:var(--m-linje); --bordeaux:var(--m-bordeaux); --marin:var(--m-marin); --oliv:var(--m-oliv);
+    --ocker:var(--m-ocker); --harfin:var(--m-harfin); --nu:var(--m-nu)}
+}
+:root[data-tema="mork"]{color-scheme:dark;
+  --papper:var(--m-papper); --papper2:var(--m-papper2); --black:var(--m-black); --black2:var(--m-black2);
+  --linje:var(--m-linje); --bordeaux:var(--m-bordeaux); --marin:var(--m-marin); --oliv:var(--m-oliv);
+  --ocker:var(--m-ocker); --harfin:var(--m-harfin); --nu:var(--m-nu)}
+*{box-sizing:border-box}
+html{scroll-padding-top:120px}
+body{margin:0; background:var(--papper); color:var(--black); font-family:var(--sans);
+  font-size:18px; line-height:1.6}
+.omslag,main,footer,.klocka>*{max-width:var(--matt); margin-left:auto; margin-right:auto}
+.omslag,main,footer{padding:0 var(--kant)}
+.etikett{font-family:var(--mono); font-size:11.5px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--black2)}
+code{font-family:var(--mono); font-size:.82em; background:var(--harfin); padding:1px 5px}
+.wiki{border-bottom:1px dotted var(--black2)}
+strong{font-weight:600}
+
+/* omslag */
+.omslag{padding-top:40px}
+.omslag .rad{display:flex; gap:16px; flex-wrap:wrap; border-bottom:1.5px solid var(--linje); padding-bottom:12px}
+.omslag .rad span+span::before{content:"▸ "; color:var(--bordeaux)}
+h1{font-family:var(--serif); font-weight:600; color:var(--bordeaux); font-size:clamp(2.1rem,5.5vw,3.3rem);
+  line-height:1.05; margin:22px 0 0}
+.omslag .karna{font-family:var(--serif); font-style:italic; font-size:1.35rem; line-height:1.42;
+  color:var(--black2); margin:14px 0 0; max-width:48ch}
+.meta{display:flex; flex-wrap:wrap; gap:10px 28px; align-items:center; margin:20px 0 0;
+  font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--black2)}
+.elevaktiv{display:flex; align-items:center; gap:10px}
+.stapel{display:inline-block; width:110px; height:7px; background:var(--harfin)}
+.stapel span{display:block; height:100%; background:var(--oliv)}
+
+/* klocka och tidslinje */
+.klocka{position:sticky; top:0; z-index:30; background:var(--papper); margin-top:26px;
+  border-top:1.5px solid var(--linje); border-bottom:1.5px solid var(--linje); padding:10px var(--kant)}
+.remsa{position:relative; display:flex; gap:3px; height:46px}
+.seg{position:relative; min-width:0; display:flex; flex-direction:column; justify-content:space-between;
+  padding:5px 7px; background:var(--papper2); border-top:3px solid var(--marin);
+  color:var(--black); text-decoration:none; overflow:hidden}
+.seg:hover{border-top-color:var(--bordeaux)}
+.seg.aktiv{border-top-color:var(--ocker); background:var(--nu)}
+.segtid{font-family:var(--mono); font-size:10.5px; color:var(--black2)}
+.segnamn{font-size:12.5px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.nal{position:absolute; top:-4px; bottom:-4px; width:2px; background:var(--bordeaux); pointer-events:none}
+.kontroller{display:flex; gap:10px; align-items:center; margin-top:9px; flex-wrap:wrap}
+.tidvisning{font-family:var(--mono); font-size:12px; letter-spacing:.05em; color:var(--black2); margin-right:auto}
+.kontroller button{font-family:var(--mono); font-size:11.5px; font-weight:600; letter-spacing:.1em;
+  text-transform:uppercase; padding:6px 12px; border:1.5px solid var(--linje); background:transparent;
+  color:var(--black); cursor:pointer}
+.kontroller button:hover{background:var(--papper2)}
+#btn-start.gar{background:var(--bordeaux); color:var(--papper); border-color:var(--bordeaux)}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--bordeaux); outline-offset:2px}
+.tema-ljus{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-tema]) .tema-mork{display:none} :root:not([data-tema]) .tema-ljus{display:inline}}
+:root[data-tema="mork"] .tema-mork{display:none} :root[data-tema="mork"] .tema-ljus{display:inline}
+
+/* sektioner */
+main{padding-top:10px; padding-bottom:60px}
+details.sektion{margin-top:34px; border-top:1.5px solid var(--linje)}
+details.sektion>summary{list-style:none; cursor:pointer; display:flex; align-items:baseline; gap:12px; padding-top:14px}
+details.sektion>summary::-webkit-details-marker{display:none}
+details.sektion>summary::after{content:"+"; font-family:var(--mono); color:var(--black2); margin-left:auto}
+details.sektion[open]>summary::after{content:"–"}
+h2{font-family:var(--serif); font-weight:600; font-size:1.75rem; margin:0; line-height:1.15}
+.sektionskropp{padding-top:12px}
+.sektionskropp h4{font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--marin); margin:24px 0 8px}
+details.bakgrund .sektionskropp{font-size:16.5px; color:var(--black2)}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px; padding-left:1.25em}
+li{margin:0 0 7px}
+li.ratt::marker{color:var(--oliv)}
+li.ratt strong{color:var(--oliv)}
+
+/* checklistor */
+ul.checklista{list-style:none; padding:0}
+li.check label{display:flex; gap:12px; align-items:flex-start; cursor:pointer; padding:6px 0;
+  border-bottom:1px solid var(--harfin)}
+li.check input{width:20px; height:20px; margin:4px 0 0; flex:none; accent-color:var(--oliv)}
+li.check input:checked+span{opacity:.45; text-decoration:line-through; text-decoration-color:var(--black2)}
+
+/* rutor */
+.ruta{background:var(--papper2); border-left:5px solid var(--marin); padding:18px 22px; margin:28px 0 0}
+.ruta p:last-child,.ruta ul:last-child{margin-bottom:0}
+.ruta.obs{border-left-color:var(--ocker); margin:0 0 18px; font-size:16.5px}
+.ruta.genom{border-left-color:var(--bordeaux)}
+.rubrik{font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--bordeaux); margin:0 0 10px}
+
+/* förloppet */
+.forlopp{margin-top:34px; border-top:1.5px solid var(--linje); padding-top:22px}
+.moment{position:relative; padding:18px 0 14px 22px; margin:0 0 18px; border-left:3px solid var(--harfin)}
+.moment>header{display:flex; align-items:baseline; gap:14px; margin:0 0 12px; flex-wrap:wrap}
+.moment .tid{font-family:var(--mono); font-size:13px; font-weight:600; color:var(--marin); min-width:52px}
+.moment h3{font-family:var(--serif); font-weight:600; font-size:1.55rem; line-height:1.15; margin:0}
+.moment .langd{font-family:var(--mono); font-size:11px; color:var(--black2); letter-spacing:.06em}
+.nu-etikett{display:none; font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; background:var(--ocker); color:var(--papper); padding:2px 8px}
+.moment.nu{border-left-color:var(--ocker); background:linear-gradient(90deg,var(--nu),transparent 70%)}
+.moment.nu .nu-etikett{display:inline-block}
+.moment.passerad>*{opacity:.55}
+.elever{font-size:17px; padding:8px 0 8px 0; border-bottom:1px solid var(--harfin); margin-bottom:14px}
+.elever .etikett,.sag .etikett{display:inline-block; margin-right:10px; color:var(--oliv)}
+.sag{margin:14px 0; padding:2px 0 2px 18px; border-left:3px solid var(--bordeaux)}
+.sag .etikett{color:var(--bordeaux); display:block; margin-bottom:2px}
+.sag p{font-family:var(--serif); font-style:italic; font-size:1.36rem; line-height:1.4; margin:0}
+.sagnot{display:block; font-size:14.5px; color:var(--black2); margin-top:4px}
+details.fordjup{margin:12px 0 0; border:1px solid var(--harfin); background:var(--papper2)}
+details.fordjup>summary{cursor:pointer; padding:10px 14px; font-weight:600; font-size:16px}
+details.fordjup>summary::marker{color:var(--marin)}
+details.fordjup[open]>summary{border-bottom:1px solid var(--harfin)}
+details.fordjup>:not(summary){margin-left:14px; margin-right:14px}
+details.fordjup>:nth-child(2){margin-top:12px}
+details.fordjup>:last-child{margin-bottom:14px}
+
+footer{border-top:1.5px solid var(--linje); padding-top:16px; padding-bottom:50px;
+  font-family:var(--mono); font-size:11.5px; color:var(--black2)}
+
+@media (max-width:640px){
+  :root{--kant:16px} body{font-size:17px}
+  .segnamn{display:none} .remsa{height:30px}
+  .moment{padding-left:14px}
+  .sag p{font-size:1.22rem}
+}
+@media print{
+  .klocka{display:none} details{display:block} details>summary::after{display:none}
+  details:not([open])>*:not(summary){display:block}
+  body{background:#fff; color:#000; font-size:11pt}
+  .moment{break-inside:avoid-page}
+}
+
+</style>
+<script>
+(function(){try{var t=localStorage.getItem('lektionsplan-tema');
+if(t==='ljus'||t==='mork')document.documentElement.setAttribute('data-tema',t);}catch(e){}})();
+</script>
+</head>
+<body data-nyckel="antiken-framsteg-för-vem-4" data-langd="70">
+
+<header class="omslag">
+  <div class="rad">
+    <span class="etikett">Historia Nivå 1b</span>
+    <span class="etikett">Antiken - framsteg för vem?</span>
+    <span class="etikett">Lektion 4</span>
+  </div>
+  <h1>Fyra röster ur Rom</h1>
+  <p class="karna">Eleverna går ut med vilken frihet fyra personer i romarriket hade och saknade - medborgaren, kvinnan, slaven och provinsbon - och en första jämförelse med Aten. Fortfarande utan egen position i momentfrågan.</p>
+  <div class="meta"><span>70 min · MSA26A (20), MSA26B (24)</span><div class="elevaktiv" title="Elevaktiv tid"><span>Elevaktiv tid 53 av 70 min</span><span class="stapel"><span style="width:76%"></span></span><b>76 %</b></div></div>
+</header>
+
+<nav class="klocka" aria-label="Lektionens tidslinje">
+  <div class="remsa"><a class="seg" href="#m0" data-n="0" style="flex:5.71" title="Öppning: L3:s exit ticket"><span class="segtid">0</span><span class="segnamn">Öppning</span></a><a class="seg" href="#m1" data-n="1" style="flex:24.29" title="Genomgång: Rom enligt boken"><span class="segtid">4</span><span class="segnamn">Genomgång</span></a><a class="seg" href="#m2" data-n="2" style="flex:28.57" title="Stationer"><span class="segtid">21</span><span class="segnamn">Stationer</span></a><a class="seg" href="#m3" data-n="3" style="flex:14.29" title="Delning i fyrgrupp"><span class="segtid">41</span><span class="segnamn">Delning i fyrgrupp</span></a><a class="seg" href="#m4" data-n="4" style="flex:14.29" title="Jämförelse: Aten mot Rom"><span class="segtid">51</span><span class="segnamn">Jämförelse</span></a><a class="seg" href="#m5" data-n="5" style="flex:12.86" title="Checkpoint och avslut"><span class="segtid">61</span><span class="segnamn">Checkpoint och avslut</span></a><span class="nal" hidden></span></div>
+  <div class="kontroller">
+    <span class="tidvisning" aria-live="polite">Klockan står still</span>
+    <button type="button" id="btn-start">Starta</button>
+    <button type="button" id="btn-nu" hidden>Gå till nu</button>
+    <button type="button" id="btn-noll" hidden>Nollställ</button>
+    <button type="button" id="btn-tema" class="tema"><span class="tema-mork">Mörkt</span><span class="tema-ljus">Ljust</span></button>
+  </div>
+</nav>
+
+<main>
+<details class="sektion checkavsnitt" open><summary><h2>Före lektionen</h2></summary><div class="sektionskropp"><ul class="checklista"><li class="check"><label><input type="checkbox" data-nyckel="före l-0-0"><span><strong>Säg till att Del 2 inte behöver vara läst</strong> (Classroom eller på L3). Annars läser de samvetsgranna ändå. <em>"Del 2 behöver ni inte läsa till lektion 4 - vi går igenom Rom tillsammans. Läs den gärna efteråt som repetition inför rådslaget."</em></span></label></li><li class="check"><label><input type="checkbox" data-nyckel="före l-0-1"><span><strong>Läs av L3:s exit ticket</strong> i frågeappen och sortera i tre högar (se öppningen).</span></label></li><li class="check"><label><input type="checkbox" data-nyckel="före l-0-2"><span><strong>Dela in paren i A och B.</strong> A-par: station 1 och 3. B-par: station 2 och 4. MSA26A: 5 + 5 par, fem fyrgrupper. MSA26B: 6 + 6, sex fyrgrupper. Bestäm vilket A-par som möter vilket B-par. Svagare läsare gärna B-par - kortare röster.</span></label></li><li class="check"><label><input type="checkbox" data-nyckel="före l-0-3"><span><strong>Skriv ut stationshäftet</strong> <code>kallmaterial-lektion-4-bearbetad</code>, 3 per station. Ett par exemplar av <code>kallmaterial-lektion-4</code> (utan omskrivning) vid varje station.</span></label></li><li class="check"><label><input type="checkbox" data-nyckel="före l-0-4"><span><strong>Skriv ut frihetsprotokollet</strong> <code>elevuppgift-lektion-4</code>, ett per elev. Eleverna tar med sitt L3-protokoll.</span></label></li><li class="check"><label><input type="checkbox" data-nyckel="före l-0-5"><span><strong>Öppna presentationen</strong> <code>presentation-lektion-4.html</code>.</span></label></li><li class="check"><label><input type="checkbox" data-nyckel="före l-0-6"><span><strong>Skriv på tavlan:</strong> <em>Vilken frihet hade hen? Vilken frihet saknade hen, och vem bestämde i stället?</em> och <em>Fler innanför - eller mer värt att vara innanför?</em></span></label></li><li class="check"><label><input type="checkbox" data-nyckel="före l-0-7"><span><strong>Checkpointen</strong> finns i frågeappen: kurs 10 <code>v3F0KMBw</code>, kurs 12 <code>hvpV7eZt</code>.</span></label></li></ul></div></details>
+<div class="ruta genom"><h3 class="rubrik">Genom hela lektionen</h3><blockquote class="sag"><span class="etikett">Säg</span><p>Spara det. Rådslaget i lektion 5 avgör. I dag samlar vi.</p><span class="sagnot">varje gång en elev tar ställning i momentfrågan.</span></blockquote>
+<p><strong>Spårningsregeln:</strong> varje belägg ska gå att hitta i <em>rösten</em>, <em>boken s. ___</em> eller <em>referatet</em> - aldrig i omskrivningen eller kartan. Ser du avskrift: <em>"Var står det? Visa mig."</em></p></div>
+<section class="forlopp" aria-label="Förlopp">
+<div class="ruta obs"><p>Om tiden inte räcker: <strong>korta genomgången</strong> - republikens detaljer kan strykas, aldrig bilderna om kejsaren och livegenskapen. Delningen och jämförelsen får inte krympa.</p></div><section class="moment" id="m0" data-start="0" data-slut="4"><header><span class="tid">0-4</span><h3>Öppning: L3:s exit ticket</h3><span class="langd">4 min</span><span class="nu-etikett">Nu</span></header><p class="elever"><span class="etikett">Eleverna</span>skärpningsrunda i par, eller lyssnar på ett modellsvar.</p>
+<ul><li><strong>Hög 1</strong> (båda meningarna konkreta): läs upp ett svar som modell, 30 sekunder.</li><li><strong>Hög 2</strong> (friheten hen <em>saknade</em> är svepande) - den vanliga bristen. Visa ett svar anonymt, paren skriver om det på 2 min, ta en omskrivning i helklass.</li><li><strong>Hög 3</strong> (tar ställning i momentfrågan): positionsdisciplinen.</li></ul>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Vem bestämde i stället - och över vad, exakt?</p></blockquote>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Samma fyra frågor, men i ett imperium. Och i Rom räcker det inte att fråga vem som var innanför. Vi måste också fråga vad det var värt.</p></blockquote></section><section class="moment" id="m1" data-start="4" data-slut="21"><header><span class="tid">4-21</span><h3>Genomgång: Rom enligt boken</h3><span class="langd">17 min</span><span class="nu-etikett">Nu</span></header><p class="elever"><span class="etikett">Eleverna</span>lyssnar, och svarar på tre vändfrågor i par (1 min var, tas inte upp i helklass).</p>
+<ul><li><strong>Kartorna först (2 min):</strong> fyra nedslag, ett i taget - ca 200 f.v.t., 100 f.v.t., 100 v.t., 400 v.t. En mening per karta, talarnoten har dem. Säg att gränserna är ungefärliga.</li><li><strong>Följ bokens ordning</strong> och säg sidnumret på varje bild. Genomgången är ett tolkat referat av boken, inte en ersättning.</li></ul>
+<blockquote class="sag"><span class="etikett">Säg</span><p>I Aten stängde man kretsen - Perikles lag 451 krävde två atenska föräldrar. Rom gjorde tvärtom. Plebejerna fick folktribuner (s. 89). Besegrade folk fick medborgarskap, och på 200-talet fick alla fria män i riket romerskt medborgarskap (s. 92).</p></blockquote>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Men titta vad medborgarskapet innehöll. Under republiken röstade du, ofta som klient åt en mäktigare man (s. 90). Under kejsarna bestämde kejsaren (s. 94). Och till slut gjordes fria bönder till livegna (s. 103).</p></blockquote>
+<blockquote class="sag"><span class="etikett">Säg</span><p>I Aten frågade vi vem som var innanför. I Rom måste vi också fråga vad det var värt att vara innanför.</p></blockquote><details class="fordjup"><summary>Vändfrågorna</summary><ol><li>Efter patron och klient: <em>"Var klienten fri?"</em></li><li>Efter Augustus och provinserna: <em>"Kretsen blev större. Blev den värd mer?"</em></li><li>Efter livegenskapen: <em>"Blev den livegne friare eller ofriare än sin farfar, som var bonde på republikens tid?"</em></li></ol></details><details class="fordjup"><summary>Stationsinstruktionen (sista bilden, 1 min)</summary><p>A-par till station 1 och 3, B-par till 2 och 4. Rösten först, spårningsregeln gäller, tio minuter per station. Säg också vad genomgången har utelämnat - den som vill läsa hela avsnittet har läsanvisningen.</p>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Ni blir experter på två personer. Om tjugo minuter ska ni lära ut dem.</p></blockquote></details></section><section class="moment" id="m2" data-start="21" data-slut="41"><header><span class="tid">21-41</span><h3>Stationer</h3><span class="langd">20 min</span><span class="nu-etikett">Nu</span></header><p class="elever"><span class="etikett">Eleverna</span>två stationer i par, 10 min var. Läser rösten, omskrivningen och vad boken säger, fyller i protokollet.</p>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Vilken frihet hade hen, och var hittade du det?</p><span class="sagnot">samma fråga vid varje station. Sidhänvisningen är insatsen.</span></blockquote>
+<ul><li><strong>Kartan sist i varje station</strong> sorterar vad personen fick och inte fick, med pilar till belägget. Den är en vägvisare, inte ett belägg.</li></ul><details class="fordjup"><summary>Station 1 · Medborgaren</summary><ul><li><strong>Gavius ropar <em>Civis Romanus sum</em>.</strong> Medborgaren fick inte piskas eller korsfästas, och det borde ha räckt - men ståthållaren struntade i det. Säg inte att rättigheten var tom: den <strong>fanns och bröts</strong>. Tråden: skyddet fanns kvar under kejsarna (Paulus halshöggs i stället för att korsfästas) men förlorades för <em>de ringa</em> på 200-talet. <strong>Citera inte Cicero</strong> - bara Beards referat finns.</li><li><strong>Augustus säger "frihet".</strong> Han skriver att han befriade staten, boken att han skapade en ärftlig monarki (s. 94). Låt eleverna se krocken. Det är begreppshistoria, inte källkritik - frågar någon om Augustus ljuger: "bra fråga, den får ett eget moment - i dag frågar vi vad han menar med ordet".</li><li><strong>Korrigera "Rom var en demokrati".</strong> En republik där de rika släkterna dominerade. Folktribunerna gav plebejerna ett veto, inte makten.</li><li><strong>Bokens egen fråga</strong> (s. 103): <em>"Skulle du föredra att vara en slav med bra arbetsuppgifter eller en fattig livegen?"</em> Ställ den, svara inte - den hör hemma i rådslaget.</li></ul>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Båda kan inte ha rätt om samma sak - eller kan de det? Vad menar Augustus med frihet?</p></blockquote></details><details class="fordjup"><summary>Station 2 · Kvinnan</summary><ul><li><strong>Boken skiljer Rom från Aten.</strong> Hon ärvde lika mycket som bröderna, kunde skilja sig och kontrollera förmögenheter (s. 100). Men hon röstade inte, hade inga ämbeten, och pater familias bestämde (s. 100). Eleverna importerar lätt den atenska kvinnan.</li></ul>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Är hon friare än kvinnan i Aten - eller fri i andra saker?</p></blockquote></details><details class="fordjup"><summary>Station 3 · Slaven</summary><ul><li><strong>Rom är inte Aten, och Rom är inte Amerika.</strong> Slaveriet var inte rasbaserat (s. 100). Det nya är <strong>frigivningen</strong>: den frigivne blev medborgare, fast klient åt sin förre ägare. Barnen var helt fria. Se till att A-paren tar med det till delningen - jämförelsens starkaste exempel.</li><li><strong>Justinianus kallar slaveriet "i strid med naturen".</strong> Låt eleverna hitta det. Lägg Aristoteles från L3 bredvid, som kallade det naturligt.</li><li><strong>Halsbandet</strong> talar i jagform men är skrivet av ägaren. Säg det i en mening om ingen ser det.</li></ul>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Två röster, två motsatta svar om naturen - och slaveriet fanns kvar i båda.</p></blockquote></details><details class="fordjup"><summary>Station 4 · Provinsbon</summary><ul><li><strong>Vem talar?</strong> Tacitus var en romersk senator som skrev om britterna. Regina har egen sten, men den restes av hennes man. Hon är också kvinna och frigiven - B-parens bro till A-parens slav.</li><li><strong>Gränsen som zon</strong>, om tiden finns.</li></ul>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Det här är det vi har.</p></blockquote>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Barates kom från Palmyra i Syrien, 400 mil bort, och gifte sig med en britt vid imperiets nordligaste gräns. Gränsen var inte en mur som höll folk ute, den var en zon där människor möttes.</p></blockquote></details></section><section class="moment" id="m3" data-start="41" data-slut="51"><header><span class="tid">41-51</span><h3>Delning i fyrgrupp</h3><span class="langd">10 min</span><span class="nu-etikett">Nu</span></header><p class="elever"><span class="etikett">Eleverna</span>A-par och B-par lär varandra sina två personer, ca 2,5 min per person. Lyssnarna fyller i de två rutor de inte besökt.</p>
+<p>Här kan lektionen läcka - det som lärs ut tappar lätt sina belägg. Säg reglerna innan grupperna börjar:</p>
+<ol><li>Den som lär ut <strong>säger var det står</strong>.</li><li>Den som lyssnar <strong>skriver belägget med kamratens namn</strong>: <em>"boken s. 100 (enligt Sara)"</em>.</li><li><strong>En person i taget</strong>, max 2,5 min. Timer på tavlan.</li></ol>
+<ul><li>Lyssna efter A-parens frigivning och B-parens arvsrätt. Saknas den: fråga lyssnarna, inte dem som lärde ut.</li></ul></section><section class="moment" id="m4" data-start="51" data-slut="61"><header><span class="tid">51-61</span><h3>Jämförelse: Aten mot Rom</h3><span class="langd">10 min</span><span class="nu-etikett">Nu</span></header><p class="elever"><span class="etikett">Eleverna</span>i par, L3- och L4-protokollen bredvid varandra. Två personer, tre kolumner: samma, ändrat, fler innanför eller mer värt?</p>
+<ul><li>Kravet står på bladet: orden <em>kontinuitet</em> och <em>förändring</em> med ett konkret belägg. <strong>Godkänn inte "Rom var bättre".</strong></li></ul>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Förändring: en frigiven slav blev medborgare i Rom, men metoik i Aten. Kontinuitet: kvinnan röstade inte i någon av dem.</p><span class="sagnot">modellexemplet, om ett par kör fast.</span></blockquote></section><section class="moment" id="m5" data-start="61" data-slut="70"><header><span class="tid">61-70</span><h3>Checkpoint och avslut</h3><span class="langd">9 min</span><span class="nu-etikett">Nu</span></header><p class="elever"><span class="etikett">Eleverna</span>checkpointen digitalt i frågeappen (8 min).</p>
+<blockquote class="sag"><span class="etikett">Säg</span><p>Ni har åtta personer i två protokoll. Nästa lektion väger ni dem. Ta med båda.</p></blockquote></section>
+</section>
+<details class="sektion exit" open><summary><h2>Exit ticket</h2></summary><div class="sektionskropp"><p>Checkpointen i frågeappen. Verifierar förutsättningarna inför rådslaget.</p>
+<p><strong>1. Enligt boken fick alla fria män i romarriket medborgarskap på 200-talet. Vilket påstående stämmer bäst?</strong></p>
+<ul><li class="ratt"><strong>Rätt:</strong> Fler blev medborgare, men medborgarna bestämde inte över riket - det gjorde kejsaren.</li><li><em>"Nu fick alla i riket, också slavarna, samma frihet."</em> - förväxlar medborgarskap med frihet för alla.</li><li><em>"Nu kunde alla medborgare rösta om rikets lagar, som i Aten."</em> - missar att innehållet krympte.</li><li><em>"Bara de som bodde i staden Rom blev medborgare."</em> - har inte läst s. 92.</li></ul>
+<p><strong>2. Vad skilde en livegen bonde från en slav?</strong></p>
+<ul><li class="ratt"><strong>Rätt:</strong> Den livegne ägdes inte av någon, men fick inte flytta från jorden, och barnen ärvde hans ställning.</li><li><em>"Den livegne var fri att flytta men ägde ingen jord."</em> - missar bundenheten.</li><li><em>"Ingenting, livegen är bara ett annat ord för slav."</em> - missar att en fri mans frihet krympte.</li><li><em>"Den livegne ägde jorden han brukade."</em> - missar beroendet (s. 103).</li></ul>
+<p><strong>3. Vilket perspektiv känner du dig minst säker på?</strong> (självskattning)</p></div></details>
+<details class="sektion checkavsnitt" open><summary><h2>Efter lektionen</h2></summary><div class="sektionskropp"><ul class="checklista"><li class="check"><label><input type="checkbox" data-nyckel="efter -0-0"><span><strong>Sortera samma kväll.</strong> Innehållsfrågorna i tre högar. Majoritet fel på en fråga → reteach i L5:s öppning.</span></label></li><li class="check"><label><input type="checkbox" data-nyckel="efter -0-1"><span><strong>Självskattningen blir L5:s perspektivgrupper.</strong> Ingen sätts på sitt osäkraste perspektiv; helst på en station eleven besökt själv. Elever som föll på båda innehållsfrågorna placeras där deras säkraste perspektiv ingår.</span></label></li><li class="check"><label><input type="checkbox" data-nyckel="efter -0-2"><span><strong>Identifiera elever med dokumenterat stöd</strong> som behöver anpassad roll i rådslaget (förberedd taltur eller skriftligt bidrag).</span></label></li></ul></div></details>
+<details class="sektion "><summary><h2>Differentiering</h2></summary><div class="sektionskropp"><ul><li><strong>Golvet för alla</strong> är den bearbetade texten. Den som fastnar på rösten kan börja med <em>Vad boken säger</em> - genomgången har redan gått igenom det.</li><li><strong>Stationsvalet:</strong> station 2 och 4 har kortare, mer konkreta röster (gravstenar).</li><li><strong>Minimikrav (mot E):</strong> för dina två personer en rad om frihet hen hade och en om frihet hen saknade, en rad per person från delningen, och en rad i jämförelsen. Meningsmallar och en ifylld exempelrad står i protokollet.</li><li><strong>Utmaning (mot A):</strong> Augustus och frihetsordet; Justinianus mot Aristoteles; fler innanför men mindre värt (de ansedda och de ringa); läs rösten utan omskrivningen. Ett par som blir klart tidigt går till en tredje station.</li><li><strong>UDL:</strong> presentationen och häftet digitalt i Classroom. Kartan i boken s. ~97 visar var Regina och Barates kom ifrån.</li></ul></div></details>
+<details class="sektion "><summary><h2>Material</h2></summary><div class="sektionskropp"><ul><li>Läroboken, <em>Samband Historia 1b</em>: s. 89-90, 92, 94, 100-101, 103</li><li><code>presentation-lektion-4.html</code> - 22 bilder, 4-17 är genomgången</li><li><code>kallmaterial-lektion-4-bearbetad</code> - 3 per station</li><li><code>kallmaterial-lektion-4</code> - ett par per station</li><li><code>elevuppgift-lektion-4</code> - ett per elev</li><li>Elevernas L3-protokoll och fotot av L3:s frihetsmatris</li><li>Stationsskyltar, lista över par och fyrgrupper, timer</li><li>Checkpointen i frågeappen</li></ul></div></details>
+
+<details class="sektion bakgrund"><summary><h2>Bakgrund och motiveringar</h2></summary><div class="sektionskropp"><h4>Roll och mål</h4><p><strong>Roll:</strong> Perspektivbygge II (Rom). Eleven exit:ar med en perspektivinventering av fyra liv i romarriket - två ur egen läsning vid stationerna, två från kamraterna med deras belägg - och en jämförelse med Aten i termer av kontinuitet och förändring.</p>
+<p><strong>Mål 1:</strong> kunskaper om Roms väg från republik till kejsardöme och om imperiets grupper, sedda utifrån olika perspektiv. E: något konkret om var och en. C: belagt med sida eller röst. A: att frihetsordet byter innehåll (Augustus).</p>
+<p><strong>Mål 2:</strong> kontinuitet och förändring i jämförelsen Aten-Rom. Distinktionen mellan kretsen och innehållet skiljer utvecklade resonemang från enkla.</p>
+<p><strong>Bedömningsmålet:</strong> protokollen från L3 och L4 är faktaunderlaget för del (a). Augustus-stationen och Justinianus-Aristoteles-paret planterar del (c).</p><h4>Ändringar</h4><p><strong>2026-09-28, septemberdesignen.</strong> Juliversionen ("Fyra liv i imperiet") byggde på källschema och Caracallas edikt. Källdelen är struken (override 1): rösterna läses, de granskas inte. Frihetsfrågan bär lektionen. Medborgarskapet följer boken, limes är kortat till en lärarnot.</p>
+<p><strong>2026-09-28, omläggning (override 3, kategori 2 - klassobservation).</strong> Eleverna har en stressig period, så Del 2 läses inte hemma utan gås igenom i lektionen. För att få tid gör varje par två stationer i stället för fyra. Princip 3 (förutsättningar levereras i förväg) är därmed avsatt för den här lektionen; trappan tillbaka till hemläsning är uppskjuten, inte avskaffad.</p>
+<p><strong>Priset:</strong> varje elev har bara två av fyra personer ur egen läsning. Belägget med kamratens namn gör de andra spårbara, men de är tunnare.</p><h4>Elevaktiv tid</h4><p>Ca 53 av 70 min (76 %): retrieval i par 2, vändfrågor 3, stationer 20, delning 10, jämförelse 10, checkpoint 8.</p><h4>Källor</h4><p><strong>NotebookLM</strong> (Hi 1b-notebooken, 2026-09-28): Gavius ur Ciceros tal mot Verres (bara i Beards referat), Augustus <em>Res Gestae</em> 1, Claudias gravskrift (CIL VI 15346), slavhalsbandet (Zoninus), Justinianus lagsamling, Reginas gravsten (RIB 1065), Tacitus <em>Agricola</em> 21 - ordagrant i Beard <em>SPQR</em> respektive <em>A History of World Societies</em>. Gavius, Paulus och honestiores/humiliores kontrollerade i Beards fulltext 2026-09-28. Saknas ordagrant: Konstantins lag om coloni och Vindolanda-breven.</p>
+<p><strong>Wiki:</strong> <span class="wiki">libertas-romersk-frihet-skiljd-fran-grekisk-eleutheria-lane-fox</span>, <span class="wiki">frihet-under-kejsarna-libertas-omdefinieras-lane-fox</span>, <span class="wiki">rom-som-slavsamhalle-frigivning-och-blind-flack</span>, <span class="wiki">hinge-questions-diagnostiska-fragor-vid-vagskalen</span>, <span class="wiki">romersk-gransekonomi-och-en-porods-limes</span>, <span class="wiki">tre-nivaer-av-kallanpassning</span></p></div></details>
+</main>
+
+<footer>Genererad ur lektionsplan-exempel.md. Ändra i markdownen och bygg om - inte här.</footer>
+
+<script>
+
+(function(){
+  var rot=document.documentElement, body=document.body;
+  var nyckel='lektionsplan:'+body.dataset.nyckel;
+  function las(k){try{return JSON.parse(localStorage.getItem(k));}catch(e){return null;}}
+  function skriv(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+
+  // Checklistor minns per läsare och lektion.
+  var bockar=las(nyckel+':bockar')||{};
+  document.querySelectorAll('input[data-nyckel]').forEach(function(cb){
+    cb.checked=!!bockar[cb.dataset.nyckel];
+    cb.addEventListener('change',function(){bockar[cb.dataset.nyckel]=cb.checked; skriv(nyckel+':bockar',bockar);});
+  });
+
+  // Tema.
+  var bT=document.getElementById('btn-tema');
+  function tema(){var v=rot.getAttribute('data-tema'); if(v) return v;
+    return (window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'mork':'ljus';}
+  bT.addEventListener('click',function(){var ny=tema()==='mork'?'ljus':'mork';
+    rot.setAttribute('data-tema',ny); try{localStorage.setItem('lektionsplan-tema',ny);}catch(e){}});
+
+  // Lektionsklockan. Tillståndet sparas, så att en omladdning mitt i passet
+  // inte nollställer den.
+  var moment=[].slice.call(document.querySelectorAll('.moment'));
+  var segment=[].slice.call(document.querySelectorAll('.seg'));
+  var remsa=document.querySelector('.remsa'), nal=document.querySelector('.nal');
+  var visning=document.querySelector('.tidvisning');
+  var bS=document.getElementById('btn-start'), bN=document.getElementById('btn-nu'), bR=document.getElementById('btn-noll');
+  var total=moment.reduce(function(m,el){return Math.max(m,+el.dataset.slut);},0)||+body.dataset.langd||1;
+  var k=las(nyckel+':klocka')||{samlat:0,sedan:null};
+
+  function minuter(){return (k.samlat+(k.sedan?Date.now()-k.sedan:0))/60000;}
+  function rita(){
+    var min=minuter(), igang=k.sedan!==null, startad=igang||k.samlat>0;
+    bS.textContent=igang?'Pausa':(startad?'Fortsätt':'Starta');
+    bS.classList.toggle('gar',igang);
+    bN.hidden=!startad; bR.hidden=!startad; nal.hidden=!startad;
+    var aktiv=-1;
+    moment.forEach(function(el,i){
+      var s=+el.dataset.start, e=+el.dataset.slut;
+      var nu=startad&&min>=s&&min<e; if(nu) aktiv=i;
+      el.classList.toggle('nu',nu);
+      el.classList.toggle('passerad',startad&&min>=e);
+      if(segment[i]) segment[i].classList.toggle('aktiv',nu);
+    });
+    if(!startad){visning.textContent='Klockan står still'; return;}
+    nal.style.left=Math.min(100,min/total*100)+'%';
+    var hel=Math.floor(min);
+    var kvar=aktiv>=0?Math.ceil(+moment[aktiv].dataset.slut-min):0;
+    visning.textContent=hel+' av '+total+' min'+(aktiv>=0?' · '+kvar+' min kvar i blocket':(min>=total?' · lektionen slut':''))+(igang?'':' · pausad');
+  }
+  bS.addEventListener('click',function(){
+    if(k.sedan!==null){k.samlat+=Date.now()-k.sedan; k.sedan=null;} else {k.sedan=Date.now();}
+    skriv(nyckel+':klocka',k); rita();
+  });
+  bR.addEventListener('click',function(){k={samlat:0,sedan:null}; skriv(nyckel+':klocka',k); rita();});
+  bN.addEventListener('click',function(){var el=document.querySelector('.moment.nu'); if(el) el.scrollIntoView({behavior:'smooth'});});
+  rita(); setInterval(rita,10000);
+})();
+
+</script>
+</body>
+</html>

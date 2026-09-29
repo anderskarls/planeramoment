@@ -9,13 +9,14 @@ allowed-tools:
   - Grep
   - AskUserQuestion
   - Bash(./resources/local-brain-search/run_search.sh:*)
+  - Bash(python:*)
 ---
 
 # Skapa enskild lektionsplanering
 
 Guida användaren genom att skapa en enskild lektionsplanering. Används när man vill skapa en lektion utan att planera ett helt moment.
 
-Detta kommando är den lätta, fristående vägen. Vill användaren planera ett **helt moment** (5-10 lektioner med övergripande momentplan, ramverksdriven designdialog, .docx/presentationer) - hänvisa till skillen `planera-moment`.
+Detta kommando är den lätta, fristående vägen. Vill användaren planera ett **helt moment** (5-10 lektioner med övergripande momentplan, ramverksdriven designdialog, elevuppgifter/presentationer) - hänvisa till skillen `planera-moment`.
 
 ## Steg 1: Läs format och vault-kontext
 
@@ -75,12 +76,20 @@ Bestäm rätt ämnesmapp via kursens `amnesmapp`-fält i `kurser.json`: `output/
 
 Skapa filen med ett beskrivande namn: `[Lektionsnamn].md`. Tillhör lektionen ett befintligt moment, lägg den i momentets temamapp och länka till momentplanen och övriga lektioner.
 
-Följ formatet baserat på användarens val: **detaljerad** variant enligt den kanoniska mallen i `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/references/lektionsplanering.md` avsnitt 5 (med frontmattern och fristående-anpassningarna från `lektionsformat.md`); **kortfattad** variant enligt `lektionsformat.md` Variant 2. Lektionsförloppet ska formas av rollen, inte av en fast fassekvens.
+Följ formatet baserat på användarens val: **detaljerad** variant enligt den kanoniska mallen i `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/references/lektionsplanering.md` avsnitt 5 (med frontmattern och fristående-anpassningarna från `lektionsformat.md`); **kortfattad** variant enligt `lektionsformat.md` Variant 2. Lektionsförloppet ska formas av rollen, inte av en fast fassekvens. Följ skrivreglerna i avsnitt 5: varje minut beskrivs en gång (i sitt `###`-tidsblock), och motiveringar hör till `## Bakgrund`.
+
+Bygg sedan läsvyn för klassrummet ur markdownen (båda varianterna):
+
+```bash
+python "${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/scripts/bygg-lektionsplan.py" "[sökväg till lektionsfilen].md"
+```
+
+HTML-filen hamnar bredvid markdownen. Redigera aldrig HTML:en - ändra i markdownen och bygg om.
 
 ## Steg 4: Sammanfatta
 
 Avsluta med:
-- Vilken fil som skapades (med sökväg)
+- Vilka filer som skapades (markdown + HTML, med sökväg) - öppna HTML-filen i webbläsaren
 - Lektionens roll och vad eleven exit:ar med
 - Förslag på kopplingar (reflektioner, relaterade lektioner)
 

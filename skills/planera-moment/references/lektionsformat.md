@@ -2,9 +2,11 @@
 
 Mallar för **fristående lektioner** (kommandot `planera-lektion`). Rollbaserade: en lektion realiserar en roll ur Momentplaneringsramverket (nivå 4), och lektionskärnan formas av rollen - inte av en fast fassekvens.
 
-**Ram, rollvägledning och detaljerad mall: se `lektionsplanering.md`** - den är kanonisk. Där finns de tre evidensprinciperna (ram), den rollspecifika kärnvägledningen för de 9 rollerna, brottningsformen och den detaljerade lektionsmallen (Variant 1 = `lektionsplanering.md` avsnitt 5). Nedan endast det fristående-specifika: frontmatter, den kortfattade varianten (Variant 2) och riktlinjer.
+**Ram, rollvägledning och detaljerad mall: se `lektionsplanering.md`** - den är kanonisk. Där finns de tre evidensprinciperna (ram), den rollspecifika kärnvägledningen för de 9 rollerna, brottningsformen och formatet för lektionsplanen med dess skrivregler (Variant 1 = `lektionsplanering.md` avsnitt 5). Nedan endast det fristående-specifika: frontmatter, den kortfattade varianten (Variant 2) och riktlinjer.
 
-En fristående lektion saknar föregående lektions exit ticket-data. Öppna då med **förkunskapsaktivering** i stället för spaced retrieval, och ersätt "Moment"-fältet med "Fristående lektion" i mallen.
+Båda varianterna byggs till en HTML-läsvy för klassrummet med `scripts/bygg-lektionsplan.py`. Scriptet läser tidsblocken (`### start-slut · Titel`), så även den kortfattade varianten skrivs med dem.
+
+En fristående lektion saknar föregående lektions exit ticket-data. Öppna då med **förkunskapsaktivering** i stället för spaced retrieval, och skriv "Fristående lektion" i `moment`-fältet.
 
 ---
 
@@ -12,19 +14,25 @@ En fristående lektion saknar föregående lektions exit ticket-data. Öppna då
 
 ```yaml
 ---
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+type: lektionsplan
 tags:
   - lektionsplanering
   - [ämne: samhällskunskap eller historia]
-ämne: [Ämne]
+lektion: [N, eller tomt]
+titel: [Lektionstitel]
 kurs: [Kursnamn]
-område: [Tema/område]
+grupper: [Grupp (antal), eller tomt]
+moment: [Momentets titel, eller "Fristående lektion"]
+langd: [minuter]
+elevaktiv: [elevaktiva minuter]
 roll: [lektionens roll]
-datum: "[YYYY-MM-DD]"
 status: utkast
 ---
 ```
 
-För den **detaljerade** varianten: lägg frontmattern överst och följ sedan den detaljerade mallen i `lektionsplanering.md` avsnitt 5 (med de fristående-anpassningar som beskrivs ovan).
+För den **detaljerade** varianten: lägg frontmattern överst och följ sedan mallen i `lektionsplanering.md` avsnitt 5 (med de fristående-anpassningar som beskrivs ovan).
 
 ---
 
@@ -37,43 +45,42 @@ Grundstruktur som läraren fyller i och anpassar själv. Passar för erfarna lä
 ```markdown
 # Lektion [N]: [Lektionstitel]
 
-**Kurs:** [Kurs]
-**Moment:** [Moment, eller "Fristående lektion"]
-**Lektionslängd:** [Längd]
+> [Vad eleverna går ut med, i en mening]
 
-## Roll
-- [Vilken roll lektionen realiserar + vad eleven exit:ar med]
+## Före lektionen
 
-## Lärandemål
+- [ ] [Förberedelse]
 
-[Kortfattat mål - vad ska eleven kunna?]
+## Förlopp
 
-## Centralt innehåll
+### 0-X · Öppning: [förkunskapsaktivering eller retrieval]
 
-- [Relevant innehåll]
+Eleverna: [kort]
 
-## Lektionsförlopp
+### X-Y · [Rollkärna]
 
-| Tid | Moment | Beskrivning |
-|-----|--------|-------------|
-| 0-X min | Öppning (retrieval) | [Kort beskrivning] |
-| X-Y min | Rollkärna | [Kort beskrivning] |
-| Y-Z min | Avslut (exit ticket) | [Kort beskrivning] |
+Eleverna: [kort]
+
+### Y-Z · Exit ticket och avslut
+
+Eleverna: [kort]
 
 ## Material
 
 - [Material som behövs]
 
-## Kopplingar
+## Bakgrund
 
-- [[Momentnamn - momentplan]]
-- [[Eventuell nästa lektion]]
+**Roll:** [roll] - eleven exit:ar med [...].
+**Lärandemål:** [ett mål]
+**Centralt innehåll:** [relevant innehåll]
+**Kopplingar:** [[Momentnamn - momentplan]], [[Eventuell nästa lektion]]
 ```
 
 ### Riktlinjer för kortfattad planering
 
-- **Roll:** ange rollen och exit - det styr kärnan även i den korta varianten.
+- **Kärnan (`>`)** och **roll** i Bakgrund styr lektionen även i den korta varianten.
 - **Lärandemål:** ett mål räcker - formulera det tydligt utan betygsnivåer.
-- **Lektionsförlopp:** ange moment utan detaljerade instruktioner, men behåll ramen (öppning → kärna → avslut).
-- **Hoppa över:** differentiering, bilagor, lärarinstruktioner, elevaktivitetslista - läraren hanterar detta själv.
+- **Förlopp:** ett tidsblock per del med en `Eleverna:`-rad, utan lärarpunkter och `Säg:`-rader, men behåll ramen (öppning → kärna → avslut).
+- **Hoppa över:** differentiering, bilagor, exit ticket-sektion, Genom hela lektionen - läraren hanterar detta själv.
 - **Fokus:** ge en tydlig stomme, inte en färdig produkt.
