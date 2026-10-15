@@ -74,7 +74,7 @@ Samla alla frågor i ett AskUserQuestion-anrop.
 
 Bestäm rätt ämnesmapp via kursens `amnesmapp`-fält i `kurser.json`: `output/lessons/[amnesmapp]/`
 
-Skapa filen med ett beskrivande namn: `[Lektionsnamn].md`. Tillhör lektionen ett befintligt moment, lägg den i momentets temamapp och länka till momentplanen och övriga lektioner.
+Skapa filen med ett beskrivande namn: `[Lektionsnamn].md`. Tillhör lektionen ett befintligt moment, lägg den i momentmappens `md/` och länka till momentplanen och övriga lektioner. Byggs den till HTML hamnar HTML:en i `html/` (se Momentmappens layout i `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/SKILL.md`). Ett äldre moment med allt platt i roten följer sin egen ordning.
 
 Följ formatet baserat på användarens val: **detaljerad** variant enligt den kanoniska mallen i `${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/references/lektionsplanering.md` avsnitt 5 (med frontmattern och fristående-anpassningarna från `lektionsformat.md`); **kortfattad** variant enligt `lektionsformat.md` Variant 2. Lektionsförloppet ska formas av rollen, inte av en fast fassekvens. Följ skrivreglerna i avsnitt 5: varje minut beskrivs en gång (i sitt `###`-tidsblock), och motiveringar hör till `## Bakgrund`.
 

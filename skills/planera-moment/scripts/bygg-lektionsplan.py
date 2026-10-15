@@ -21,6 +21,10 @@ Inline: **fet**, *kursiv*, `kod`, [[wikilänk]].
 
 Användning:
     python bygg-lektionsplan.py <lektion-N.md> [--ut <fil.html>]
+
+Utan --ut följer utfilen momentmappens layout: ligger markdownen under en
+mapp som heter md/ hamnar HTML:en på samma plats under html/
+(md/lektion-3.md -> html/lektion-3.html). Annars bredvid markdownen.
 """
 from __future__ import annotations
 
@@ -33,6 +37,15 @@ from pathlib import Path
 def die(msg: str) -> None:
     print(f"FEL: {msg}", file=sys.stderr)
     sys.exit(2)
+
+
+def html_for(md: Path) -> Path:
+    """md/<x>.md -> html/<x>.html i momentmappen; annars bredvid markdownen."""
+    delar = md.parts
+    for i in range(len(delar) - 2, -1, -1):
+        if delar[i] == "md":
+            return Path(*delar[:i], "html", *delar[i + 1:]).with_suffix(".html")
+    return md.with_suffix(".html")
 
 
 # ------------------------------------------------------------------ parsning
@@ -543,7 +556,8 @@ def main() -> None:
     md = Path(args[0]).resolve()
     if not md.exists():
         die(f"hittar inte {md}")
-    ut = Path(argv[argv.index("--ut") + 1]) if "--ut" in argv else md.with_suffix(".html")
+    ut = Path(argv[argv.index("--ut") + 1]) if "--ut" in argv else html_for(md)
+    ut.parent.mkdir(parents=True, exist_ok=True)
     ut.write_text(bygg(md), encoding="utf-8", newline="\n")
     print(f"✓ {ut}")
 

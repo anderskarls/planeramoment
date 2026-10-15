@@ -184,4 +184,4 @@ Regler:
    - Öppna filen i webbläsare om möjligt, annars beskriv layouten
    - Fråga om justeringar (färg, formuleringar, ordning)
 
-6. **Spara** till `moment-[ämne]-[tema]/momentoversikt.html`
+6. **Spara** till momentmappens `html/`: `output/lessons/[Ämne]/[Tema]/html/momentoversikt.html`

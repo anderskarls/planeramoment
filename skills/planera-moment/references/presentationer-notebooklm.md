@@ -6,7 +6,7 @@ Läs in innan du börjar:
 - `references/arkiv-presentationer.md` - Arkiv v2.1: boilerplate (komplett CSS), slide-katalog och konventioner
 - `references/presentationsteknik.md` - pedagogiska principer för klassrumspresentationer
 
-Generera presentationer för varje lektion som har ett instruktions-/presentationsmoment. Generera **en presentation i taget**. Spara till `output/lessons/[Ämne]/[Tema]/presentation-lektion-[N].html`.
+Generera presentationer för varje lektion som har ett instruktions-/presentationsmoment. Generera **en presentation i taget**. Spara till `[Momentmapp]/html/presentation-lektion-[N].html`.
 
 *I snabbläge: generera alla presentationer i följd, presentera en samlad översikt, invänta en godkännanderunda. Kvalitetskontrollen (Arkiv-checklistan) körs ändå per presentation.*
 
@@ -72,4 +72,4 @@ För varje presentation:
 
 4. **Presentera för läraren** och fråga om feedback innan du går vidare till nästa presentation.
 
-Spara till `output/lessons/[Ämne]/[Tema]/presentation-lektion-[N].html`.
+Spara till `[Momentmapp]/html/presentation-lektion-[N].html`.

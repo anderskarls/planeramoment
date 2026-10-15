@@ -82,11 +82,11 @@ Presentera lektionsplanen och fråga: "Vill du justera något i denna lektionspl
 
 ### Spara och bygg
 
-- **Markdown:** `output/lessons/[Ämne]/[Tema]/lektion-[N].md` (i vaultet) - källan.
-- **HTML:** byggs ur markdownen bredvid den, som `lektion-[N].html`:
+- **Markdown:** `[Momentmapp]/md/lektion-[N].md` (i vaultet) - källan.
+- **HTML:** byggs ur markdownen till `[Momentmapp]/html/lektion-[N].html` (scriptet väljer `html/` själv när markdownen ligger i `md/`, och skapar mappen):
 
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/scripts/bygg-lektionsplan.py" "output/lessons/[Ämne]/[Tema]/lektion-[N].md"
+python "${CLAUDE_PLUGIN_ROOT}/skills/planera-moment/scripts/bygg-lektionsplan.py" "output/lessons/[Ämne]/[Tema]/md/lektion-[N].md"
 ```
 
 (På Windows: sätt `PYTHONUTF8=1` om konsolen klagar på svenska tecken.) Bygg om efter varje ändring av markdownen - redigera aldrig HTML:en. Kontrollera efter bygget att scriptet rapporterat en fil, och att `Säg:`, `**` och `[[` inte finns kvar som råtext i den byggda sidan (det betyder en rad som inte följde konventionen).

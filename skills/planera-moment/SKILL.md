@@ -30,10 +30,27 @@ Genomför en 7-stegsprocess för att planera ett komplett undervisningsmoment. G
 Denna fil är en **orkestrerare**. Varje steg har en egen referensfil under `references/` med den fullständiga vägledningen. **Läs in respektive stegfil först när du når det steget** - ladda inte alla i förväg. Stegfilerna refererar i sin tur till struktur-/metodfiler (gy11/gy25, pedagogiska-metoder, lektionsplanering) som laddas vid behov.
 
 Skapa output-kataloger för momentet på två platser:
-- **Markdown (.md)** sparas i vaultet: `output/lessons/[Ämne]/[Tema]/`
+- **Vaultet:** momentmappen `output/lessons/[Ämne]/[Tema]/` - indelad enligt **Momentmappens layout** nedan
 - **Word (.docx)** - elevuppgifter och källmaterial - sparas utanför vaultet: `[Word-mappen]\[Ämne]\[Tema]\` (se **Sökvägar** nedan)
 
 Strukturen är identisk på båda platser (t.ex. `Historia/Franska revolutionen/`). Ämne ska ha stor bokstav, tema ska vara läsbart med mellanslag. Skapa katalogerna om de inte finns. Vilken ämnesmapp en kurs hör till anges i `kurser.json` (fältet `amnesmapp`).
+
+### Momentmappens layout
+
+```
+[Tema]/
+├── momentplan.md      ingången - ligger alltid i roten
+├── md/                källorna: lektion-N.md, elevuppgift-*, kallmaterial-*, kortmallar ...
+├── html/              det som visas: lektion-N.html, presentation-*, momentoversikt.html, utskrifter, pdf, css, bilder
+└── (roten)            data: csv, json, docx, skript, undermappar som verifiering/
+```
+
+- **`md/`** - all markdown utom `momentplan.md`. Undermappar speglas: `md/lektion-8-elevmaterial/dorrkort.md`.
+- **`html/`** - all HTML plus det HTML:en visar eller som är en utskrift av den (pdf, css, svg, png, jpg). Samma spegling: `html/lektion-8-elevmaterial/dorrkort-utskrift.html`.
+- **Byggskripten följer regeln själva:** en markdown under `md/` byggs till motsvarande sökväg under `html/` (`bygg-lektionsplan.py` i pluginen, `bygg-utskrift.py` och `bygg-stationshafte.py` i vaultets `resources/`). Ange aldrig `--ut` för att lägga HTML bredvid markdownen.
+- **Äldre moment** kan ha allt platt i roten. Läs dem som de är och flytta inget utan att fråga läraren.
+
+I stegfilerna betyder `[Momentmapp]` = `output/lessons/[Ämne]/[Tema]`.
 
 ## Sökvägar
 
@@ -56,7 +73,7 @@ Ett moment spänner ofta över flera sessioner. Innan du startar steg 1: ta reda
    - `Nivå 4 - Rollsekvens` + `Nivå 5 - Brottningsform` → steg 3 klart
    - `Lektionssekvens (rollmappning)` → steg 4 klart
    - `Frågeapp (Survey Platform)` → steg 5b klart; `Videoöversikter` → steg 5c klart
-3. **Inventera artefakter på disk** mot Completion Checklist: vilka `lektion-N.md`/`.html`, `elevuppgift-lektion-N.*`, `presentation-lektion-N.html`, `video/*.mp4`, `momentoversikt.html` finns redan? (`.docx` och `video/*.mp4` ligger i Word-mappen, inte i vaultmappen - se Sökvägar.)
+3. **Inventera artefakter på disk** mot Completion Checklist: vilka `md/lektion-N.md`, `html/lektion-N.html`, `md/elevuppgift-lektion-N.md`, `html/presentation-lektion-N.html`, `html/momentoversikt.html` finns redan? (`.docx` och `video/*.mp4` ligger i Word-mappen, inte i vaultmappen - se Sökvägar. Ett äldre moment kan ha allt platt i roten - se Momentmappens layout.)
 4. **Återställ arbetskontexten** utan att ställa om designfrågorna: ladda rätt referensfiler för systemet (steg 1.3), läs kursminnet (steg 1.5) och återställ NotebookLM-läget (steg 1.4). Står `**NotebookLM:** AV` i Grundinformationen gäller det beslutet vidare - fråga inte om igen. Står det `PÅ`, kontrollera om att inloggningen lever (`notebooklm list --json`, läs `error`-fältet) och aktivera notebooken; en ny session betyder ofta ny auth-status.
 5. **Sammanfatta läget** för läraren ("Steg 1-4 klara, lektion 1-2 av 6 genererade, inga presentationer ännu") och föreslå att fortsätta från nästa ogjorda punkt. Läraren kan välja att backa.
 
@@ -127,12 +144,12 @@ Output: uppdaterar `momentplan.md` (lektionssekvens/rollmappning).
 ### Steg 5: Detaljerade lektionsplaner (HTML-läsvy för klassrummet)
 
 Generera en lektion i taget, rollbaserat, med NotebookLM-innehåll, tre evidensprinciper (retrieval/elevaktiv tid/exit ticket), kvalitetskontroll och en HTML-sida byggd ur markdownen (tidslinje, lektionsklocka, varje minut beskriven en gång, motiveringar hopfällda i Bakgrund). **Läs och följ `references/steg-5-lektionsplaner.md`.**
-Output: `lektion-N.md` (källan) + `lektion-N.html`, båda i vaultet.
+Output: `md/lektion-N.md` (källan) + `html/lektion-N.html`, båda i momentmappen.
 
 ### Steg 5a: Elevuppgifter (separata Word-dokument)
 
 Efter varje godkänd lektionsplan: generera elevmaterial för lektionens rollkärna (arbetsblad, källmaterial, analysuppgifter) med inbyggd differentiering. **Läs och följ `references/steg-5a-elevuppgifter.md`.**
-Output: `elevuppgift-lektion-N.md` + `.docx` (samma mönster för `kallmaterial-lektion-N`).
+Output: `md/elevuppgift-lektion-N.md` + `.docx` i Word-mappen (samma mönster för `kallmaterial-lektion-N`).
 
 ### Steg 5b: Frågor till frågeappen (Survey Platform)
 
@@ -147,12 +164,12 @@ Output: `video/video-*.mp4` + Videoöversikter-tabell i `momentplan.md`.
 ### Steg 6: Presentationer (reveal.js HTML i designsystemet Arkiv)
 
 Generera presentationer för lektioner med instruktionsmoment, i designsystemet Arkiv, med NotebookLM-förankrat innehåll. **Läs och följ `references/presentationer-notebooklm.md`.**
-Output: `presentation-lektion-N.html`.
+Output: `html/presentation-lektion-N.html`.
 
 ### Steg 7: Momentöversikt för elever (HTML)
 
 Self-contained HTML-översikt för eleverna (datum, innehåll, förberedelser, mål) - inkl. ev. delningskoder (5b) och videolänkar (5c). **Läs och följ `references/steg-7-momentoversikt.md`.**
-Output: `momentoversikt.html`.
+Output: `html/momentoversikt.html`.
 
 ### Avslutning
 
@@ -184,12 +201,12 @@ I steg 5/5a/6 erbjuds batchgenerering: generera alla lektionsplaner (eller alla 
 | 2 | Steg 1 + gy11/struktur.md eller gy25/struktur.md (rätt system per kurs) | momentplan.md (uppdaterad) |
 | 3 | Steg 1-2 + pedagogik-ramverk.md (nivå 4-5) + pedagogiska-metoder.md + **wiki** (metoder + reflektioner) + **NotebookLM** | momentplan.md (rollsekvens + brottningsform) |
 | 4 | Steg 1-3 (rollsekvens) + lektionsplanering.md | momentplan.md (lektionssekvens/rollmappning) |
-| 5 | Steg 1-4 + lektionsplanering.md (avsnitt 5 = formatet) + **NotebookLM** + **wiki** (didaktik per lektion) | lektion-N.md + lektion-N.html (vault, byggd med scripts/bygg-lektionsplan.py) |
-| 5a | Steg 5 (godkänd lektionsplan) + docx SKILL.md | elevuppgift-lektion-N.md + .docx, kallmaterial-lektion-N.md + .docx |
+| 5 | Steg 1-4 + lektionsplanering.md (avsnitt 5 = formatet) + **NotebookLM** + **wiki** (didaktik per lektion) | md/lektion-N.md + html/lektion-N.html (byggd med scripts/bygg-lektionsplan.py) |
+| 5a | Steg 5 (godkänd lektionsplan) + docx SKILL.md | md/elevuppgift-lektion-N.md + .docx, md/kallmaterial-lektion-N.md + .docx |
 | 5b | Steg 1-5 + Steg 5a (elevuppgifter) + **MCP survey-platform** | frågor + ev. moment med elevuppgifter i databasen + momentplan.md (uppdaterad) |
 | 5c | Steg 1 (notebook) + Steg 4-5 (lektionsteman + förberedelsematerial) + **NotebookLM-CLI** | video-moment-oversikt.mp4 + video-forforstaelse-lektion-N.mp4 + momentplan.md (uppdaterad) |
-| 6 | Steg 1-4 + arkiv-presentationer.md + presentationsteknik.md + **NotebookLM** (innehåll) | presentation-lektion-N.html |
-| 7 | Steg 1-4 + html-momentoversikt SKILL.md + lärar-input + ev. delningskoder + ev. videolänkar | momentoversikt.html |
+| 6 | Steg 1-4 + arkiv-presentationer.md + presentationsteknik.md + **NotebookLM** (innehåll) | html/presentation-lektion-N.html |
+| 7 | Steg 1-4 + html-momentoversikt SKILL.md + lärar-input + ev. delningskoder + ev. videolänkar | html/momentoversikt.html |
 
 ## Completion Checklist
 
@@ -204,7 +221,7 @@ I steg 5/5a/6 erbjuds batchgenerering: generera alla lektionsplaner (eller alla 
 - [ ] Videoöversikter genererade (momentöversikt + förförståelse-videor för lektioner med förberedelsematerial), nedladdade som .mp4 och loggade i momentplan.md (om notebook aktiv)
 - [ ] Presentationer genererade som reveal.js HTML för lektioner med instruktionsmoment
 - [ ] Momentöversikt genererad som .html (med delningskoder om frågor exporterades, och videolänkar om videor genererades)
-- [ ] .md- och .html-filer sparade i vaultet (`output/lessons/[Ämne]/[Tema]/`), .docx-filer (elevuppgifter) i `[Word-mappen]\[Ämne]\[Tema]\`
+- [ ] .md-filer i momentmappens `md/` och .html-filer i `html/` (`momentplan.md` i roten), .docx-filer (elevuppgifter) i `[Word-mappen]\[Ämne]\[Tema]\`
 - [ ] Kunskapsunderlag (wiki) dokumenterat i momentplan.md med [[länkar]] (eller markerat tomt)
 - [ ] AI-svaghetscheck genomförd på alla lektionsplaner
 - [ ] Exit ticket-slinga verifierad (varje exit ticket mäter rollens exit och informerar nästa retrieval-öppning)

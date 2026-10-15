@@ -44,7 +44,7 @@ Använd samma docx-metod som lektionsplanerna. Format:
 - Sidfot med kursnamn och lektionstitel
 
 **Spara i båda format:**
-- **Markdown:** `output/lessons/[Ämne]/[Tema]/elevuppgift-lektion-[N].md` (i vaultet)
+- **Markdown:** `[Momentmapp]/md/elevuppgift-lektion-[N].md` (i vaultet). Byggs en utskrifts-HTML eller PDF hamnar den i `[Momentmapp]/html/`.
 - **Word:** `[Word-mappen]\[Ämne]\[Tema]\elevuppgift-lektion-[N].docx` (Word-mappen definierad i SKILL.md:s Sökvägar-sektion)
 
 (Samma mönster för källmaterial: `kallmaterial-lektion-[N].md` / `.docx`)
